@@ -71,3 +71,5 @@ https://www.reddit.com/r/vscode/comments/kryobd/set_up_c_in_vscode_separate_tuto
 https://www.reddit.com/r/vscode/comments/f7r2l6/compile_multiple_c_files/
 https://stackoverflow.com/questions/47665886/vs-code-will-not-build-c-programs-with-multiple-ccp-source-files
 https://cliutils.gitlab.io/modern-cmake/
+
+do you see how retarded this shit looks? fucking fix it now
