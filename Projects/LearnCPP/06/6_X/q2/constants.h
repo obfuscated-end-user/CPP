@@ -1,0 +1,19 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+namespace constants {
+    inline constexpr int max_class_size = 35;
+}
+
+#endif
+
+/*
+always do the header guard thing:
+
+#ifndef name
+#define name
+// shit
+#endif
+
+always do the inline constexpr thing on shit like this
+*/
