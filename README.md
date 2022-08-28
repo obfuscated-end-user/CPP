@@ -1,6 +1,6 @@
 ## read this shit obviously
 
-## you're at 11.18
+## you're at 11.X
 ## WHAT THE FUCK FIX YOUR COMPILER
 
 ## quizzes to do:
