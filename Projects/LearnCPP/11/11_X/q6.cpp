@@ -26,6 +26,8 @@ f) Write a function named shuffleDeck to shuffle the deck of cards using std::sh
 Reminder: Only seed your random number generator once.
 
 g) Write a function named getCardValue() that returns the value of a Card (e.g. a 2 is worth 2, a ten, jack, queen, or king is worth 10. Assume an Ace is worth 11).
+
+There's nothing wrong if you give up. Do it, motherfucker.
 */
 
 // a) A deck of cards has 52 unique cards (13 card ranks of 4 suits). Create enumerations for the card ranks (2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace) and suits (clubs, diamonds, hearts, spades). Those enumerators will not be used to index arrays.

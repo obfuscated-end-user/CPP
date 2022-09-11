@@ -1,10 +1,10 @@
 ## read this shit obviously
 
-## you're at 11.X
+## you're at 12.1
 ## WHAT THE FUCK FIX YOUR COMPILER
 
 ## quizzes to do:
-11.9
+12.1
 
 if multiple files:
 CTRL + SHIFT + B TO BUILD YOUR FUCKING TASK
