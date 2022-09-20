@@ -6,7 +6,7 @@
 struct Fraction {
 	int numerator {};
 	int denominator {};
-    int faggot {};
+    int random_ass {};
 };  // DON'T FORGET THE SEMICOLON
 
 // Now we can make use of our Fraction type

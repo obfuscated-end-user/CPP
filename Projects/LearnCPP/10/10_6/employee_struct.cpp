@@ -8,7 +8,7 @@ struct Employee {
 
 int main() {
     Employee joe { 2, 28 }; // joe.wage will be value-initialized to 0.0
-    Employee faggot {}; // value-initialize all members
+    Employee satan {}; // value-initialize all members
 
     return 0;
 }
