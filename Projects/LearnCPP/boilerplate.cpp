@@ -1,4 +1,4 @@
-// link of lesson
+// link to lesson
 
 #include <iostream>
 
