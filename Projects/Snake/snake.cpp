@@ -29,34 +29,35 @@ void Setup() {
 void Draw() {
     system("cls");
 
-    for(int i = 0; i < width + 2; i++)
-        std::cout << "#";
+    for (int i = 0; i < width + 2; i++)
+        std::cout << '#';
     std::cout << std::endl;
+
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0)
-                std::cout << "#"; // walls
+                std::cout << '#'; // walls
             if (i == y && j == x)
-                std::cout << "*"; // snake tale
+                std::cout << '*'; // snake tale
             else if (i == fruitY && j == fruitX)
-                std::cout << "%"; // change it to change the fruit
+                std::cout << '%'; // change it to change the fruit
             else {
                 bool print = false;
-                for (int k = 0; k< nTail ; k++) {
+                for (int k = 0; k < nTail; k++) {
                     if (tailX[k] == j && tailY[k] == i)
-                        std::cout << "*";
+                        std::cout << '*';
                     print = true;
                 }
                 if (!print)
-                    std::cout << " ";
+                    std::cout << ' ';
             }
         if (j == width - 1)
-            std::cout << "#";
+            std::cout << '#';
         }
     std::cout << std::endl;
     }
     for (int i = 0; i < width + 2; i++)
-        std::cout << "#";
+        std::cout << '#';
     std::cout << std::endl;
     std::cout << "Score:" << score << std::endl;
 }
@@ -64,11 +65,11 @@ void Draw() {
 void Input() {
     if (_kbhit()) {
         switch (_getch()) {
-            case 'a': dir = LEFT; break;
-            case 'd': dir = RIGHT; break;
-            case 'w': dir = UP; break;
-            case 's': dir = DOWN ; break;
-            case 'x': gameover = true; break;
+            case 'a': dir = LEFT;       break;
+            case 'd': dir = RIGHT;      break;
+            case 'w': dir = UP;         break;
+            case 's': dir = DOWN ;      break;
+            case 'x': gameover = true;  break;
         }
     }
 }
@@ -80,7 +81,7 @@ void algorithm() {
     tailX[0] = x;
     tailY[0] = y;
 
-    for(int i = 1; i < nTail ; i++) {
+    for (int i = 1; i < nTail; i++) {
         prev2X = tailX[i];
         prev2Y = tailY[i];
         tailX[i] = prevX;
@@ -90,10 +91,10 @@ void algorithm() {
     }
 
     switch (dir) {
-        case LEFT: x--; break;
+        case LEFT:  x--; break;
         case RIGHT: x++; break;
-        case UP: y--; break;
-        case DOWN: y++; break;
+        case UP:    y--; break;
+        case DOWN:  y++; break;
         default: break;
     }
 
@@ -123,9 +124,9 @@ int main() {
     Setup();
 
     while (!gameover) {
-        Draw ();
-        Input ();
-        algorithm ();
+        Draw();
+        Input();
+        algorithm();
     }
 
     return 0;
