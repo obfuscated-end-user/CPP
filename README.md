@@ -1,7 +1,7 @@
 # C++ stuff
 
 ## Introduction
-This repository contains code that I wrote for learning C++. The code quality itself is shit, so don't expect anything from it. Feel free to look and laugh at my dumbass hackerman skills.
+This repository contains code that I wrote for learning C++. The code quality itself is shit, so don't expect anything from it. Feel free to look and laugh at my shitty programming skills.
 
 ## Other
 I don't know, click on [this link](https://www.youtube.com/watch?v=MAlSjtxy5ak), just because.
