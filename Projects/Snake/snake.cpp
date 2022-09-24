@@ -38,7 +38,7 @@ void Draw() {
             if (j == 0)
                 std::cout << '#'; // walls
             if (i == y && j == x)
-                std::cout << '*'; // snake tale
+                std::cout << '*'; // snake tail
             else if (i == fruitY && j == fruitX)
                 std::cout << '%'; // change it to change the fruit
             else {
