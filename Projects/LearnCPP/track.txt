@@ -1,9 +1,8 @@
 https://www.learncpp.com/
 
-you're at 12.4
+you're at 12.5
 
 quizzes to do:
-12.4
 
 if multiple files:
 CTRL + SHIFT + B TO BUILD YOUR FUCKING TASK
