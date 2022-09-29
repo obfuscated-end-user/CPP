@@ -96,6 +96,8 @@ namespace config {
 
 int getRandomInt(int min, int max) {
     static std::mt19937 mt { static_cast<std::mt19937::result_type>(std::time(nullptr)) }; // can't use operator= here
+    // oh, because it's a class i'm a fucking retard
+    // you don't know what the fuck you're talking about
 
     return std::uniform_int_distribution {min, max}(mt);
 }
@@ -105,11 +107,15 @@ int getRandomInt(int min, int max) {
 // remember that Numbers is std::vector<int>
 Numbers generateNumbers (int start, int count, int multiplier) {
     // std::vector<int> numbers(static_cast<std::vector<int>::size_type>(count));
+    // make an int vector named numbers that has a count size
     Numbers numbers(static_cast<Numbers::size_type>(count));
     int i = start;
 
+    // for each number in the vector
     for (auto& number : numbers) {
+        // square the numbers times the multiplier, which is random
         number = ((i * i) * multiplier);
+        // increment to the value of the next number until you reach all values
         ++i;
     }
 
@@ -127,6 +133,7 @@ Numbers generateUserNumbers(int multiplier) {
     std::cin >> count;
     
     // Input validation omitted. ALl functions assume valid input.
+    // this function returns an int vector, which in turn is returned from generateNumbers
     return generateNumbers(start, count, multiplier);
 }
 
@@ -142,11 +149,14 @@ int getUserGuess() {
 // Searches for the value @guess in @numbers and removes it.
 // Returns true if the value as found. False otherwise.
 bool findAndRemove(Numbers& numbers, int guess) {
+    // iterator
     auto found = std::find(numbers.begin(), numbers.end(), guess);
 
+    // if iterator goes to end; "doesn't find anything"
     if (found == numbers.end())
         return false;
     else {
+        // i assume that this erases an element at a specified index (or "position"? whatever the fuck that means)
         numbers.erase(found);
         return true;
     }
@@ -154,7 +164,10 @@ bool findAndRemove(Numbers& numbers, int guess) {
 
 // Finds the value in @numbers that is closest to @guess.
 int findClosestNumber(const Numbers& numbers, int guess) {
-    return *std::min_element(numbers.begin(), numbers.end(), [=](int a, int b){
+    // min_element() because it is closer to original value than max. use your fucking head
+                                                            // lambda used here
+    return *std::min_element(numbers.begin(), numbers.end(), [=](int a, int b) {
+        // std::abs() is for getting the absolute value
         return (std::abs(a - guess) < std::abs(b - guess));
     });
 }
@@ -181,6 +194,7 @@ void printFailure(const Numbers& numbers, int guess) {
 
     std::cout << guess << " is wrong!";
 
+    // if the user's guess is off by at least 4
     if (std::abs(closest - guess) <= config::maximumWrongAnswer)
         std::cout << " Try " << closest << " next time.\n";
     else
