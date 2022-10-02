@@ -89,8 +89,10 @@ int binarySearch(const int* array, int target, int min, int max) {
     If you discard the entire array without finding the target element, return a sentinel that represents “not found” (in this case, we’ll use -1, since it’s an invalid array index). */
     // loop through the first half
 
-    if (target > max)
-        return -1;
+    // if target is equal to the FUCK
+    // i forgot that target is the VALUE, not the fucking index you dumbass
+    /* if (target > max)
+        return -1; */
 
     int center; // center index of the array
     // Look at the center element of the array (if the array has an even number of elements, round down).
@@ -111,7 +113,11 @@ int binarySearch(const int* array, int target, int min, int max) {
         // If the center element equals the target element, return the index of the center element.
         return center;
     }
+    
+    // debug
+    std::cout << "min: " << min <<  "\nmax: " << max << '\n';
 
+    // search the list
     for (int i = min; i < max - 1; ++i) {
         if (array[i] == target) {
             return i;
@@ -130,6 +136,7 @@ int main() {
     // Here are the test values
     constexpr int testValues[numTestValues] { 0, 3, 12, 13, 22, 26, 43, 44, 49 };
     // And here are the expected results for each value
+
     int expectedValues[numTestValues] { -1, 0, 3, -1, -1, 8, -1, 13, -1 };
 
     // Loop through all of the test values
@@ -137,11 +144,22 @@ int main() {
         // See if our test value is in the array
         int index = binarySearch(array, testValues[count], 0, static_cast<int>(std::size(array)) - 1);
         // If it matches our expected value, then great!
-        if (index == expectedValues[count])
+        if (index == expectedValues[count]) {
+            std::cout << "count: " << count << '\n';
             std::cout << "test value " << testValues[count] << " passed!\n";
-        else // otherwise, our binarySearch() function must be broken
+        }
+        else { // otherwise, our binarySearch() function must be broken
+            std::cout << "count: " << count << '\n';
             std::cout << "test value " << testValues[count] << " failed.  There's something wrong with your code!\n";
+        }    
     }
 
     return 0;
 }
+
+/*
+values that fuck up:
+12 26 44
+respective indices:
+2 5 7
+*/
