@@ -14,7 +14,7 @@ public:
     }
 
     void print() {
-         std::cout << "Something(" << m_value1 << ", " << m_value2 << ", " << m_value3 << ")\n";
+        std::cout << "Something(" << m_value1 << ", " << m_value2 << ", " << m_value3 << ")\n";
     }
 
 };
