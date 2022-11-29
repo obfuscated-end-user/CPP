@@ -1,3 +1,5 @@
+// https://www.learncpp.com/cpp-tutorial/constructor-member-initializer-lists/
+
 #include <iostream>
 
 class A {
