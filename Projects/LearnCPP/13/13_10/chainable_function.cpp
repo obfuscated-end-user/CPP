@@ -18,7 +18,9 @@ public:
         return *this;
     }
 
-    int getValue() { return m_value; }
+    int getValue() {
+        return m_value;
+    }
 };
 
 #include <iostream>
