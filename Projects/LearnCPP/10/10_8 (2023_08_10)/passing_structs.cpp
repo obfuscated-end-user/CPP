@@ -18,12 +18,10 @@ int main() {
     Employee joe { 14, 32, 24.15 };
     Employee frank { 15, 28, 18.27 };
 
-    // Print Joe's information
     printEmployee(joe);
 
     std::cout << '\n';
 
-    // Print Frank's information
     printEmployee(frank);
 
     return 0;
