@@ -1,1 +1,8 @@
 **/.vscode/
+
+Projects/Misc/cypher.cpp
+Projects/Misc/stolen1.cpp
+Projects/Misc/todo.txt
+
+*.class
+*.exe
