@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-10-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-10-summary-and-quiz
 
 /*
 Question #3
@@ -35,7 +35,7 @@ struct Triad {
 template <typename T, typename U, typename V>
 Triad(T, U, V) -> Triad<T, U, V>;
 
-template <typename T, typename U, typename V>   // FUCK YOU ALSO NEED THIS SHIT HERE
+template <typename T, typename U, typename V>
 void print(const Triad<T, U, V>& t) {
     std::cout << '[' << t.x << ", " << t.y << ", " << t.z << ']';
 }

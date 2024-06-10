@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/class-template-argument-deduction-ctad-and-deduction-guides/
+// https://www.learncpp.com/cpp-tutorial/class-template-argument-deduction-ctad-and-deduction-guides
 
 template <typename T, typename U>
 struct pair {

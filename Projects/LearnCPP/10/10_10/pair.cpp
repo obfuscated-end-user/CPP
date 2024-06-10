@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/class-templates/
+// https://www.learncpp.com/cpp-tutorial/class-templates
 
 #include <iostream>
 #include <utility>
