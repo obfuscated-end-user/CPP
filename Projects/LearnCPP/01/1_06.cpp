@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/uninitialized-variables-and-undefined-behavior/
+// https://www.learncpp.com/cpp-tutorial/uninitialized-variables-and-undefined-behavior
 
 #include <iostream>
 

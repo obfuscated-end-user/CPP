@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/developing-your-first-program/
+// https://www.learncpp.com/cpp-tutorial/developing-your-first-program
 
 #include <iostream>
 

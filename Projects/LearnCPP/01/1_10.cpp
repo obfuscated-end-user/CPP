@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-expressions/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-expressions
 
 #include <iostream>
 

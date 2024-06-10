@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization/
+// https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization
 
 #include <iostream>
 #include <string>
@@ -8,6 +8,6 @@
 
 // use underscores instead of periods and semicolons for file names
 int main() {
-    int ass {}; // 0
-    std::cout << ass;
+    int num {}; // 0
+    std::cout << num;
 }

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl
 
 #include <iostream>  // for std::cout and std::cin
 
