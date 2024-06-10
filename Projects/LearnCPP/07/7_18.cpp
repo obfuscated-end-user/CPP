@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation
 
 #include <iostream>
 

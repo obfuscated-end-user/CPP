@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/function-template-instantiation/
+// https://www.learncpp.com/cpp-tutorial/function-template-instantiation
 
 #include "Max.h" // import template definition for max<T, T>()
 #include <iostream>

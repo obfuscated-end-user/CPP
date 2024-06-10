@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz
 
 /*
 In the chapter 4 comprehensive quiz, we wrote a program to simulate a ball falling off of a tower. Because we didn’t have loops yet, the ball could only fall for 5 seconds.

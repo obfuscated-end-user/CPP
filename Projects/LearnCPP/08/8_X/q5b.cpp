@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz
 
 /*
 5b) Write a function template named mult that allows the user to multiply one value of any type (first parameter) and an integer (second parameter). The function should return the same type as the first parameter. The following program should run:

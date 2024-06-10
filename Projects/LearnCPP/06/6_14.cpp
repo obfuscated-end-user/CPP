@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/constexpr-and-consteval-functions/
+// https://www.learncpp.com/cpp-tutorial/constexpr-and-consteval-functions
 
 #include <iostream>
 
@@ -12,7 +12,6 @@ constexpr int greater(int x, int y) {
 // consteval
 // - Used to indicate that a function must evaluate at compile-time, otherwise a compile error will result.
 // Such functions are called immediate functions.
-// compiler goes full retard when this is uncommented
 /* consteval int greater2(int x, int y) { // function is now consteval 
     return (x > y ? x : y);
 } */
@@ -24,7 +23,6 @@ int main() {
     constexpr int g { greater(x, y) }; // will be evaluated at compile-time
     std::cout << g << " is greater!";
 
-    // fuck
     /* std::cout << greater2(5, 6) << " is greater!";
     // can't do this
     std::cout << greater2(x, 6) << " is greater!"; */

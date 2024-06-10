@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/function-templates/
+// https://www.learncpp.com/cpp-tutorial/function-templates
 
 #include <iostream>
 

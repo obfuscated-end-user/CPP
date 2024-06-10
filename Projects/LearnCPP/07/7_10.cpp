@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/break-and-continue/
+// https://www.learncpp.com/cpp-tutorial/break-and-continue
 
 #include <iostream>
 
@@ -67,7 +67,6 @@ int main() {
     // since count will never be incremented by 1,
     // it will always stay at five.
     // therefore, infinite loop.
-    // poetick reatard ca'nt speal
 
     /* int returnValue{ breakOrReturn() };
     std::cout << "Function breakOrReturn returned " << returnValue << '\n'; */

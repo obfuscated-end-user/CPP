@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/stdcin-and-handling-invalid-input/
+// https://www.learncpp.com/cpp-tutorial/stdcin-and-handling-invalid-input
 
 #include <iostream>
 #include <limits>

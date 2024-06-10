@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz
 
 /*
 Implement a game of hi-lo. First, your program should pick a random integer between 1 and 100. The user is given 7 tries to guess the number.
@@ -49,8 +49,6 @@ int main() {
 	std::mt19937 mt{ ss };
 	std::uniform_int_distribution random_num { 1, 100 };
     int hidden_num = random_num(mt);
-
-
 
     char playAgain = 'y';
     bool again = true;

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/default-arguments/
+// https://www.learncpp.com/cpp-tutorial/default-arguments
 
 #include <iostream>
 

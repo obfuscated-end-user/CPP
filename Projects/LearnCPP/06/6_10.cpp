@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/static-local-variables/
+// https://www.learncpp.com/cpp-tutorial/static-local-variables
 
 #include <iostream>
 

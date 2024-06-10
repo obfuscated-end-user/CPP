@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/function-templates-with-multiple-template-types/
+// https://www.learncpp.com/cpp-tutorial/function-templates-with-multiple-template-types
 
 #include <iostream>
 
@@ -7,7 +7,7 @@ template <typename T, typename U> // We're using two template type parameters na
     return (x > y) ? x : y; // uh oh, we have a narrowing conversion problem here
 } */
 
-// auto to remove the narrowing conversion shit
+// auto to remove the narrowing conversion
 auto max(T x, U y) {
     return (x > y) ? x : y;
 }
@@ -16,7 +16,7 @@ auto max(T x, U y) {
 auto max2(auto x, auto y) {
     return (x > y) ? x : y;
     // this does the same thing as the previous one.
-    // this also sends a dumbass warning in the terminal.
+    // this also sends a warning in the terminal.
 }
 
 int main() {

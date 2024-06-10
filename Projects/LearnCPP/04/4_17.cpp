@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-stdstring/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-stdstring
 
 #include <iostream>
 #include <string> // allows use of std::string
@@ -8,7 +8,7 @@ using namespace std::literals;
 
 int main() {
     std::cout << "Hello, world!\n";
-    // std::string name { "Alex" }; // initialize name with string literal "Alex"
+    // std::string name { "Mark" }; // initialize name with string literal "Mark"
     // name = "John";              // change name to "John"
 
     /* std::cout << "Enter your full name: ";
@@ -37,9 +37,6 @@ int main() {
     std::cout << "foo\n";   // no suffix is a C-style string literal
     std::cout << "goo\n"s;  // s suffix is a std::string literal
 
-    // doesn't fucking work
-    // WHAT THE FUCK IT WORKS NOW
-    // UPDATE THE FUCKING MSYS BULLSHIT
     std::cout << "moo\n"sv; // sv suffix is a std::string_view literal
     return 0;
 }

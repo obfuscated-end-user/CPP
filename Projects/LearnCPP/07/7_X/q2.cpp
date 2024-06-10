@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz
 
 /*
 A prime number is a natural number greater than 1 that is evenly divisible (with no remainder) only by 1 and itself. Complete the following program by writing the isPrime() function using a for-loop. When successful, the program will print “Success!”.
@@ -42,7 +42,7 @@ int main()
 #include <cmath>
 
 bool isPrime(int x) {
-    // according to maths and shit 1 is not prime because 1 and 1 are the same things therefore you're gay.
+    // according to maths 1 is not prime because 1 and 1 are the same things
     if (x <= 1)
         return false;
     // if number can be divided, then that number is not prime

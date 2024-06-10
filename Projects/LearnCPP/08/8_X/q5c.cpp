@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz
 
 /*
 5c) Write a function template named sub that allows the user to subtract two values of different types. The following program should run:

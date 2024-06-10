@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-4-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-4-summary-and-quiz
 
 /*
     Write the following program: The user is asked to enter 2 floating point numbers (use doubles). The user is then asked to enter one of the following mathematical symbols: +, -, *, or /. The program computes the answer on the two numbers the user entered and prints the results. If the user enters an invalid symbol, the program should print nothing.
@@ -37,7 +37,7 @@ int main() {
     } */
 
     // slightly modified version
-    // should've done this shit with functions fucking retard
+    // should've done this thing with functions
     double num1, num2;
     char symbol;
     std::cout << "Enter a double value: ";

@@ -1,9 +1,8 @@
-// https://www.learncpp.com/cpp-tutorial/literals/
+// https://www.learncpp.com/cpp-tutorial/literals
 
 #include <iostream>
 
 int main() {
-    // std::string fuck = "fuck";
     float f { 4.1f }; // use 'f' suffix so the literal is a float and matches variable type of float
     double d { 4.1 }; // change variable to type double so it matches the literal type double
 

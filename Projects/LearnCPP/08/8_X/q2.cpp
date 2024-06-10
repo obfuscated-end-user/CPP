@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz
 
 /*
 2a) Upgrade the following program using type aliases:

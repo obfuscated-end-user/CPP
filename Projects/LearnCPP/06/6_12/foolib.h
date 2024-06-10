@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/using-declarations-and-using-directives/
+// https://www.learncpp.com/cpp-tutorial/using-declarations-and-using-directives
 
 namespace foo {
     // newly introduced function

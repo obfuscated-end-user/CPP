@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz
 
 /*
 What is the output of this program and why?

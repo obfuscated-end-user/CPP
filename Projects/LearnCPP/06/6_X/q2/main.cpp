@@ -27,8 +27,7 @@ int main()
 #include <iostream>
 #include "constants.h"
 
-int main()
-{
+int main() {
 	std::cout << "How many students are in your class? ";
 	int students{};
 	std::cin >> students;

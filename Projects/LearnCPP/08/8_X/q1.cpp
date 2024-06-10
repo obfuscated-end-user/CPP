@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-8-summary-and-quiz
 
 /*
 What type of conversion happens in each of the following cases? Valid answers are: No conversion needed, numeric promotion, numeric conversion, won’t compile due to narrowing conversion. Assume int and long are both 4 bytes.

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/pass-by-address-part-2/
+// https://www.learncpp.com/cpp-tutorial/pass-by-address-part-2
 
 #include <iostream>
 #include <cstddef> // for std::nullptr_t

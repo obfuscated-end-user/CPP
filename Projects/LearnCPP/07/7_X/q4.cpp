@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-7-comprehensive-quiz
 
 /*
 Update your previous solution to handle invalid input (e.g. ‘x’) or valid input with extraneous characters (e.g. “43x”) when the user is guessing a number.
@@ -10,9 +10,8 @@ Hint: Write a separate function to handle the user inputting their guess (along 
 #include <random>
 #include <limits>
 
-// i don't know the fucking answer
 // answer is on the site itself, just look it up there
-// because trying to put it here will fuck up the entire program
+// because trying to put it here will break the entire program
 bool checkInput(int guess) {
     if (std::cin.fail()) {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

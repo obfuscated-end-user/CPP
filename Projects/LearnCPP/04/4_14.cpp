@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/compile-time-constants-constant-expressions-and-constexpr/
+// https://www.learncpp.com/cpp-tutorial/compile-time-constants-constant-expressions-and-constexpr
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ int main()
     constexpr int something { sum };  // ok: sum is a constant expression
 
     std::cout << "Enter your age: ";
-    int age{}; // vague ass shit, therefore not a constant expression
+    int age{}; // vague, therefore not a constant expression
     std::cin >> age;
 
     // constexpr int myAge { age };      // compile error: age is not a constant expression

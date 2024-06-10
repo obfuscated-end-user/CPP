@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/function-template-instantiation/
+// https://www.learncpp.com/cpp-tutorial/function-template-instantiation
 
 #ifndef MAX_H
 #define MAX_H

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-9-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-9-summary-and-quiz
 
 #include <iostream>
 

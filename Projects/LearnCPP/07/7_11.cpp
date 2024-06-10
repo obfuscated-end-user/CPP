@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/halts-exiting-your-program-early/
+// https://www.learncpp.com/cpp-tutorial/halts-exiting-your-program-early
 
 #include <iostream>
 #include <cstdlib> // for std::exit()

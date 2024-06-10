@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-4-summary-and-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-4-summary-and-quiz
 
 /*
 Extra credit: This one is a little more challenging.

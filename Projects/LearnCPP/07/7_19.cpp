@@ -1,10 +1,9 @@
-// https://www.learncpp.com/cpp-tutorial/generating-random-numbers-using-mersenne-twister/
+// https://www.learncpp.com/cpp-tutorial/generating-random-numbers-using-mersenne-twister
 
 #include <iostream>
 #include <random> // for std::mt19937, std::uniform_int_distribution, and std::random_device
 #include <chrono> // for std::chrono
 
-// WHOA NON CONST GLOBAL VARIABLES I HOPE YOUR PROGRAM BREAKS YOU FUCKING CUNT
 namespace Random { // capital R to avoid conflicts with functions named random()
 	std::mt19937 mt{ std::random_device{}() };
 	int get(int min, int max) {

@@ -12,7 +12,6 @@ always do the header guard thing:
 
 #ifndef name
 #define name
-// shit
 #endif
 
 always do the inline constexpr thing on shit like this

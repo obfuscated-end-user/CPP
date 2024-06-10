@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/type-deduction-with-pointers-references-and-const/
+// https://www.learncpp.com/cpp-tutorial/type-deduction-with-pointers-references-and-const
 
 #include <string>
 

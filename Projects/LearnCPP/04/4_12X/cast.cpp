@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-type-conversion-and-static_cast/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-type-conversion-and-static_cast
 
 #include <iostream>
 
@@ -11,8 +11,7 @@
 } */
 
 
-int main()
-{
+int main() {
 	std::cout << "Enter a single character: ";
 	char c{};
 	std::cin >> c;

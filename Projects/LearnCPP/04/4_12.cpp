@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-type-conversion-and-static_cast/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-type-conversion-and-static_cast
 
 #include <iostream>
 

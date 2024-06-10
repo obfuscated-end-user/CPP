@@ -1,10 +1,10 @@
-// https://www.learncpp.com/cpp-tutorial/using-declarations-and-using-directives/
+// https://www.learncpp.com/cpp-tutorial/using-declarations-and-using-directives
 
 #include <iostream>
 #include "foolib.h"
 
 // function that you defined that apparently has the same name as from an another function
-// from some random ass library
+// from some random library
 int someFcn(double) {
     return 1;
 }
