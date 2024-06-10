@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-the-preprocessor/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-the-preprocessor
 
 #include <iostream>
 

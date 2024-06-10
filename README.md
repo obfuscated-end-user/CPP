@@ -1,7 +1,7 @@
 # C++
 
 ## Introduction
-This repository contains C++ code.
+This repository contains C++ code.  
 Self-study kind of thing.
 
 ## Other

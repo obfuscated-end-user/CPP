@@ -1,6 +1,6 @@
 #include <iostream>
 
-// WHAT THE FUCK THIS WORKS
+// THIS WORKS
 #include "add.cpp"
 
 // int add(int x, int y); // needed so main.cpp knows that add() is a function defined elsewhere

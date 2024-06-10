@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/header-files/
+// https://www.learncpp.com/cpp-tutorial/header-files
 
 // 1) We really should have a header guard here, but will omit it for simplicity (we'll cover header guards in the next lesson)
 

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-function-parameters-and-arguments/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-function-parameters-and-arguments
 
 #include <iostream>
 
@@ -15,8 +15,7 @@ int doubleNumber(int x) {
     return 2 * x;
 }
 
-int main()
-{
+int main() {
     // Write a complete program that reads an integer from the user, doubles it using the doubleNumber() function you wrote in the previous quiz question, and then prints the doubled value out to the console.
     std::cout << doubleInteger(add(1, 2));
     return 0;

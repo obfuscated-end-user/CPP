@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/header-guards/
+// https://www.learncpp.com/cpp-tutorial/header-guards
 
 #include "square.h"
 #include "geometry.h"

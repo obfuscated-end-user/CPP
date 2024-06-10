@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/header-files/
+// https://www.learncpp.com/cpp-tutorial/header-files
 
 #include "add.h" // Insert contents of add.h at this point.  Note use of double quotes here.
 #include <iostream>
