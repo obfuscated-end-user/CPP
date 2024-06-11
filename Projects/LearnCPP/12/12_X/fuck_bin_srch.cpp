@@ -1,11 +1,11 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz
 
-// hey, i copied the code over from the site. i can't fucking do anything practical. i can't think like a programmer.
+// hey, i copied the code over from the site. i can't do anything practical. i can't think like a programmer.
 
 #include <iostream>
 #include <iterator>
 #include <cassert>
-#include <numeric>  // for std::midpoint. GO FUCK YOURSELF
+#include <numeric>  // for std::midpoint.
 
 // array is the array to search over.
 // target is the value we're trying to determine exists or not.
@@ -18,7 +18,7 @@ int binarySearch(const int* array, int target, int min, int max) {
     // while min is less than or equal to max
     while (min <= max) {
         // implement this iteratively
-        // int midpoint = std::midpoint(min, max);  // this doesn't work for me, even though i had set my version to C++20. i don't know what the fuck happened.
+        // int midpoint = std::midpoint(min, max);  // this doesn't work for me, even though i had set my version to C++20. i don't know what happened.
         // Before C++20
         int midpoint = min + ((max - min) / 2); // this way of calculating midpoint avoids overflow
 
@@ -36,7 +36,7 @@ int binarySearch(const int* array, int target, int min, int max) {
             min = midpoint + 1;
         } else {
             // if you haven't noticed already, the lines "max = midpoint - 1;" and "min = midpoint + 1;" prevent this from becoming an infinite loop. it modifies those values until it eventually leads here.
-            // ^ false. dumbass misconception.
+            // ^ false. stupid misconception.
             std::cout << "returning midpoint\n";
             return midpoint;
         }

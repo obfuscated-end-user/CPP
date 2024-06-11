@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/static-member-variables/
+// https://www.learncpp.com/cpp-tutorial/static-member-variables
 
 #include <iostream>
 

@@ -1,9 +1,9 @@
-// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files/
+// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files
 
 #include "Date.h"
 #include <iostream>
 
-// uncomment the code below this comment to fuck up the build process
+// uncomment the code below this comment to mess up the build process
 /* Date::Date(int year, int month, int day) {
     SetDate(year, month, day);
 }

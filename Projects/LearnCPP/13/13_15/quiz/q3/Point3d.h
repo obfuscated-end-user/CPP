@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes/
+// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes
 
 #ifndef POINT3D_H
 #define POINT3D_H

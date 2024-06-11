@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz
 
 #include <iostream>
 #include <iterator>

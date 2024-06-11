@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-standard-library-algorithms/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-standard-library-algorithms
 
 #include <iostream>
 #include <iterator>

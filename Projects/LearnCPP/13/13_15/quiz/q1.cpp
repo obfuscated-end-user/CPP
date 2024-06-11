@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes/
+// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes
 
 /*
     In geometry, a point is a position in space. We can define a point in 3d-space as the set of coordinates x, y, and z. For example, the Point(2.0, 1.0, 0.0) would be the point at coordinate space x=2.0, y=1.0, and z=0.0.

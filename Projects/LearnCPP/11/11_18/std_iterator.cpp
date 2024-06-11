@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-iterators/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-iterators
 
 #include <array>
 #include <iostream>
@@ -20,7 +20,6 @@ int main() {
 }
 
 // ++p means increment p pointer to whatever type it points to. since p is a int pointer, it increments 4 instead of just 1
-// fuck you
 
 /*
 Don’t worry about the types of the iterators for now, we’ll re-visit iterators in a later chapter. The important thing is that the iterator takes care of the details of iterating through the container. All we need are four things: the begin point, the end point, operator++ to move the iterator to the next element (or the end), and operator* to get the value of the current element.

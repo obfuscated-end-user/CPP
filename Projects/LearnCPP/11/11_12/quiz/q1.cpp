@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/dynamically-allocating-arrays/
+// https://www.learncpp.com/cpp-tutorial/dynamically-allocating-arrays
 
 /*
 Question #1

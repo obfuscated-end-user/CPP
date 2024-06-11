@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz
 
 /*
 Write a function to print a C-style string character by character. Use a pointer to step through each character of the string and print that character. Stop when you hit the null terminator. Write a main function that tests the function with the string literal “Hello, world!”.
@@ -17,7 +17,7 @@ std::cout << *str; // e
 #include <string.h>
 
 void printCString(const char* cstring, int& size) {
-    std::cout << "fuck\n";
+    std::cout << "foo\n";
 /*     for (int i; *cstring < size; ++cstring) {
         std::cout << *cstring;
     } */
@@ -34,11 +34,11 @@ void printCString(const char* cstring, int& size) {
         std::cout << *cstring;
     }
     */
-    std::cout << "shit\n";
+    std::cout << "bar\n";
 }
 
 void printCString2(const char* cstring) {
-    // THERE IS SOMETHING CALLED A WHILE LOOP FUCKING USE IT RETARD
+    // THERE IS SOMETHING CALLED A WHILE LOOP, USE IT
     while (*cstring != '\0') {  // while character is not a null terminator
         std::cout << *cstring;  // print that character
         ++cstring;              // move to next character

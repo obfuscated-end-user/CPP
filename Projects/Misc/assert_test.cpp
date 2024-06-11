@@ -10,6 +10,6 @@ int main() {
     const int number = 1;
     /* std::cout << "Enter a number: ";
     std::cin >> number; */
-    static_assert((number % 0), "Number is not even"); FUCK FUCK FUCK
+    static_assert((number % 0), "Number is not even");
     return 0;
 }

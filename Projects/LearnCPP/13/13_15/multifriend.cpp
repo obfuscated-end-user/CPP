@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes/
+// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes
 
 #include <iostream>
 
@@ -15,7 +15,7 @@ public:
     {
     }
 
-    // code will fuck up if you remove the class prototype from above
+    // code will break if you remove the class prototype from above
     friend void printWeather(const Temperature& temperature, const Humidity& humidity);
 };
 

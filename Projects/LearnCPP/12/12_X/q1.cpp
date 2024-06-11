@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz
 
 /*
 Question #1
@@ -25,7 +25,7 @@ double max(double a, double b);
 void swap(int& a, int& b);
 
 // c) A function named getLargestElement() that takes a dynamically allocated array of integers and returns the largest number in such a way that the caller can change the value of the element returned (don’t forget the length parameter).
-int& getLargestElement(int* array, int length); // YOU'RE A FUCKING RETARD
+int& getLargestElement(int* array, int length);
 
 int main() {
     std::cout << '\n';

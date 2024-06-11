@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/void-pointers/
+// https://www.learncpp.com/cpp-tutorial/void-pointers
 
 #include <iostream>
 

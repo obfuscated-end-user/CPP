@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz
 
 /*
 Question #5
@@ -14,7 +14,7 @@ int* allocateArray(const int length)
 }
 */
 
-// returns an int pointer, and wall we homies know that c++ goes full retard with array pointers and memory leak and shit because you never delete it.
+// returns an int pointer, because c++ breaks with array pointers and does some memory leak thing because you never delete it.
 int* allocateArray(const int length) {
     int temp[length]{};
     return temp;

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/generating-random-numbers-using-mersenne-twister/
+// https://www.learncpp.com/cpp-tutorial/generating-random-numbers-using-mersenne-twister
 
 #include <iostream>
 #include <random>

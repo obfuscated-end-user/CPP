@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector/
+// https://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector
 
 #include <vector>
 #include <iostream>

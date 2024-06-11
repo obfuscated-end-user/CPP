@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/const-class-objects-and-member-functions/
+// https://www.learncpp.com/cpp-tutorial/const-class-objects-and-member-functions
 
 class Something {
 public:

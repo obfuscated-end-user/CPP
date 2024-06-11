@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes/
+// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes
 
 /*
 1b) Instead of making class Point3d a friend of class Vector3d, make member function Point3d::moveByVector a friend of class Vector3d.
@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-// fuckin hell you need to flip Point3d and Vector3d
+// you need to flip Point3d and Vector3d
 class Vector3d;
 
 class Point3d {

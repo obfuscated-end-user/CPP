@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/pointers-to-pointers/
+// https://www.learncpp.com/cpp-tutorial/pointers-to-pointers
 
 #include <iostream>
 

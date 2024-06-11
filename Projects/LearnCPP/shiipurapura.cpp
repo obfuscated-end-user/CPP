@@ -12,8 +12,8 @@ int max(int x, int y) {
     return (x > y) ? x : y; */
 
 int main() {
-    /* std::int32_t fuck = 29919012040989911489310790;
-    std::cout << fuck << " " << sizeof(fuck) << std::endl;
+    /* std::int32_t foo = 29919012040989911489310790;
+    std::cout << foo << " " << sizeof(foo) << std::endl;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.fail(); */
     int x;

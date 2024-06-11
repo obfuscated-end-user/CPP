@@ -57,14 +57,14 @@ MyString& MyString::operator= (const MyString& str) {
 }
 
 int main() {
-	MyString alex("Alex", 5); // Meet Alex
+	MyString mark("Mark", 5); // Meet Mark
 	MyString employee;
-	employee = alex; // Alex is our newest employee
+	employee = mark; // Mark is our newest employee
 	std::cout << employee; // Say your name, employee
 
-    alex = alex; // Alex is himself
+    mark = mark; // Mark is himself
     // garbage
-    std::cout << alex; // Say your name, Alex
+    std::cout << mark; // Say your name, Mark
 
 	return 0;
 }

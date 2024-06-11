@@ -263,5 +263,5 @@ int main() {
     return 0;
 }
 
-// fuck i give up can't find out why the fuck it won't work
+// i give up can't find out why it won't work
 //  i need sleep

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files/
+// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files
 
 class Date {
 private:

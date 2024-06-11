@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/for-each-loops/
+// https://www.learncpp.com/cpp-tutorial/for-each-loops
 
 #include <iostream>
 

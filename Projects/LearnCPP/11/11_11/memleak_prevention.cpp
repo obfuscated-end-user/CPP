@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/dynamic-memory-allocation-with-new-and-delete/
+// https://www.learncpp.com/cpp-tutorial/dynamic-memory-allocation-with-new-and-delete
 
 #include <iostream>
 

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files/
+// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files
 
 // refer to chainable_function.cpp in 13_10 directory
 class Calc {

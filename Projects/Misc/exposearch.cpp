@@ -1,5 +1,5 @@
 // NOT MINE
-// source: https://www.freecodecamp.org/news/search-algorithms-exponential-search-explained/
+// source: https://www.freecodecamp.org/news/search-algorithms-exponential-search-explained
 
 // C++ program to find an element x in a
 // sorted array using Exponential search.

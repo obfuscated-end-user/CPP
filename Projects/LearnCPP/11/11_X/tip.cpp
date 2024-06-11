@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz
 
 #include <algorithm> // std::shuffle
 #include <array>

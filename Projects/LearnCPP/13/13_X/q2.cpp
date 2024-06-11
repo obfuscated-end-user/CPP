@@ -16,7 +16,7 @@ public:
 
 	~HelloWorld() {
         delete[] m_data; // string
-        std::cout << "lol fuckin destroyed"; // proof
+        std::cout << "lol destroyed"; // proof
 	}
 
 	void print() const {

@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files/
+// https://www.learncpp.com/cpp-tutorial/class-code-and-header-files
 
 /*
 You learned that you can put function declarations inside header files in order to use those functions in multiple files or even multiple projects. Classes are no different. Class definitions can be put in header files in order to facilitate reuse in multiple files or multiple projects. Traditionally, the class definition is put in a header file of the same name as the class, and the member functions defined outside of the class are put in a .cpp file of the same name as the class.

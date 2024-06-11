@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes/
+// https://www.learncpp.com/cpp-tutorial/friend-functions-and-classes
 
 class Accumulator {
 private:
@@ -27,8 +27,8 @@ int main() {
     return 0;
 }
 
-// friend sounds like a stupid fucking keyword
-// remember, this is different from the static function shit from the previous lessons
+// friend is a stupid keyword
+// remember, this is different from the static function thing from the previous lessons
 
 // a function declaration in class has a friend keyword
 // some function outside the class suddenly has access to the private members of that class

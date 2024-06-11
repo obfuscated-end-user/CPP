@@ -1,4 +1,4 @@
-// https://arvid.io/2018/06/30/on-cxx-random-number-generator-quality/
+// https://arvid.io/2018/06/30/on-cxx-random-number-generator-quality
 
 #include <random>
 #include <stdio.h>

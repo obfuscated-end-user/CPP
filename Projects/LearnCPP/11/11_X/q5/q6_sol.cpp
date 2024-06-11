@@ -1,6 +1,6 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz
 
-// YEEK YEEK WOOP WOOP WHY YOU CHEATING YO ASS
+// YEEK YEEK WOOP WOOP WHY YOU CHEATING
 
 #include <iostream>
 #include <array>

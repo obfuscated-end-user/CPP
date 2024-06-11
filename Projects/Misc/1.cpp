@@ -1,12 +1,12 @@
 /*
     RELEARN ALL OF THESE:
     - syntax
-    - basic shit:
+    - basic stuff:
         - variables
             - types
             - data structures
         - operators
-        - errors (whatever the fuck you call them)
+        - errors (whatever you call them)
         - exception handling
         - conditionals
         - loops

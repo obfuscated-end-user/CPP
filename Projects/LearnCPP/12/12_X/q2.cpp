@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz
 
 /*
 Question #2
@@ -29,7 +29,7 @@ float divide(float x, float y) {
 double divide(float x, float y) {
     return x / y;
 }
-// you: float is also double i don't fucking know
+// you: float is also double i don't know
 // answer: The two divide functions are not distinct, as they have the same name and same parameters. There is also a potential divide by 0 issue.
 
 // d)

@@ -27,7 +27,7 @@ Reminder: Only seed your random number generator once.
 
 g) Write a function named getCardValue() that returns the value of a Card (e.g. a 2 is worth 2, a ten, jack, queen, or king is worth 10. Assume an Ace is worth 11).
 
-There's nothing wrong if you give up. Do it, motherfucker.
+There's nothing wrong if you give up.
 */
 
 // a) A deck of cards has 52 unique cards (13 card ranks of 4 suits). Create enumerations for the card ranks (2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace) and suits (clubs, diamonds, hearts, spades). Those enumerators will not be used to index arrays.
@@ -95,7 +95,7 @@ void printCard(const Card& card) {
 
 // function with return type of std::array that has 52 Card objects
 std::array<Card, 52> createDeck() {
-    // fuck aliases let's try doing it without that
+    // screw aliases let's try doing it without that
     std::array<Card, 52> deck {};   // the deck to fill cards with
     std::array<Card, 52>::size_type index = 0; // index
     // twisted fate's balls have 52 iterations

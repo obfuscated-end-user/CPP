@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/const-class-objects-and-member-functions/
+// https://www.learncpp.com/cpp-tutorial/const-class-objects-and-member-functions
 
 #include <iostream>
 
@@ -20,7 +20,7 @@ public:
         m_day = day;
     }
 
-    // removing the const keyboard from at least one these getter functions fucks up the program
+    // removing the const keyboard from at least one these getter functions breaks the program
     int getYear() const {
         return m_year;
     }

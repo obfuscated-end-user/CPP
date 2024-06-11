@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-iterators/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-iterators
 
 #include <iostream>
 #include <vector>

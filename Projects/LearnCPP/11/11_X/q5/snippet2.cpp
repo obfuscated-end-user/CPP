@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-11-comprehensive-quiz
 
 /*
 Question #5

@@ -1,5 +1,4 @@
 // https://www.learncpp.com/cpp-tutorial/chapter-14-project
-// FUCK
 
 #include <array>
 #include <cassert>
@@ -64,7 +63,7 @@ public:
         return Direction {up};
     }
 
-    // what the fuck? Direction& dir doesn't work?
+    // Direction& dir doesn't work?
     friend std::ostream& operator<<(std::ostream& stream, Direction dir) {
         switch (dir.getType()) {
             case Direction::up:     return (stream << "up");
@@ -80,7 +79,7 @@ public:
         return Direction {random};
     }
 
-// declare below else it won't fucking work
+// declare below else it won't work
 private:
     Type m_type;
 };

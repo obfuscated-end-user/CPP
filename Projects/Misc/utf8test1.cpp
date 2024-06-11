@@ -4,7 +4,7 @@
 #include <string>
 
 int main() {
-    // const std::char8_t[] ass = u8"日本語";
+    // const std::char8_t[] abc = u8"日本語";
     std::string jp {u8"日本語"};
     std::cout << jp << std::endl;
     std::cout << "日本語" << std::endl;

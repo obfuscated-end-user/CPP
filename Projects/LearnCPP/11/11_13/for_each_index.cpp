@@ -1,9 +1,9 @@
-// https://www.learncpp.com/cpp-tutorial/for-each-loops/
+// https://www.learncpp.com/cpp-tutorial/for-each-loops
 
 #include <iostream>
 
 int main() {
-    std::string names[]{ "Alex", "Betty", "Caroline", "Dave", "Emily" }; // Names of the students
+    std::string names[]{ "Mark", "Betty", "Caroline", "Dave", "Emily" }; // Names of the students
     constexpr int scores[]{ 84, 92, 76, 81, 56 };
     int maxScore{ 0 };
 

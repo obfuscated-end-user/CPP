@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz/
+// https://www.learncpp.com/cpp-tutorial/chapter-12-comprehensive-quiz
 
 /*
 The best algorithm for determining whether a value exists in a sorted array is called binary search.
@@ -89,8 +89,8 @@ int binarySearch(const int* array, int target, int min, int max) {
     If you discard the entire array without finding the target element, return a sentinel that represents “not found” (in this case, we’ll use -1, since it’s an invalid array index). */
     // loop through the first half
 
-    // if target is equal to the FUCK
-    // i forgot that target is the VALUE, not the fucking index you dumbass
+    // if target is equal to the VALUE
+    // i forgot that target is the VALUE, not the index
     /* if (target > max)
         return -1; */
 
@@ -158,7 +158,7 @@ int main() {
 }
 
 /*
-values that fuck up:
+values that break:
 12 26 44
 respective indices:
 2 5 7

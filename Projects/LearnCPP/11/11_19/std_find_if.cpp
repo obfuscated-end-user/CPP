@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/introduction-to-standard-library-algorithms/
+// https://www.learncpp.com/cpp-tutorial/introduction-to-standard-library-algorithms
 
 #include <algorithm>
 #include <array>
@@ -21,8 +21,7 @@ int main() {
 
     if (found == arr.end()) {
         std::cout << "No nuts\n";
-    }
-    else {
+    } else {
         std::cout << "Found " << *found << '\n';
     }
 

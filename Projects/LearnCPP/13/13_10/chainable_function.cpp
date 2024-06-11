@@ -1,4 +1,4 @@
-// https://www.learncpp.com/cpp-tutorial/the-hidden-this-pointer/
+// https://www.learncpp.com/cpp-tutorial/the-hidden-this-pointer
 
 class Calc {
 private:

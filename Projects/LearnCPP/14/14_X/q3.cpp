@@ -6,12 +6,12 @@
 class IntArray {
 private:
     int m_length = 0;
-    // int pointer because you know, arrays and shit in c++
+    // int pointer because you know, arrays in c++
     int* m_array = nullptr;
 
 public:
     explicit IntArray(int length): m_length {length} {
-        // prevents really stupid shit
+        // prevents really stupid stuff
         assert(length > 0 && "IntArray length should be a positive integer");
         // reserve space of that size
         m_array = new int[m_length] {};
@@ -87,7 +87,7 @@ int main() {
 
 	a[4] = 7;
 
-	std::cout << b << '\n'; // what the fuck?
+	std::cout << b << '\n'; // what?
 
 	return 0;
 }

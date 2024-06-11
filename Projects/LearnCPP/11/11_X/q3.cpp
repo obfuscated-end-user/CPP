@@ -12,7 +12,7 @@ void swap(int& a, int& b)
 
 #include <iostream>
 
-// i know this looks fucking retarded but it works
+// i know this looks stupid but it works
 void swap(int& a, int& b) { // you need the ampersands or it won't work
     int c = a;
     a = b;

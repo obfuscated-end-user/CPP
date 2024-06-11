@@ -20,10 +20,10 @@ void convertToASCII(std::string letter) {
     std::string msg = "\xE0\xA4\xAE\xE0\xA4\xB9\xE0\xA4\xB8\xE0\xA5\x81\xE0\xA4\xB8";
     //std::cout << msg;
     std::stringstream ss;
-    ss <<"pussy 123\n";
+    ss <<"mario 123\n";
     std::cout << ss.str();
     
-    std::string test1 = "fuck";
+    std::string test1 = "foo";
     convertToASCII(test1);
     std::cout << test1 << '\n';
 } */

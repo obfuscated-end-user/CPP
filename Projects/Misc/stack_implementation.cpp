@@ -1,4 +1,4 @@
-// https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
+// https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials
 
 // TBD
 #include <bits/stdc++.h>
