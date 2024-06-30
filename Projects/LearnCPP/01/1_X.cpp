@@ -2,8 +2,7 @@
 
 #include <iostream>
 
-int main()
-{
+int main() {
     int num1, num2;
     std::cout << "Enter an integer: ";
     std::cin >> num1;
