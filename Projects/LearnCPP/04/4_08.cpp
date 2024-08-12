@@ -14,7 +14,7 @@ int main() {
     std::cout << 9876543.21f << '\n';
     std::cout << 0.0000987654321f << "\n\n";
 
-    std::cout << std::setprecision(16); // show 16 digits of precision
+    std::cout << std::setprecision(17); // show 17 digits of precision
     std::cout << 3.33333333333333333333333333333333333333f <<'\n'; // f suffix means float
     std::cout << 3.33333333333333333333333333333333333333 << "\n\n"; // no suffix means double
 

@@ -1,21 +1,23 @@
 // https://www.learncpp.com/cpp-tutorial/object-sizes-and-the-sizeof-operator
 
+#include <iomanip>
 #include <iostream>
 
 int main() {
     int foo;
-    std::cout << "bool:\t\t" << sizeof(bool) << " bytes\n";
-    std::cout << "char:\t\t" << sizeof(char) << " bytes\n";
-    std::cout << "wchar_t:\t" << sizeof(wchar_t) << " bytes\n";
-    std::cout << "char16_t:\t" << sizeof(char16_t) << " bytes\n";
-    std::cout << "char32_t:\t" << sizeof(char32_t) << " bytes\n";
-    std::cout << "short:\t\t" << sizeof(short) << " bytes\n";
-    std::cout << "int:\t\t" << sizeof(int) << " bytes\n";
-    std::cout << "long:\t\t" << sizeof(long) << " bytes\n";
-    std::cout << "long long:\t" << sizeof(long long) << " bytes\n";
-    std::cout << "float:\t\t" << sizeof(float) << " bytes\n";
-    std::cout << "double:\t\t" << sizeof(double) << " bytes\n";
-    std::cout << "long double:\t" << sizeof(long double) << " bytes\n";
-    std::cout << "foo:\t\t" << sizeof(foo) << " bytes\n";
+    std::cout << std::left;
+    std::cout << std::setw(16) << "bool:" << sizeof(bool) << " bytes\n";
+    std::cout << std::setw(16) << "char:" << sizeof(char) << " bytes\n";
+    std::cout << std::setw(16) << "wchar_t:" << sizeof(wchar_t) << " bytes\n";
+    std::cout << std::setw(16) << "char16_t:" << sizeof(char16_t) << " bytes\n";
+    std::cout << std::setw(16) << "char32_t:" << sizeof(char32_t) << " bytes\n";
+    std::cout << std::setw(16) << "short:" << sizeof(short) << " bytes\n";
+    std::cout << std::setw(16) << "int:" << sizeof(int) << " bytes\n";
+    std::cout << std::setw(16) << "long:" << sizeof(long) << " bytes\n";
+    std::cout << std::setw(16) << "long long:" << sizeof(long long) << " bytes\n";
+    std::cout << std::setw(16) << "float:" << sizeof(float) << " bytes\n";
+    std::cout << std::setw(16) << "double:" << sizeof(double) << " bytes\n";
+    std::cout << std::setw(16) << "long double:" << sizeof(long double) << " bytes\n";
+    std::cout << std::setw(16) << "foo:" << sizeof(foo) << " bytes\n";
     return 0;
 }
