@@ -10,7 +10,7 @@ int main() {
     // char shi = {'死'}; // breaks the program
     // std::cout << shi << "\n\n";
 
-    char invalid {17};
+    char invalid { 17 };
     std::cout << invalid << '\n';
 
     std::cout << "Input a keyboard character: "; // assume the user enters "abcd" (without quotes)

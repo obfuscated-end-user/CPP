@@ -4,7 +4,7 @@
 #include <iostream>
 
 int main() {
-    std::int16_t i{5};
+    std::int16_t i { 5 };
     std::cout << sizeof(i) << '\n';
 
     std::uint_fast16_t sometype { 0 };

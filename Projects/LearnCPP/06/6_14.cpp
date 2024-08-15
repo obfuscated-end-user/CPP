@@ -1,4 +1,5 @@
 // https://www.learncpp.com/cpp-tutorial/constexpr-and-consteval-functions
+// DEAD LINK
 
 #include <iostream>
 

@@ -1,7 +1,10 @@
 // https://www.learncpp.com/cpp-tutorial/numeral-systems-decimal-binary-hexadecimal-and-octal
+// 2024/08/12 - Moved to "5.3 — Numeral systems (decimal, binary, hexadecimal, and octal)"
 
 #include <iostream>
-#include <bitset> // for std::bitset
+#include <bitset>   // for std::bitset
+#include <format>   // C++20
+// #include <print>    // C++23
 
 int main() {
     int x{ 012 };           // 0 before the number means this is octal
@@ -32,5 +35,9 @@ int main() {
 
 	std::cout << bin1 << ' ' << bin2 << '\n';
 	std::cout << std::bitset<4>{ 0b1010 } << '\n'; // create a temporary std::bitset and print it
+
+    // std::cout << std::format("{:b}\n", 0b1010); // C++20, {:b} formats the argument as binary digits
+    // std::cout << std::format("{:#b}\n", 0b1010);
+
     return 0;
 }
