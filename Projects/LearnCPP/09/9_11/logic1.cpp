@@ -4,7 +4,7 @@
 #include <string>
 
 const int& getNextId() {
-    static int s_x{ 0 }; // note: variable is non-const
+    static int s_x { 0 }; // note: variable is non-const
     ++s_x; // generate the next id
 
     return s_x; // and return a reference to it

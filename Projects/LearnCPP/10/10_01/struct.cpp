@@ -11,6 +11,6 @@ struct Fraction {
 
 // Now we can make use of our Fraction type
 int main() {
-	Fraction f{ 3, 4, 388 }; // this actually instantiates a Fraction object named f
+	Fraction f { 3, 4, 388 }; // this actually instantiates a Fraction object named f
 	return 0;
 }

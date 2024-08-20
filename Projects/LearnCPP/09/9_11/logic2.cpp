@@ -4,7 +4,7 @@
 #include <string>
 
 const int& getNextId() {
-    static int s_x{ 0 };
+    static int s_x { 0 };
     ++s_x;
     return s_x;
 }

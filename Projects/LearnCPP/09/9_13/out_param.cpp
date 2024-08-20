@@ -6,15 +6,15 @@
 // sinOut and cosOut are out parameters
 void getSinCos(double degrees, double& sinOut, double& cosOut) {
     // sin() and cos() take radians, not degrees, so we need to convert
-    static constexpr double pi = 3.14159265358979323846;
+    static constexpr double pi { 3.14159265358979323846 };
     double radians = degrees * pi / 180.0;
     sinOut = std::sin(radians);
     cosOut = std::cos(radians);
 }
 
 int main() {
-    double sin = 0.0;
-    double cos = 0.0;
+    double sin { 0.0 };
+    double cos { 0.0 };
 
     double degrees;
     std::cout << "Enter the number of degrees: ";

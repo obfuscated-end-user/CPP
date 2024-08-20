@@ -8,8 +8,8 @@ int& max(int& x, int& y) {
 }
 
 int main() {
-    int x{ 5 };
-    int y{ 6 };
+    int x { 5 };
+    int y { 6 };
 
     max(x, y) = 7; // sets the greater of x or y to 7
     std::cout << x << y;
