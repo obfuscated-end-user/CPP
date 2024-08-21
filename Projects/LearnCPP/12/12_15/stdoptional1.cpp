@@ -25,7 +25,7 @@ int main() {
 
     std::optional<int> o1 { 5 };            // initialize with a value
     std::optional<int> o2 {};               // initialize with no value
-    std::optional<int> o3 { std::nullopt }; // ""
+    std::optional<int> o3 { std::nullopt }; // "          "    "  "
 
     std::cout << *o1;               // dereference to get value stored in o1 (undefined behavior if o1 does not have a value)
     std::cout << o2.value();        // call value() to get value stoted in o2 (throws std::bad_optional_access exception if o2 does not have a value)
