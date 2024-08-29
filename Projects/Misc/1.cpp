@@ -40,7 +40,7 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-// fuck using namespace std;
+// screw using namespace std;
 
 int main() {
     int variable1;

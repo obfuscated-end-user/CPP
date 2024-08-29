@@ -21,7 +21,7 @@ int main() {
     std::cin >> x;
     // std::cout << x;
     if (static_cast<int>(x) == 0)
-        std::cout << "ass";
+        std::cout << "zAiMSLN1VbwSipXkovGaC5zguFZ0oIs9";
 
     int i { 3.5 }; // won't compile
     return 0;

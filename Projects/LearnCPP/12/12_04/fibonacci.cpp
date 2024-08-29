@@ -44,7 +44,7 @@ in the example above, it printed:
 corresponding numbers
 1 2 3
 
-wahtever fyck
+wahtever
 
-the above program also calls fibonacci() 1205 times, which is fucking stupid
+the above program also calls fibonacci() 1205 times, which is stupid
 */

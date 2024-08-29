@@ -5,7 +5,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "it fucking works" << '\n';
+    std::cout << "it works" << '\n';
     std::cout << getSquareSides();
     return 0;
 }

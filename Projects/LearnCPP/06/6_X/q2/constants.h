@@ -14,5 +14,5 @@ always do the header guard thing:
 #define name
 #endif
 
-always do the inline constexpr thing on shit like this
+always do the inline constexpr thing on things like this
 */
