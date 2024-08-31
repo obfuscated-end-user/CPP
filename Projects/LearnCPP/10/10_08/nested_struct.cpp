@@ -4,9 +4,9 @@
 
 struct Company {
     struct Employee { // accessed via Company::Employee
-        int id{};
-        int age{};
-        double wage{};
+        int id {};
+        int age {};
+        double wage {};
     };
     int numberOfEmployees{};
     Employee CEO{}; // Employee is a struct within the Company struct

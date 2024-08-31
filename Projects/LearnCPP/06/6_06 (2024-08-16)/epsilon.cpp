@@ -9,7 +9,7 @@
 // constAbs() can be called like a normal function, but can handle different types of values (e.g. int, double, etc...)
 template <typename T>
 constexpr T constAbs(T x) {
-    retutn (x < 0 ? -x : x);
+    return (x < 0 ? -x : x);
 }
 
 // absEpsilon is an absolute value

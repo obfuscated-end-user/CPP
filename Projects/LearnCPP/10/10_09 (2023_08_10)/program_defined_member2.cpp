@@ -14,7 +14,7 @@ struct Company {
 };
 
 int main() {
-    Company myCompany{ 7, { 1, 32, 55000.0 } };
+    Company myCompany { 7, { 1, 32, 55000.0 } };
     std::cout << myCompany.CEO.wage << '\n'; // print the CEO's wage
 
     return 0;
