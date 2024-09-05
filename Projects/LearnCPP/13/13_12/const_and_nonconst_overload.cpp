@@ -8,7 +8,7 @@ private:
     std::string m_value {};
 
 public:
-    Something(const std::string& value=""): m_value{ value } {}
+    Something(const std::string& value=""): m_value { value } {}
 
     // getValue() for const objects (returns const reference)
     const std::string& getValue() const {

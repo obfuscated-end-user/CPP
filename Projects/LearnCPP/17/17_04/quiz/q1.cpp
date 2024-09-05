@@ -11,7 +11,7 @@ private:
 	std::string m_color;
 
 public:
-	Fruit(std::string_view name, std::string_view color): m_name{name}, m_color{color} {}
+	Fruit(std::string_view name, std::string_view color): m_name { name }, m_color { color } {}
 
 	const std::string& getName() const {
         return m_name;
@@ -27,7 +27,7 @@ private:
 	double m_fiber;
 
 public:
-	Apple(std::string_view name, std::string_view color, double fiber):Fruit{name, color}, m_fiber{fiber} {}
+	Apple(std::string_view name, std::string_view color, double fiber): Fruit { name, color }, m_fiber { fiber } {}
 
 	double getFiber() const {
         return m_fiber;
@@ -42,7 +42,7 @@ std::ostream& operator<<(std::ostream& out, const Apple& a) {
 
 class Banana : public Fruit {
 public:
-	Banana(std::string_view name, std::string_view color): Fruit {name, color} {}
+	Banana(std::string_view name, std::string_view color): Fruit { name, color } {}
 };
 
 std::ostream& operator<<(std::ostream& out, const Banana& b) {
@@ -51,10 +51,10 @@ std::ostream& operator<<(std::ostream& out, const Banana& b) {
 }
 
 int main() {
-	const Apple a {"Red delicious", "red", 4.2};
+	const Apple a { "Red delicious", "red", 4.2 };
 	std::cout << a << '\n';
 
-	const Banana b {"Cavendish", "yellow"};
+	const Banana b { "Cavendish", "yellow" };
 	std::cout << b << '\n';
 
 	return 0;

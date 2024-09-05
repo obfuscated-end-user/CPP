@@ -14,7 +14,7 @@ int main() {
         std::cout << count << ' ';
     std::cout << '\n';
 
-    // does the same thing as above but looks more retarded
+    // does the same thing as above but looks more ehh
     { // the block here ensures block scope for count
         int count{ 1 }; // our init-statement
         while (count <= 10) { // our condition 

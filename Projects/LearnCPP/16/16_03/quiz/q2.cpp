@@ -10,7 +10,7 @@ private:
     std::string m_name;
 
 public:
-    Teacher(const std::string& name): m_name{name} {}
+    Teacher(const std::string& name): m_name { name } {}
 
     const std::string& getName() const {
         return m_name;
@@ -40,13 +40,13 @@ public:
 
 int main() {
     // Create a teacher outside the scope of the Department
-    Teacher t1 {"Bob"};
-    Teacher t2 {"Frank"};
-    Teacher t3 {"Beth"};
+    Teacher t1 { "Bob" };
+    Teacher t2 { "Frank" };
+    Teacher t3 { "Beth" };
 
     {
         // Create a department and add some Teachers to it
-        Department department{}; // create an empty Department
+        Department department {}; // create an empty Department
 
         department.add(t1);
         department.add(t2);

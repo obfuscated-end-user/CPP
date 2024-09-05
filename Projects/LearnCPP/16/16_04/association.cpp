@@ -14,7 +14,7 @@ private:
     std::vector<std::reference_wrapper<const Patient>> m_patient;
 
 public:
-    Doctor(const std::string& name): m_name{name} {}
+    Doctor(const std::string& name): m_name { name } {}
 
     void addPatient(Patient& patient);
 
@@ -37,7 +37,7 @@ private:
     }
 
 public:
-    Patient(const std::string& name): m_name{name} {}
+    Patient(const std::string& name): m_name { name } {}
 
     friend std::ostream& operator<<(std::ostream& out, const Patient& patient);
 
@@ -78,12 +78,12 @@ std::ostream& operator<<(std::ostream& out, const Patient& patient) {
 }
 
 int main() {
-    Patient dave {"Dave"};
-    Patient frank {"Frank"};
-    Patient betsy {"Betsy"};
+    Patient dave { "Dave" };
+    Patient frank { "Frank" };
+    Patient betsy { "Betsy" };
 
-    Doctor james {"James"};
-    Doctor scott {"Scott"};
+    Doctor james { "James" };
+    Doctor scott { "Scott" };
 
     james.addPatient(dave);
 

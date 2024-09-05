@@ -9,7 +9,7 @@ private:
     int m_id;
 
 public:
-    Car(const std::string& name, int id): m_name{name}, m_id{id} {}
+    Car(const std::string& name, int id): m_name { name }, m_id { id } {}
 
     const std::string& getName() const {
         return m_name;
@@ -38,10 +38,10 @@ public:
 };
 
 Car CarLot::s_carLot[4] {
-    {"Prius", 4},
-    {"Corolla", 17},
-    {"Accord", 84},
-    {"Matrix", 62}
+    { "Prius", 4 },
+    { "Corolla", 17 },
+    { "Accord", 84 },
+    { "Matrix", 62 }
 };
 
 class Driver {
@@ -50,7 +50,7 @@ private:
     int m_carId;
 
 public:
-    Driver(const std::string& name, int carId): m_name{name}, m_carId{carId} {}
+    Driver(const std::string& name, int carId): m_name { name }, m_carId { carId } {}
 
     const std::string& getName() const {
         return m_name;
@@ -62,8 +62,8 @@ public:
 };
 
 int main() {
-    Driver d {"Franz", 17};
-    Car* car {CarLot::getCar(d.getCardId())};
+    Driver d { "Franz", 17 };
+    Car* car { CarLot::getCar(d.getCardId()) };
 
     if (car)
         std::cout << d.getName() << " is driving a " << car->getName() << '\n';
