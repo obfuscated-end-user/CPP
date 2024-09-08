@@ -4,7 +4,7 @@ class Something {
 public:
     int m_value {};
 
-    Something(): m_value{0} {
+    Something(): m_value { 0 } {
     }
 
     void setValue(int value) {
