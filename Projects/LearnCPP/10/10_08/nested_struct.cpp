@@ -8,8 +8,8 @@ struct Company {
         int age {};
         double wage {};
     };
-    int numberOfEmployees{};
-    Employee CEO{}; // Employee is a struct within the Company struct
+    int numberOfEmployees {};
+    Employee CEO {}; // Employee is a struct within the Company struct
 };
 
 int main() {
