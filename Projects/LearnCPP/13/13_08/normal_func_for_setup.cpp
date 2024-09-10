@@ -25,7 +25,7 @@ public:
 
 int main() {
     Foo a;
-    Foo b{ 5 };
+    Foo b { 5 };
 
     return 0;
 }

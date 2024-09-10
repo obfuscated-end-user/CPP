@@ -28,7 +28,7 @@ private:
 
 public:
     // call Person(std::string_view, int) to initialize these fields
-    BaseballPlayer(std::string_view name="", int age=0, double battingAverage=0.0, int homeRuns=0): Person { name, age }, m_battingAverage{ battingAverage }, m_homeRuns{ homeRuns } {}
+    BaseballPlayer(std::string_view name="", int age=0, double battingAverage=0.0, int homeRuns=0): Person { name, age }, m_battingAverage { battingAverage }, m_homeRuns { homeRuns } {}
 
     double getBattingAverage() const {
         return m_battingAverage;

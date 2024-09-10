@@ -29,7 +29,7 @@ public:
 
 int main() {
     Fraction zero; // will call Fraction(0, 1)
-    Fraction zero{}; // will call Fraction(0, 1)
-    Fraction six{ 6 }; // will call Fraction(6, 1)
-    Fraction fiveThirds{ 5, 3 }; // will call Fraction(5, 3)
+    Fraction zero {}; // will call Fraction(0, 1)
+    Fraction six { 6 }; // will call Fraction(6, 1)
+    Fraction fiveThirds { 5, 3 }; // will call Fraction(5, 3)
 }

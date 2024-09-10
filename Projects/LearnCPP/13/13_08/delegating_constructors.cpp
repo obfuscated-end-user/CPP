@@ -11,14 +11,12 @@ private:
 
 public:
     Employee(int id=0, std::string_view name=""):
-        m_id{ id }, m_name{ name }
-    {
+        m_id { id }, m_name { name } {
         std::cout << "Employee " << m_name << " created.\n";
     }
 
     // Use a delegating constructor to minimize redundant code
-    Employee(std::string_view name) : Employee{ 0, name }
-    { }
+    Employee(std::string_view name) : Employee { 0, name } { }
 };
 
 int main() {

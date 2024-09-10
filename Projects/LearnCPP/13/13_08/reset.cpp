@@ -4,13 +4,12 @@
 
 class Foo {
 private:
-    int m_a{ 5 };
-    int m_b{ 6 };
+    int m_a { 5 };
+    int m_b { 6 };
 
 
 public:
-    Foo() {
-    }
+    Foo() {}
 
     Foo(int a, int b) : m_a{ a }, m_b{ b } {
     }

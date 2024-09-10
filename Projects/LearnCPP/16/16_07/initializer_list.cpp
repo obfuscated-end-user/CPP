@@ -12,7 +12,7 @@ private:
 public:
     // constructors you're used to seeing
     IntArray() = default;
-    IntArray(int length): m_length{length}, m_data{new int[length]{}} {}
+    IntArray(int length): m_length { length }, m_data { new int[length] {} } {}
 
     // allow IntArray to use an std::initializer_list
     // use a delegating constructor to do the shortcut thing (the IntArray(static_cast<int>(list.size()) part)
@@ -44,12 +44,12 @@ public:
 
 int main() {
     // IntArray array{ 5, 4, 3, 2, 1 };
-    IntArray array = {5, 4, 3, 2, 1};   // initializer list
+    IntArray array = { 5, 4, 3, 2, 1 };   // initializer list
     for (int count = 0; count < array.getLength(); ++count)
         std::cout << array[count] << ' ';
 
     IntArray a1(5);   // uses IntArray(int), allocates an array of size 5
-    IntArray a2{ 5 }; // uses IntArray<std::initializer_list<int>, allocates array of size 1
+    IntArray a2 { 5 }; // uses IntArray<std::initializer_list<int>, allocates array of size 1
 
     return 0;
 }

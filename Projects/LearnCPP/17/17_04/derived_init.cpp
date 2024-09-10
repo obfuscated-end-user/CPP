@@ -7,7 +7,7 @@ private:
     int m_id;
 
 public:
-    Base(int id=0): m_id{id} {}
+    Base(int id=0): m_id { id } {}
 
     int getId() const {
         return m_id;
@@ -20,7 +20,7 @@ private:
 
 public:
     // Call Base(int) constructor with value id
-    Derived(double cost=0.0, int id=0): Base{id}, m_cost{cost} {}
+    Derived(double cost=0.0, int id=0): Base { id }, m_cost { cost } {}
 
     double getCost() const {
         return m_cost;

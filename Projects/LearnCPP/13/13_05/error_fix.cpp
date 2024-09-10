@@ -2,9 +2,9 @@
 
 class Date {
 private:
-    int m_year{ 1900 };
-    int m_month{ 1 };
-    int m_day{ 1 };
+    int m_year { 1900 };
+    int m_month { 1 };
+    int m_day { 1 };
 
 public:
     // Tell the compiler to create a default constructor, even if
@@ -19,8 +19,8 @@ public:
 };
 
 int main() {
-    Date date{}; // date is initialized to Jan 1st, 1900
-    Date today{ 2020, 10, 14 }; // today is initialized to Oct 14th, 2020
+    Date date {}; // date is initialized to Jan 1st, 1900
+    Date today { 2020, 10, 14 }; // today is initialized to Oct 14th, 2020
 
     return 0;
 }
