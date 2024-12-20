@@ -23,7 +23,7 @@ int main() {
     Employee e1 { "Joe", 1 };
     e1.print();
 
-    // For a class representing an employeem it doesn't make sense to allow creation of employees with no name.
+    // For a class representing an employee it doesn't make sense to allow creation of employees with no name.
     Employee e2 {}; // compile error: no matching constructor
     e2.print();
 
