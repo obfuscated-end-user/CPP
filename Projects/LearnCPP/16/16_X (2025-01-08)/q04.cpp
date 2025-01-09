@@ -65,8 +65,7 @@ int main() {
     // If the array is empty
     if (v1.size() == 0) {
         std::cout << "The array has no elements\n";
-    }
-    else {
+    } else {
         printArray(v1);
 
         auto m1 { findMinMaxIndices(v1) };
