@@ -3,7 +3,7 @@
 #include <functional>
 
 int main() {
-    // A regular function pointer. Only works with an empty capture clause (empty[]).
+    // A regular function pointer. Only works with an empty capture clause (empty []).
     double (*addNumbers1)(double, double) {
         [](double a, double b) {
             return a + b;

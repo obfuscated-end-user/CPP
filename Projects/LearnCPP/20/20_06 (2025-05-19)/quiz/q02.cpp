@@ -58,7 +58,7 @@ struct Season {
 };
 
 int main() {
-    std::array<Season, 4> seasons{
+    std::array<Season, 4> seasons {
         { { "Spring", 285.0 },
         { "Summer", 296.0 },
         { "Fall", 288.0 },

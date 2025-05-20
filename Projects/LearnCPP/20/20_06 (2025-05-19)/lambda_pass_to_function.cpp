@@ -22,7 +22,7 @@ void repeat3(int repetitions, const auto& fn) {
         fn(i);
 }
 
-// Case 4: use use function pointer (only for lambda with no captures)
+// Case 4: use function pointer (only for lambda with no captures)
 void repeat4(int repetitions, void (*fn)(int)) {
     for (int i { 0 }; i < repetitions; ++i)
         fn(i);
