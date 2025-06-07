@@ -62,7 +62,9 @@ public:
 		: Fruit { name, color }
 		, m_fiber { fiber } {}
 
-	double getFiber() const { return m_fiber; }
+	double getFiber() const {
+		return m_fiber;
+	}
 
 };
 
