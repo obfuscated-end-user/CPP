@@ -4,9 +4,9 @@
 #include <iostream>
 
 struct House {
-    int number{};
-    int stories{};
-    int roomsPerStory{};
+    int number {};
+    int stories {};
+    int roomsPerStory {};
 };
 
 int main() {

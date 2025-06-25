@@ -36,7 +36,7 @@ T findMax(const std::vector<T>& arr) {
     std::size_t length { arr.size() };
 
     if (length == 0)
-        return T{};
+        return T {};
     
     T max { arr[0] };   // Set the max seen to the first element
 

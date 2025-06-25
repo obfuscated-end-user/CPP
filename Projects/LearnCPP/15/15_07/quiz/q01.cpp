@@ -64,7 +64,7 @@ private:    // could be public if we want these to be accesible
 public:
     // Generate a random int between [min, max] (inclusive)
     static int get(int min, int max) {
-        return std::uniform_int_distribution{min, max}(mt);
+        return std::uniform_int_distribution { min, max }(mt);
     }
 };
 

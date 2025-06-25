@@ -69,8 +69,8 @@ char& GradeMap::operator[](std::string_view name) {
     return m_map.emplace_back(std::string { name }).grade;
 
     // push_back version (C++17 or older)
-	// m_map.push_back(StudentGrade{std::string{name}});
-	// return m_map.back().grade;
+    // m_map.push_back(StudentGrade{std::string{name}});
+    // return m_map.back().grade;
 }
 
 int main() {
@@ -79,8 +79,8 @@ int main() {
     grades["Joe"] = 'A';
     grades["Frank"] = 'B';
     
-	std::cout << "Joe has a grade of " << grades["Joe"] << '\n';
-	std::cout << "Frank has a grade of " << grades["Frank"] << '\n';
+    std::cout << "Joe has a grade of " << grades["Joe"] << '\n';
+    std::cout << "Frank has a grade of " << grades["Frank"] << '\n';
 
     return 0;
 }

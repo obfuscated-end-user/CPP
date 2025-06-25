@@ -84,26 +84,26 @@ public:
 };
 
 int main() {
-	Average avg {};
-	std::cout << avg << '\n';
+    Average avg {};
+    std::cout << avg << '\n';
 
-	avg += 4;
-	std::cout << avg << '\n';
+    avg += 4;
+    std::cout << avg << '\n';
 
-	avg += 8;
-	std::cout << avg << '\n';
+    avg += 8;
+    std::cout << avg << '\n';
 
-	avg += 24;
-	std::cout << avg << '\n';
+    avg += 24;
+    std::cout << avg << '\n';
 
-	avg += -10;
-	std::cout << avg << '\n';
+    avg += -10;
+    std::cout << avg << '\n';
 
-	(avg += 6) += 10;   // 2 calls chained together
-	std::cout << avg << '\n';
+    (avg += 6) += 10;   // 2 calls chained together
+    std::cout << avg << '\n';
 
-	Average copy { avg };
-	std::cout << copy << '\n';
+    Average copy { avg };
+    std::cout << copy << '\n';
 
-	return 0;
+    return 0;
 }

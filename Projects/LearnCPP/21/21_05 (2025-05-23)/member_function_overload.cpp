@@ -23,9 +23,9 @@ Cents Cents::operator+ (int value) const {
 }
 
 int main() {
-	const Cents cents1 { 6 };
-	const Cents cents2 { cents1 + 2 };
-	std::cout << "I have " << cents2.getCents() << " cents.\n";
+    const Cents cents1 { 6 };
+    const Cents cents2 { cents1 + 2 };
+    std::cout << "I have " << cents2.getCents() << " cents.\n";
 
-	return 0;
+    return 0;
 }

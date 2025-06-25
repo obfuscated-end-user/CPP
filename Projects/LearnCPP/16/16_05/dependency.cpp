@@ -9,7 +9,7 @@ private:
     double m_z;
 
 public:
-    Point(double x=0.0, double y=0.0, double z=0.0): m_x{x}, m_y{y}, m_z{z} {}
+    Point(double x=0.0, double y=0.0, double z=0.0): m_x { x }, m_y { y }, m_z { z } {}
 
     friend std::ostream& operator<< (std::ostream& out, const Point& point); // Point has a dependency on std::ostream here
 };

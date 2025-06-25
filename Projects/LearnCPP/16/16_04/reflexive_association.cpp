@@ -9,5 +9,5 @@ private:
     const Course* m_prerequisite;
 
 public:
-    Course(const std::string& name, const Course* prerequisite=nullptr): m_name{name}, m_prerequisite{prerequisite} {}
+    Course(const std::string& name, const Course* prerequisite=nullptr): m_name { name }, m_prerequisite { prerequisite } {}
 };

@@ -11,7 +11,7 @@ private:
 
 public:
 	IntArray() = default;
-	IntArray(int length): m_length{length}, m_data{new int[length]{}} {}
+	IntArray(int length): m_length {length}, m_data {new int[length]{}} {}
 
 	IntArray(std::initializer_list<int> list): IntArray(static_cast<int>(list.size())){
 		int count = 0;
