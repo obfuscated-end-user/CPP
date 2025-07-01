@@ -8,8 +8,8 @@ Initialize a std::array with the following values: ‘h’, ‘e’, ‘l’, �
 #include <iostream>
 
 int main() {
-    constexpr std::array arr { 'h', 'e', 'l', 'l', 'o' };
-    std::cout << arr[1] << '\n';
+	constexpr std::array arr { 'h', 'e', 'l', 'l', 'o' };
+	std::cout << arr[1] << '\n';
 
-    return 0;
+	return 0;
 }
