@@ -4,12 +4,12 @@
 #include <iostream>
 
 int main() {
-    std::array fibonacci { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };   // note use of std::array here
+	std::array fibonacci { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };	// note use of std::array here
 
-    for (auto number : fibonacci)
-        std::cout << number << ' ';
+	for (auto number : fibonacci)
+		std::cout << number << ' ';
 
-    std::cout << '\n';
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }

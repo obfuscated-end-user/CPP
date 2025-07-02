@@ -3,14 +3,14 @@
 #include <iostream>
 
 void print(char ptr[]) {
-    std::cout << ptr << '\n';   // output string
+	std::cout << ptr << '\n';	// output string
 }
 
 int main() {
-    char str[] { "string" };
-    std::cout << str << '\n';   // outputs string
+	char str[] { "string" };
+	std::cout << str << '\n';	// outputs string
 
-    print(str);
+	print(str);
 
-    return 0;
+	return 0;
 }

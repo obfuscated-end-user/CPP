@@ -3,20 +3,20 @@
 #include <iostream>
 
 void printArray(const int* begin, const int* end) {
-    for (; begin != end; ++begin) {
-        std::cout << *begin << ' ';
-    }
+	for (; begin != end; ++begin) {
+		std::cout << *begin << ' ';
+	}
 
-    std::cout << '\n';
+	std::cout << '\n';
 }
 
 int main() {
-    constexpr int arr[] { 9, 7, 5, 3, 1 };
-    
-    const int* begin { arr };
-    const int* end  { arr + std::size(arr) };
+	constexpr int arr[] { 9, 7, 5, 3, 1 };
+	
+	const int* begin { arr };
+	const int* end  { arr + std::size(arr) };
 
-    printArray(begin, end);
+	printArray(begin, end);
 
-    return 0;
+	return 0;
 }

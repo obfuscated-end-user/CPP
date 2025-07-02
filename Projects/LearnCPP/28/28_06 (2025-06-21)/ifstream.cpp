@@ -5,24 +5,24 @@
 #include <string>
 
 int main() {
-    // ifstream is used for reading files
-    // We'll read from a file called Sample.txt
-    std::ifstream inf { "Sample.txt" };
+	// ifstream is used for reading files
+	// We'll read from a file called Sample.txt
+	std::ifstream inf { "Sample.txt" };
 
-    // If we couldn't open the output file stream for reading
-    if (!inf) {
-        // Print an error and exit
-        std::cerr << "Uh oh, Sample.txt could not be opened for reading!\n";
-        return 1;
-    }
+	// If we couldn't open the output file stream for reading
+	if (!inf) {
+		// Print an error and exit
+		std::cerr << "Uh oh, Sample.txt could not be opened for reading!\n";
+		return 1;
+	}
 
-    // While there's still stuff left to read
-    std::string strInput {};
-    while (inf >> strInput)
-        std::cout << strInput << '\n';
+	// While there's still stuff left to read
+	std::string strInput {};
+	while (inf >> strInput)
+		std::cout << strInput << '\n';
 
-    return 0;
+	return 0;
 
-    // When inf goes out of scope, the ifstream
-    // destructor will close the file
+	// When inf goes out of scope, the ifstream
+	// destructor will close the file
 }

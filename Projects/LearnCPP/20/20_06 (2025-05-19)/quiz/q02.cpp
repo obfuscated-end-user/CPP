@@ -18,19 +18,19 @@ struct Season
 int main()
 {
   std::array<Season, 4> seasons{
-    { { "Spring", 285.0 },
-      { "Summer", 296.0 },
-      { "Fall", 288.0 },
-      { "Winter", 263.0 } }
+	{ { "Spring", 285.0 },
+	  { "Summer", 296.0 },
+	  { "Fall", 288.0 },
+	  { "Winter", 263.0 } }
   };
 
-   *
-   * Use std::sort here
-   *
+	*
+	* Use std::sort here
+	*
 
   for (const auto& season : seasons)
   {
-    std::cout << season.name << '\n';
+	std::cout << season.name << '\n';
   }
 
   return 0;
@@ -53,28 +53,28 @@ Summer
 #include <string_view>
 
 struct Season {
-    std::string_view name {};
-    double averageTemperature {};
+	std::string_view name {};
+	double averageTemperature {};
 };
 
 int main() {
-    std::array<Season, 4> seasons {
-        { { "Spring", 285.0 },
-        { "Summer", 296.0 },
-        { "Fall", 288.0 },
-        { "Winter", 263.0 } }
-    };
+	std::array<Season, 4> seasons {
+		{ { "Spring", 285.0 },
+		{ "Summer", 296.0 },
+		{ "Fall", 288.0 },
+		{ "Winter", 263.0 } }
+	};
 
-    // We can compare averageTemperature of the two arguments to
-    // sort the array.
-    std::sort(seasons.begin(), seasons.end(),
-                [](const auto& a, const auto& b) {
-                    return a.averageTemperature < b.averageTemperature;
-                });
+	// We can compare averageTemperature of the two arguments to
+	// sort the array.
+	std::sort(seasons.begin(), seasons.end(),
+				[](const auto& a, const auto& b) {
+					return a.averageTemperature < b.averageTemperature;
+				});
 
-    for (const auto& season : seasons) {
-        std::cout << season.name << '\n';
-    }
+	for (const auto& season : seasons) {
+		std::cout << season.name << '\n';
+	}
 
-    return 0;
+	return 0;
 }

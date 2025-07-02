@@ -5,17 +5,17 @@
 #include <iostream>
 
 void doubleNumber(int& i) {
-    i *= 2;
+	i *= 2;
 }
 
 int main() {
-    std::array arr { 1, 2, 3, 4 };
+	std::array arr { 1, 2, 3, 4 };
 
-    std::for_each(arr.begin(), arr.end(), doubleNumber);
+	std::for_each(arr.begin(), arr.end(), doubleNumber);
 
-    for (auto i : arr) {
-        std::cout << i << ' ';
-    }
+	for (auto i : arr) {
+		std::cout << i << ' ';
+	}
 
-    std::cout << '\n';
+	std::cout << '\n';
 }

@@ -93,7 +93,7 @@ If you’re on a pre-C++17 compiler, you can replace std::gcd with this function
 #include <cmath>
 
 int gcd(int a, int b) {
-    return (b == 0) ? std::abs(a) : gcd(b, a % b);
+	return (b == 0) ? std::abs(a) : gcd(b, a % b);
 }
 ```
 */
@@ -104,76 +104,76 @@ int gcd(int a, int b) {
 
 class Fraction {
 private:
-    int m_numerator { 0 };
-    int m_denominator { 1 };
+	int m_numerator { 0 };
+	int m_denominator { 1 };
 
 public:
-    Fraction(int numerator=0, int denominator=1) :
-        m_numerator { numerator }, m_denominator { denominator } {
-        // We put reduce() in the constructor to ensure any new fractions we make get reduced!
-        // Any fractions that are overwritten will need to be re-reduced
-        reduce();
-    }
+	Fraction(int numerator=0, int denominator=1) :
+		m_numerator { numerator }, m_denominator { denominator } {
+		// We put reduce() in the constructor to ensure any new fractions we make get reduced!
+		// Any fractions that are overwritten will need to be re-reduced
+		reduce();
+	}
 
-    void reduce() {
-        int gcd { std::gcd(m_numerator, m_denominator) };
-        if (gcd) {
-            m_numerator /= gcd;
-            m_denominator /= gcd;
-        }
-    }
+	void reduce() {
+		int gcd { std::gcd(m_numerator, m_denominator) };
+		if (gcd) {
+			m_numerator /= gcd;
+			m_denominator /= gcd;
+		}
+	}
 
-    friend Fraction operator*(const Fraction& f1, const Fraction& f2);
-    friend Fraction operator*(const Fraction& f1, int value);
-    friend Fraction operator*(int value, const Fraction& f1);
+	friend Fraction operator*(const Fraction& f1, const Fraction& f2);
+	friend Fraction operator*(const Fraction& f1, int value);
+	friend Fraction operator*(int value, const Fraction& f1);
 
-    friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
+	friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
 
-    void print() const {
-        std::cout << m_numerator << '/' << m_denominator << '\n';
-    }
+	void print() const {
+		std::cout << m_numerator << '/' << m_denominator << '\n';
+	}
 };
 
 Fraction operator*(const Fraction& f1, const Fraction& f2) {
-    return Fraction { f1.m_numerator * f2.m_numerator, f1.m_denominator * f2.m_denominator };
+	return Fraction { f1.m_numerator * f2.m_numerator, f1.m_denominator * f2.m_denominator };
 }
 
 Fraction operator*(const Fraction& f1, int value) {
-    return Fraction { f1.m_numerator * value, f1.m_denominator };
+	return Fraction { f1.m_numerator * value, f1.m_denominator };
 }
 
 Fraction operator*(int value, const Fraction& f1) {
-    return Fraction { f1 * value };
+	return Fraction { f1 * value };
 }
 
 std::ostream& operator<<(std::ostream& out, const Fraction& f1) {
-    return out << f1.m_numerator << '/' << f1.m_denominator;
+	return out << f1.m_numerator << '/' << f1.m_denominator;
 }
 
 std::istream& operator>>(std::istream& in, Fraction& f1) {
-    int numerator {};
-    char ignore {};
-    int denominator {};
+	int numerator {};
+	char ignore {};
+	int denominator {};
 
-    in >> numerator >> ignore >> denominator;
-    if (denominator == 0)                           // if our denominator is semantically invalid
-        in.setstate(std::ios_base::failbit);        // set failure mode manually
-    if (in)                                         // if we're not in failure mode
-        f1 = Fraction { numerator, denominator };   // update our object to the extracted values
+	in >> numerator >> ignore >> denominator;
+	if (denominator == 0)							// if our denominator is semantically invalid
+		in.setstate(std::ios_base::failbit);		// set failure mode manually
+	if (in)										 // if we're not in failure mode
+		f1 = Fraction { numerator, denominator };	// update our object to the extracted values
 
-    return in;
+	return in;
 }
 
 int main() {
-    Fraction f1 {};
-    std::cout << "Enter fraction 1: ";
-    std::cin >> f1;
+	Fraction f1 {};
+	std::cout << "Enter fraction 1: ";
+	std::cin >> f1;
 
-    Fraction f2 {};
-    std::cout << "Enter fraction 2: ";
-    std::cin >> f2;
+	Fraction f2 {};
+	std::cout << "Enter fraction 2: ";
+	std::cin >> f2;
 
-    std::cout << f1 << " * " << f2 << " is " << f1 * f2 << '\n'; // note: The result of f1 * f2 is an r-value
+	std::cout << f1 << " * " << f2 << " is " << f1 * f2 << '\n'; // note: The result of f1 * f2 is an r-value
 
-    return 0;
+	return 0;
 }

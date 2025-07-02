@@ -6,13 +6,13 @@ Next, let’s add some useful functions to our Card struct. First, overload oper
 ```
 struct Card
 {
-    // Your other stuff here
+	// Your other stuff here
 
-    friend std::ostream& operator<<(std::ostream& out, const Card &card)
-    {
-        out << // print your card rank and suit here
-        return out;
-    }
+	friend std::ostream& operator<<(std::ostream& out, const Card &card)
+	{
+		out << // print your card rank and suit here
+		return out;
+	}
 };
 ```
 
@@ -23,17 +23,17 @@ The following should compile:
 ```
 int main()
 {
-    // Print one card
-    Card card { Card::rank_5, Card::suit_heart };
-    std::cout << card << '\n';
+	// Print one card
+	Card card { Card::rank_5, Card::suit_heart };
+	std::cout << card << '\n';
 
-    // Print all cards
-    for (auto suit : Card::allSuits)
-        for (auto rank : Card::allRanks)
-            std::cout << Card { rank, suit } << ' ';
-    std::cout << '\n';
+	// Print all cards
+	for (auto suit : Card::allSuits)
+		for (auto rank : Card::allRanks)
+			std::cout << Card { rank, suit } << ' ';
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }
 ```
 
@@ -49,64 +49,74 @@ AC 2C 3C 4C 5C 6C 7C 8C 9C TC JC QC KC AD 2D 3D 4D 5D 6D 7D 8D 9D TD JD QD KD AH
 #include <iostream>
 
 struct Card {
-    enum Rank {
-        rank_ace,
-        rank_2,
-        rank_3,
-        rank_4,
-        rank_5,
-        rank_6,
-        rank_7,
-        rank_8,
-        rank_9,
-        rank_10,
-        rank_jack,
-        rank_queen,
-        rank_king,
+	enum Rank {
+		rank_ace,
+		rank_2,
+		rank_3,
+		rank_4,
+		rank_5,
+		rank_6,
+		rank_7,
+		rank_8,
+		rank_9,
+		rank_10,
+		rank_jack,
+		rank_queen,
+		rank_king,
 
-        max_ranks
-    };
+		max_ranks
+	};
 
-    enum Suit {
-        suit_club,
-        suit_diamond,
-        suit_heart,
-        suit_spade,
+	enum Suit {
+		suit_club,
+		suit_diamond,
+		suit_heart,
+		suit_spade,
 
-        max_suits
-    };
+		max_suits
+	};
 
-    // These need to be static so they are only created once per program, not once per Card
-    static constexpr std::array allRanks { rank_ace, rank_2, rank_3, rank_4, rank_5, rank_6, rank_7, rank_8, rank_9, rank_10, rank_jack, rank_queen, rank_king };
-    static constexpr std::array allSuits { suit_club, suit_diamond, suit_heart, suit_spade };
+	// These need to be static so they are only created once per program, not once per Card
+	static constexpr std::array allRanks {
+		rank_ace, rank_2, rank_3, rank_4, rank_5, rank_6, rank_7,
+		rank_8, rank_9, rank_10, rank_jack, rank_queen, rank_king
+	};
+	static constexpr std::array allSuits {
+		suit_club, suit_diamond,
+		suit_heart, suit_spade
+	};
 
-    Rank rank {};
-    Suit suit {};
+	Rank rank {};
+	Suit suit {};
 
-    friend std::ostream& operator<<(std::ostream& out, const Card &card) {
-        static constexpr std::array ranks { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K' };
-        static constexpr std::array suits { 'C', 'D', 'H', 'S' };
+	friend std::ostream& operator<<(std::ostream& out, const Card &card) {
+		static constexpr std::array ranks {
+			'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'
+		};
+		static constexpr std::array suits { 'C', 'D', 'H', 'S' };
 
-        out << ranks[card.rank] << suits[card.suit];
-        return out;
-    }
+		out << ranks[card.rank] << suits[card.suit];
+		return out;
+	}
 
-    int value() const {
-        static constexpr std::array rankValues { 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
-        return rankValues[rank];
-    }
+	int value() const {
+		static constexpr std::array rankValues {
+			11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10
+		};
+		return rankValues[rank];
+	}
 };
 
 int main() {
-    // Print one card
-    Card card { Card::rank_5, Card::suit_heart };
-    std::cout << card << '\n';
+	// Print one card
+	Card card { Card::rank_5, Card::suit_heart };
+	std::cout << card << '\n';
 
-    // Print all cards
-    for (auto suit : Card::allSuits)
-        for (auto rank : Card::allRanks)
-            std::cout << Card { rank, suit } << ' ';
-    std::cout << '\n';
+	// Print all cards
+	for (auto suit : Card::allSuits)
+		for (auto rank : Card::allRanks)
+			std::cout << Card { rank, suit } << ' ';
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }

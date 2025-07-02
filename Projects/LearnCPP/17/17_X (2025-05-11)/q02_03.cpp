@@ -3,8 +3,8 @@
 /*
 Add the ability to purchase potions, handling invalid input (treat any extraneous input as a failure). Print the player’s inventory after they leave. The program should be complete after this step.
 Make sure you test for the following cases:
-    User enters an invalid potion number (e.g. ‘d’)
-    User enters a valid potion number but with extraneous input (e.g. 2d, 25)
+	User enters an invalid potion number (e.g. ‘d’)
+	User enters a valid potion number but with extraneous input (e.g. 2d, 25)
 We cover invalid input handling in lesson 9.5 -- std::cin and handling invalid input.
 Hint: The user can enter either a number or ‘q’, so extract the user’s input to type char.
 To convert an ASCII number character to an int (e.g. '5' to 5), you can use the following:
@@ -12,7 +12,7 @@ To convert an ASCII number character to an int (e.g. '5' to 5), you can use the 
 ```
 int charNumToInt(char c)
 {
-    return c - '0';
+	return c - '0';
 }
 ```
 
@@ -21,153 +21,153 @@ Hint: Write a function to handle user input. It should return the Potion::Type t
 
 #include <array>
 #include <iostream>
-#include <limits>   // for std::numeric_limits
+#include <limits>	// for std::numeric_limits
 #include <string_view>
 #include "Random.h"
 
 namespace Potion {
-    enum Type {
-        healing,
-        mana,
-        speed,
-        invisibility,
-        max_potions
-    };
+	enum Type {
+		healing,
+		mana,
+		speed,
+		invisibility,
+		max_potions
+	};
 
-    constexpr std::array types { healing, mana, speed, invisibility };  // An array of our enumerators
+	constexpr std::array types { healing, mana, speed, invisibility };	// An array of our enumerators
 
-    // We could put these in a struct, but since we only have two attributes we'll keep them separate for now
-    // We will explicitly define the element type so we don't have to use the sv suffix
-    constexpr std::array<std::string_view, max_potions> name { "healing", "mana", "speed", "invisibility" };
-    constexpr std::array cost { 20, 30, 12, 50 };
+	// We could put these in a struct, but since we only have two attributes we'll keep them separate for now
+	// We will explicitly define the element type so we don't have to use the sv suffix
+	constexpr std::array<std::string_view, max_potions> name { "healing", "mana", "speed", "invisibility" };
+	constexpr std::array cost { 20, 30, 12, 50 };
 
-    static_assert(std::size(types) == max_potions); // ensure 'all' ccontains the correct number of enumerators
-    static_assert(std::size(cost) == max_potions);
-    static_assert(std::size(name) == max_potions);
+	static_assert(std::size(types) == max_potions);	// ensure 'all' ccontains the correct number of enumerators
+	static_assert(std::size(cost) == max_potions);
+	static_assert(std::size(name) == max_potions);
 };
 
 class Player {
 private:
-    static constexpr int s_minStartingGold { 80 };
-    static constexpr int s_maxStartingGold { 120 };
+	static constexpr int s_minStartingGold { 80 };
+	static constexpr int s_maxStartingGold { 120 };
 
-    std::string m_name {};
-    int m_gold {};
-    std::array<int, Potion::max_potions> m_inventory {};
+	std::string m_name {};
+	int m_gold {};
+	std::array<int, Potion::max_potions> m_inventory {};
 
 public:
-    explicit Player(std::string_view name) :
-        m_name { name },
-        m_gold { Random::get(s_minStartingGold, s_maxStartingGold) }
-    {}
-    
-    // returns false if can't afford, true if purchased
-    bool buy(Potion::Type type) {
-        if (m_gold < Potion::cost[type])
-            return false;
+	explicit Player(std::string_view name) :
+		m_name { name },
+		m_gold { Random::get(s_minStartingGold, s_maxStartingGold) }
+	{}
+	
+	// returns false if can't afford, true if purchased
+	bool buy(Potion::Type type) {
+		if (m_gold < Potion::cost[type])
+			return false;
 
-        m_gold -= Potion::cost[type];
-        ++m_inventory[type];
-        return true;
-    }
+		m_gold -= Potion::cost[type];
+		++m_inventory[type];
+		return true;
+	}
 
-    int gold() const {
-        return m_gold;
-    }
+	int gold() const {
+		return m_gold;
+	}
 
-    int inventory(Potion::Type p) const {
-        return m_inventory[p];
-    }
+	int inventory(Potion::Type p) const {
+		return m_inventory[p];
+	}
 };
 
 void ignoreLine() {
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 int charNumToInt(char c) {
-    return c - '0';
+	return c - '0';
 }
 
 Potion::Type whichPotion() {
-    std::cout << "Enter the number of the potion you'd like to buy, or 'q' to quit: ";
-    char input {};
-    while (true) {
-        std::cin >> input;
-        if (!std::cin) {
-            std::cin.clear();   // put us back in 'normal' operation mode
-            ignoreLine();       // and remove bad input
-            continue;
-        }
+	std::cout << "Enter the number of the potion you'd like to buy, or 'q' to quit: ";
+	char input {};
+	while (true) {
+		std::cin >> input;
+		if (!std::cin) {
+			std::cin.clear();	// put us back in 'normal' operation mode
+			ignoreLine();		// and remove bad input
+			continue;
+		}
 
-        // If there is extraneous input, treat as failure case
-        if (!std::cin.eof() && std::cin.peek() != '\n') {
-            std::cout << "I didn't understand what you said. Try again: ";
-            ignoreLine();   // ignore any extraneous input
-            continue;
-        }
+		// If there is extraneous input, treat as failure case
+		if (!std::cin.eof() && std::cin.peek() != '\n') {
+			std::cout << "I didn't understand what you said. Try again: ";
+			ignoreLine();	// ignore any extraneous input
+			continue;
+		}
 
-        if (input == 'q')
-            return Potion::max_potions;
+		if (input == 'q')
+			return Potion::max_potions;
 
-        // Convert the char to a number and see if it's a valid potion selection
-        int val { charNumToInt(input) };
-        if (val >= 0 && val < Potion::max_potions)
-            return static_cast<Potion::Type>(val);
+		// Convert the char to a number and see if it's a valid potion selection
+		int val { charNumToInt(input) };
+		if (val >= 0 && val < Potion::max_potions)
+			return static_cast<Potion::Type>(val);
 
-        // It wasn't a valid potion selection
-        std::cout << "I didn't understand what you said. Try again: ";
-        ignoreLine();
-    }
+		// It wasn't a valid potion selection
+		std::cout << "I didn't understand what you said. Try again: ";
+		ignoreLine();
+	}
 }
 
 void shop(Player &player) {
-    while (true) {
-        std::cout << "Here is our selection for today:\n";
+	while (true) {
+		std::cout << "Here is our selection for today:\n";
 
-        for (auto p: Potion::types)
-            std::cout << p << ") " << Potion::name[p] << " costs " << Potion::cost[p] << '\n';
-        
-        Potion::Type which { whichPotion() };
-        if (which == Potion::max_potions)
-            return;
+		for (auto p: Potion::types)
+			std::cout << p << ") " << Potion::name[p] << " costs " << Potion::cost[p] << '\n';
+		
+		Potion::Type which { whichPotion() };
+		if (which == Potion::max_potions)
+			return;
 
-        bool success { player.buy(which) };
-        if (!success)
-            std::cout << "You can not afford that.\n\n";
-        else
-            std::cout << "You purchased a potion of " << Potion::name[which] << ". You have " << player.gold() << " gold left.\n\n";
-    }
+		bool success { player.buy(which) };
+		if (!success)
+			std::cout << "You can not afford that.\n\n";
+		else
+			std::cout << "You purchased a potion of " << Potion::name[which] << ". You have " << player.gold() << " gold left.\n\n";
+	}
 }
 
 void printInventory(Player &player) {
-    std::cout << "Your inventory contains: \n";
+	std::cout << "Your inventory contains: \n";
 
-    for (auto p: Potion::types) {
-        if (player.inventory(p) > 0)
-            std::cout << player.inventory(p) << "x potion of " << Potion::name[p] << '\n';
-    }
+	for (auto p: Potion::types) {
+		if (player.inventory(p) > 0)
+			std::cout << player.inventory(p) << "x potion of " << Potion::name[p] << '\n';
+	}
 
-    std::cout << "You escaped with " << player.gold() << " gold remaining.\n";
+	std::cout << "You escaped with " << player.gold() << " gold remaining.\n";
 }
 
 int main() {
-    std::cout << "Welcome to Roscoe's potion emporium!\n";
-    std::cout << "Enter your name: ";
+	std::cout << "Welcome to Roscoe's potion emporium!\n";
+	std::cout << "Enter your name: ";
 
-    std::string name {};
-    std::cin >> name;
+	std::string name {};
+	std::cin >> name;
 
-    Player player { name };
+	Player player { name };
 
-    std::cout << "Hello, " << name << ", you have " << player.gold() << " gold.\n\n";
+	std::cout << "Hello, " << name << ", you have " << player.gold() << " gold.\n\n";
 
-    shop(player);
+	shop(player);
 
-    std::cout << '\n';
+	std::cout << '\n';
 
-    printInventory(player);
+	printInventory(player);
 
-    std::cout << "\nThanks for shopping at Roscoe's potion emporium!\n";
+	std::cout << "\nThanks for shopping at Roscoe's potion emporium!\n";
 
-    return 0;
+	return 0;
 }

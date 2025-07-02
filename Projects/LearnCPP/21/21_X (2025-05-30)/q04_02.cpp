@@ -50,33 +50,33 @@ Hint: To output your number, static_cast it to a double.
 
 class FixedPoint2 {
 private:
-    std::int16_t m_base {};     // here's our non-fractional part
-    std::int8_t m_decimal {};   // here's our fractional part
+	std::int16_t m_base {};	 // here's our non-fractional part
+	std::int8_t m_decimal {};	// here's our fractional part
 
 public:
-    FixedPoint2(std::int16_t base=0, std::int8_t decimal=0)
-        : m_base { base }, m_decimal { decimal } {
-        
-        // If either (or both) of the non-fractional and fractional part of the number are negative, the number should be treated as negative
-        if (m_base < 0 || m_decimal < 0) {
-            // Make sure base is negative
-            if (m_base > 0)
-                m_base = -m_base;
-            // Make sure decimal is negative
-            if (m_decimal > 0)
-                m_decimal = -m_decimal;
-        }
-    }
+	FixedPoint2(std::int16_t base=0, std::int8_t decimal=0)
+		: m_base { base }, m_decimal { decimal } {
+		
+		// If either (or both) of the non-fractional and fractional part of the number are negative, the number should be treated as negative
+		if (m_base < 0 || m_decimal < 0) {
+			// Make sure base is negative
+			if (m_base > 0)
+				m_base = -m_base;
+			// Make sure decimal is negative
+			if (m_decimal > 0)
+				m_decimal = -m_decimal;
+		}
+	}
 
-    explicit operator double() const {
-        return m_base + (static_cast<double>(m_decimal) / 100);
-    }
+	explicit operator double() const {
+		return m_base + (static_cast<double>(m_decimal) / 100);
+	}
 };
 
 // This doesn't require access to the internals of the class, so it can be defined outside the class
 std::ostream& operator<<(std::ostream& out, const FixedPoint2& fp) {
-    out << static_cast<double>(fp);
-    return out;
+	out << static_cast<double>(fp);
+	return out;
 }
 
 int main() {

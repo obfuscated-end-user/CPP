@@ -23,8 +23,8 @@ public:
 		: Base { value }, m_name { name } {}
 
 	const std::string& getName() const {
-        return m_name;
-    }
+		return m_name;
+	}
 };
 
 int main() {

@@ -6,12 +6,12 @@
 #include <vector>
 
 int main() {
-    std::vector<std::string_view> words { "Albert", "Bobby", "Chad", "Dave" };    // sorted in alphabetical order
-    
-    for (const auto& word : std::views::reverse(words)) // create a reverse view
-        std::cout << word << ' ';
+	std::vector<std::string_view> words { "Albert", "Bobby", "Chad", "Dave" };	// sorted in alphabetical order
+	
+	for (const auto& word : std::views::reverse(words)) // create a reverse view
+		std::cout << word << ' ';
 
-    std::cout << '\n';
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }

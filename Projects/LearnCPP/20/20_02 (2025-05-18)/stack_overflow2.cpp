@@ -6,18 +6,18 @@
 int g_counter { 0 };
 
 void eatStack() {
-    std::cout << ++g_counter << ' ';
+	std::cout << ++g_counter << ' ';
 
-    // We use a conditional here to avoid compiler warnings about infinite recursion
-    if (g_counter > 0)
-        eatStack(); // note that eatStack() calls itself
+	// We use a conditional here to avoid compiler warnings about infinite recursion
+	if (g_counter > 0)
+		eatStack(); // note that eatStack() calls itself
 
-    // Needed to prevent compiler from doing tail-call optimization
-    std::cout << "hi";
+	// Needed to prevent compiler from doing tail-call optimization
+	std::cout << "hi";
 }
 
 int main() {
-    eatStack();
+	eatStack();
 
-    return 0;
+	return 0;
 }

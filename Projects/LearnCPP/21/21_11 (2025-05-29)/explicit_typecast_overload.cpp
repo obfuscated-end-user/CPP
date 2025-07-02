@@ -4,47 +4,47 @@
 
 class Cents {
 private:
-    int m_cents {};
+	int m_cents {};
 
 public:
-    Cents(int cents=0) : m_cents { cents } {}
+	Cents(int cents=0) : m_cents { cents } {}
 
-    explicit operator int() const { // now marked as explicit
-        return m_cents;
-    }
+	explicit operator int() const { // now marked as explicit
+		return m_cents;
+	}
 
-    int getCents() const {
-        return m_cents;
-    }
+	int getCents() const {
+		return m_cents;
+	}
 
-    void setCents(int cents) {
-        m_cents = cents;
-    }
+	void setCents(int cents) {
+		m_cents = cents;
+	}
 };
 
 class Dollars {
 private:
-    int m_dollars {};
+	int m_dollars {};
 
 public:
-    Dollars(int dollars=0) : m_dollars { dollars } {}
+	Dollars(int dollars=0) : m_dollars { dollars } {}
 
-    operator Cents() const {
-        return Cents { m_dollars * 100 };
-    }
+	operator Cents() const {
+		return Cents { m_dollars * 100 };
+	}
 
 };
 
 void printCents(Cents cents) {
 //  std::cout << cents; // no longer  works because cents won't implicit convert to an int
-    std::cout << static_cast<int>(cents);   // we can use an explicit cast instead
+	std::cout << static_cast<int>(cents);	// we can use an explicit cast instead
 }
 
 int main() {
-    Dollars dollars { 9 };
-    printCents(dollars);    // implicit conversion from Dollars to Cents okay because its not marked as explicit
+	Dollars dollars { 9 };
+	printCents(dollars);	// implicit conversion from Dollars to Cents okay because its not marked as explicit
 
-    std::cout << '\n';
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }

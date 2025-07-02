@@ -4,24 +4,24 @@
 
 class Base {
 public:
-    Base() {}
+	Base() {}
 
-    void identify() const {
-        std::cout << "Base::identify()\n";
-    }
+	void identify() const {
+		std::cout << "Base::identify()\n";
+	}
 };
 
 class Derived : public Base {
 public:
-    Derived() {}
+	Derived() {}
 };
 
 int main() {
-    Base base {};
-    base.identify();
+	Base base {};
+	base.identify();
 
-    Derived derived {};
-    derived.identify();
+	Derived derived {};
+	derived.identify();
 
-    return 0;
+	return 0;
 }

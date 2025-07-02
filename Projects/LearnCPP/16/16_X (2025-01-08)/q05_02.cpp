@@ -27,72 +27,72 @@ Create a function to accept a letter of input from the user. Do basic input vali
 #include <Random.h>
 
 namespace WordList {
-    // Define your list of words here
-    std::vector<std::string_view> words { "mystery", "broccoli" , "account", "almost", "spaghetti", "opinion", "beautiful", "distance", "luggage" };
+	// Define your list of words here
+	std::vector<std::string_view> words { "mystery", "broccoli" , "account", "almost", "spaghetti", "opinion", "beautiful", "distance", "luggage" };
 
-    std::string_view getRandomWord() {
-        return words[Random::get<std::size_t>(0, words.size() - 1)];
-    }
+	std::string_view getRandomWord() {
+		return words[Random::get<std::size_t>(0, words.size() - 1)];
+	}
 }
 
 class Session {
 private:
-    // Game session data
-    std::string_view m_word { WordList::getRandomWord() };
+	// Game session data
+	std::string_view m_word { WordList::getRandomWord() };
 
 public:
-    std::string_view getWord() const {
-        return m_word;
-    }
+	std::string_view getWord() const {
+		return m_word;
+	}
 };
 
 void draw(const Session& s) {
-    std::cout << '\n';
+	std::cout << '\n';
 
-    std::cout << "The word: ";
-    for ([[maybe_unused]] auto c : s.getWord()) // step through each letter of the word
-        std::cout << '_';
+	std::cout << "The word: ";
+	for ([[maybe_unused]] auto c : s.getWord()) // step through each letter of the word
+		std::cout << '_';
 
-    std::cout << '\n';
+	std::cout << '\n';
 }
 
 char getGuess() {
-    while (true) {
-        std::cout << "Enter your next letter: ";
+	while (true) {
+		std::cout << "Enter your next letter: ";
 
-        char c {};
-        std::cin >> c;
+		char c {};
+		std::cin >> c;
 
-        // If user did something bad, try again
-        if (!std::cin) {
-            // Fix it
-            std::cin.clear();
-            std::cout << "That wasn't a valid input. Try again.\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
+		// If user did something bad, try again
+		if (!std::cin) {
+			// Fix it
+			std::cin.clear();
+			std::cout << "That wasn't a valid input. Try again.\n";
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 
-        // Clear out any extraneous input
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		// Clear out any extraneous input
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        // If the user entered an invalid char, try again
-        if (c < 'a' || c > 'z') {
-            std::cout << "That wasn't a valid input. Try again.\n";
-            continue;
-        }
+		// If the user entered an invalid char, try again
+		if (c < 'a' || c > 'z') {
+			std::cout << "That wasn't a valid input. Try again.\n";
+			continue;
+		}
 
-        return c;
-    }
+		return c;
+	}
 }
 
 int main() {
-    std::cout << "Welcome to C++man (a variant of Hangman)\n";
-    std::cout << "To win: guess the word.  To lose: run out of pluses.\n";
+	std::cout << "Welcome to C++man (a variant of Hangman)\n";
+	std::cout << "To win: guess the word.  To lose: run out of pluses.\n";
 
-    Session s {};
+	Session s {};
 
-    draw(s);
-    char c { getGuess() };
-    std::cout << "You guessed: " << c << '\n';
+	draw(s);
+	char c { getGuess() };
+	std::cout << "You guessed: " << c << '\n';
 
-    return 0;
+	return 0;
 }

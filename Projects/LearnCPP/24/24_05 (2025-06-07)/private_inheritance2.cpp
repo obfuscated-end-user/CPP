@@ -2,24 +2,24 @@
 
 class Base {
 public:
-    int m_public {};
+	int m_public {};
 protected:
-    int m_protected {};
+	int m_protected {};
 private:
-    int m_private {};
+	int m_private {};
 };
 
 class D2 : private Base {   // note: private inheritance
-    // Private inheritance means:
-    // Public inherited members become private
-    // Protected inherited members become private
-    // Private inherited members stay inaccessible
+	// Private inheritance means:
+	// Public inherited members become private
+	// Protected inherited members become private
+	// Private inherited members stay inaccessible
 public:
-    int m_public2 {};
+	int m_public2 {};
 protected:
-    int m_protected2 {};
+	int m_protected2 {};
 private:
-    int m_private2 {};
+	int m_private2 {};
 };
 
 class D3 : public D2 {
@@ -36,5 +36,5 @@ private:
 };
 
 int main() {
-    return 0;
+	return 0;
 }

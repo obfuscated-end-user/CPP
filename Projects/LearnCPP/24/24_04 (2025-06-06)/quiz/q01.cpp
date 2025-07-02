@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes
 
 /*
-    Let’s implement our Fruit example that we talked about in our introduction to inheritance. Create a Fruit base class that contains two private members: a name (std::string), and a color (std::string). Create an Apple class that inherits Fruit. Apple should have an additional private member: fiber (double). Create a Banana class that also inherits Fruit. Banana has no additional members.
+	Let’s implement our Fruit example that we talked about in our introduction to inheritance. Create a Fruit base class that contains two private members: a name (std::string), and a color (std::string). Create an Apple class that inherits Fruit. Apple should have an additional private member: fiber (double). Create a Banana class that also inherits Fruit. Banana has no additional members.
 
 The following program should run:
 
@@ -44,12 +44,12 @@ public:
 		: m_name { name }, m_color { color } {}
 
 	const std::string& getName() const {
-        return m_name;
-    }
+		return m_name;
+	}
 
 	const std::string& getColor() const {
-        return m_color;
-    }
+		return m_color;
+	}
 
 };
 

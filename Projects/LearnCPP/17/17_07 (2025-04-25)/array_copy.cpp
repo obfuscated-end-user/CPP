@@ -4,11 +4,11 @@
 #include <iostream>
 
 int main() {
-    int arr[] { 1, 2, 3 };
-    int src[] { 4, 5, 6 };
+	int arr[] { 1, 2, 3 };
+	int src[] { 4, 5, 6 };
 
-    // Copy src into arr
-    std::copy(std::begin(src), std::end(src), std::begin(arr));
+	// Copy src into arr
+	std::copy(std::begin(src), std::end(src), std::begin(arr));
 
-    return 0;
+	return 0;
 }

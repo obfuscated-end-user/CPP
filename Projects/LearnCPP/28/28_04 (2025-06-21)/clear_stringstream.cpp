@@ -4,22 +4,22 @@
 #include <sstream>
 
 int main() {
-    std::stringstream os {};
-    os << "Hello ";
+	std::stringstream os {};
+	os << "Hello ";
 
-    os.str(""); // erase the buffer
-    os.clear(); // reset error flags
+	os.str(""); // erase the buffer
+	os.clear(); // reset error flags
 
-    os << "World!";
-    std::cout << os.str() << '\n';
+	os << "World!";
+	std::cout << os.str() << '\n';
 
-    os << "Hello ";
+	os << "Hello ";
 
-    os.str(std::string{});  // erase the buffer
-    os.clear();             // reset error flags
+	os.str(std::string{});  // erase the buffer
+	os.clear();			 // reset error flags
 
-    os << "World!";
-    std::cout << os.str();
+	os << "World!";
+	std::cout << os.str();
 
-    return 0;
+	return 0;
 }

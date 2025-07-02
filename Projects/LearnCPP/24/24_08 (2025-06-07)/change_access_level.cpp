@@ -4,30 +4,30 @@
 
 class Base {
 private:
-    int m_value {};
+	int m_value {};
 
 public:
-    Base(int value) : m_value { value } {}
+	Base(int value) : m_value { value } {}
 
 protected:
-    void printValue() const {
-        std::cout << m_value;
-    }
+	void printValue() const {
+		std::cout << m_value;
+	}
 };
 
 class Derived : public Base {
 public:
-    Derived(int value) : Base { value } {}
+	Derived(int value) : Base { value } {}
 
-    // Base::printValue() was inherited as protected, so the public has no access
-    // But we're chaning it to public via a using declaration
-    using Base::printValue; // note: no parenthesis here
+	// Base::printValue() was inherited as protected, so the public has no access
+	// But we're chaning it to public via a using declaration
+	using Base::printValue; // note: no parenthesis here
 };
 
 int main() {
-    Derived derived { 7 };
+	Derived derived { 7 };
 
-    // printValue is public in Derived, so this is okay
-    derived.printValue();   // prints 7
-    return 0;
+	// printValue is public in Derived, so this is okay
+	derived.printValue();   // prints 7
+	return 0;
 }

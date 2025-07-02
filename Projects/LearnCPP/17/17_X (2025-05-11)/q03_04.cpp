@@ -15,9 +15,9 @@ Third, write a shuffle() member function that shuffles the deck. To make this ea
 #include <algorithm> // for std::shuffle
 #include "Random.h"  // for Random::mt
 
-    // Put this line in your shuffle function to shuffle m_cards using the Random::mt Mersenne Twister
-    // This will rearrange all the Cards in the deck randomly
-    std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
+	// Put this line in your shuffle function to shuffle m_cards using the Random::mt Mersenne Twister
+	// This will rearrange all the Cards in the deck randomly
+	std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
 ```
 
 The shuffle() function should also reset however you are tracking where the next card is back to the start of the deck.
@@ -27,13 +27,13 @@ The following program should run:
 ```
 int main()
 {
-    Deck deck{};
-    std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+	Deck deck{};
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
 
-    deck.shuffle();
-    std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+	deck.shuffle();
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
 
-    return 0;
+	return 0;
 }
 ```
 
@@ -45,90 +45,100 @@ AC 2C 3C
 ```
 */
 
-#include <algorithm>    // for std::shuffle
+#include <algorithm>	// for std::shuffle
 #include <array>
 #include <cassert>
 #include <iostream>
 #include "Random.h"
 
 struct Card {
-    enum Rank {
-        rank_ace,
-        rank_2,
-        rank_3,
-        rank_4,
-        rank_5,
-        rank_6,
-        rank_7,
-        rank_8,
-        rank_9,
-        rank_10,
-        rank_jack,
-        rank_queen,
-        rank_king,
+	enum Rank {
+		rank_ace,
+		rank_2,
+		rank_3,
+		rank_4,
+		rank_5,
+		rank_6,
+		rank_7,
+		rank_8,
+		rank_9,
+		rank_10,
+		rank_jack,
+		rank_queen,
+		rank_king,
 
-        max_ranks
-    };
+		max_ranks
+	};
 
-    enum Suit {
-        suit_club,
-        suit_diamond,
-        suit_heart,
-        suit_spade,
+	enum Suit {
+		suit_club,
+		suit_diamond,
+		suit_heart,
+		suit_spade,
 
-        max_suits
-    };
+		max_suits
+	};
 
-    static constexpr std::array allRanks { rank_ace, rank_2, rank_3, rank_4, rank_5, rank_6, rank_7, rank_8, rank_9, rank_10, rank_jack, rank_queen, rank_king };
-    static constexpr std::array allSuits { suit_club, suit_diamond, suit_heart, suit_spade };
+	static constexpr std::array allRanks {
+		rank_ace, rank_2, rank_3, rank_4, rank_5, rank_6, rank_7,
+		rank_8, rank_9, rank_10, rank_jack, rank_queen, rank_king
+	};
+	static constexpr std::array allSuits {
+		suit_club, suit_diamond,
+		suit_heart, suit_spade
+	};
 
-    Rank rank {};
-    Suit suit {};
+	Rank rank {};
+	Suit suit {};
 
-    friend std::ostream& operator<<(std::ostream& out, const Card &card) {
-        static constexpr std::array ranks { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K' };
-        static constexpr std::array suits { 'C', 'D', 'H', 'S' };
+	friend std::ostream& operator<<(std::ostream& out, const Card &card) {
+		static constexpr std::array ranks {
+			'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'
+		};
+		static constexpr std::array suits { 'C', 'D', 'H', 'S' };
 
-        out << ranks[card.rank] << suits[card.suit];
-        return out;
-    }
+		out << ranks[card.rank] << suits[card.suit];
+		return out;
+	}
 
-    int value() const {
-        static constexpr std::array rankValues { 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
-        return rankValues[rank];
-    }
+	int value() const {
+		static constexpr std::array rankValues {
+			11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10
+		};
+		return rankValues[rank];
+	}
 };
 
 class Deck {
 private:
-    std::array<Card, 52> m_cards {};
-    std::size_t m_nextCardIndex { 0 };
+	std::array<Card, 52> m_cards {};
+	std::size_t m_nextCardIndex { 0 };
 
 public:
-    Deck() {
-        std::size_t count { 0 };
-        for (auto suit : Card::allSuits)
-            for (auto rank : Card::allRanks)
-                m_cards[count++] = Card { rank, suit };
-    }
+	Deck() {
+		std::size_t count { 0 };
+		for (auto suit : Card::allSuits)
+			for (auto rank : Card::allRanks)
+				m_cards[count++] = Card { rank, suit };
+	}
 
-    void shuffle() {
-        std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
-        m_nextCardIndex = 0;
-    }
+	void shuffle() {
+		std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
+		m_nextCardIndex = 0;
+	}
 
-    Card dealCard() {
-        assert(m_nextCardIndex != 52 && "Deck::dealCard ran out of cards.");
-        return m_cards[m_nextCardIndex++];
-    }
+	Card dealCard() {
+		assert(m_nextCardIndex != 52 && "Deck::dealCard ran out of cards.");
+		return m_cards[m_nextCardIndex++];
+	}
 };
 
 int main() {
-    Deck deck {};
-    std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+	Deck deck {};
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
 
-    deck.shuffle();
-    std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+	deck.shuffle();
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
 
-    return 0;
+	return 0;
 }

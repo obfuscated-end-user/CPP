@@ -44,10 +44,10 @@ namespace Random {
 	// * min and max have same type
 	// * Return value has same type as min and max
 	// * Supported types:
-	// *    short, int, long, long long
-	// *    unsigned short, unsigned int, unsigned long, or unsigned long long
-	// Sample call: Random::get(1L, 6L);             // returns long
-	// Sample call: Random::get(1u, 6u);             // returns unsigned int
+	// *	short, int, long, long long
+	// *	unsigned short, unsigned int, unsigned long, or unsigned long long
+	// Sample call: Random::get(1L, 6L);			 // returns long
+	// Sample call: Random::get(1u, 6u);			 // returns unsigned int
 	template <typename T>
 	T get(T min, T max) {
 		return std::uniform_int_distribution<T>{min, max}(mt);
@@ -59,7 +59,7 @@ namespace Random {
 	// * min and max will be converted to the return type
 	// Sample call: Random::get<std::size_t>(0, 6);  // returns std::size_t
 	// Sample call: Random::get<std::size_t>(0, 6u); // returns std::size_t
-	// Sample call: Random::get<std::int>(0, 6u);    // returns int
+	// Sample call: Random::get<std::int>(0, 6u);	// returns int
 	template <typename R, typename S, typename T>
 	R get(S min, T max) {
 		return get<R>(static_cast<R>(min), static_cast<R>(max));

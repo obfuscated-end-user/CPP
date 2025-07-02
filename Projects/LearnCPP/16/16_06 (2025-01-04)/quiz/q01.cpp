@@ -8,11 +8,11 @@ Write a short program that prints the elements of the following vector to the sc
 
 int main()
 {
-    std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
+	std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
 
-    // Add your code here
+	// Add your code here
 
-    return 0;
+	return 0;
 }
 
 The output should look like this:
@@ -24,12 +24,12 @@ The output should look like this:
 #include <vector>
 
 int main() {
-    std::vector arr { 4, 6, 7, 3, 8, 2, 1, 9 };
-    for (std::size_t index { 0 }; index < arr.size(); ++index)
-        std::cout << arr[index] << ' ';
+	std::vector arr { 4, 6, 7, 3, 8, 2, 1, 9 };
+	for (std::size_t index { 0 }; index < arr.size(); ++index)
+		std::cout << arr[index] << ' ';
 
-    if (arr.size() > 0)
-        std::cout << '\n';
+	if (arr.size() > 0)
+		std::cout << '\n';
 
-    return 0;
+	return 0;
 }

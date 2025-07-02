@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr
 
 /*
-    Fix the program presented in the section “A reductive case” so that the Resource is properly deallocated. Do not alter the code in main().
+	Fix the program presented in the section “A reductive case” so that the Resource is properly deallocated. Do not alter the code in main().
 
 Here is the program again for ease of reference:
 
@@ -34,15 +34,15 @@ int main()
 
 class Resource {
 public:
-	std::weak_ptr<Resource> m_ptr {};   // use std::weak_ptr so m_ptr doesn't keep the Resource alive
+	std::weak_ptr<Resource> m_ptr {};	// use std::weak_ptr so m_ptr doesn't keep the Resource alive
 
 	Resource() {
-        std::cout << "Resource acquired\n";
-    }
+		std::cout << "Resource acquired\n";
+	}
 
 	~Resource() {
-        std::cout << "Resource destroyed\n";
-    }
+		std::cout << "Resource destroyed\n";
+	}
 };
 
 int main() {

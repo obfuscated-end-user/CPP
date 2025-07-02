@@ -2,11 +2,11 @@
 
 class Base {
 public:
-    int m_public;
+	int m_public;
 protected:
-    int m_protected;
+	int m_protected;
 private:
-    int m_private;
+	int m_private;
 };
 
 // all valid

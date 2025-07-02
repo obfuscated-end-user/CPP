@@ -6,23 +6,23 @@
 class A {
 public:
 	virtual std::string_view getName1(int x) {
-        return "A";
-    }
+		return "A";
+	}
 
 	virtual std::string_view getName2(int x) {
-        return "A";
-    }
+		return "A";
+	}
 };
 
 class B : public A {
 public:
 	virtual std::string_view getName1(short x) {
-        return "B"; // note: parameter is a short
-    }
+		return "B"; // note: parameter is a short
+	}
 
 	virtual std::string_view getName2(int x) const {
-        return "B"; // note: function is const
-    }
+		return "B"; // note: function is const
+	}
 };
 
 int main() {

@@ -35,42 +35,42 @@ My granny smith apple is green.
 
 class Fruit {
 private:
-    std::string m_name;
-    std::string m_color;
+	std::string m_name;
+	std::string m_color;
 
 public:
-    Fruit(std::string_view name, std::string_view color)
-        : m_name { name }, m_color { color } {}
+	Fruit(std::string_view name, std::string_view color)
+		: m_name { name }, m_color { color } {}
 
-    const std::string& getName() const {
-        return m_name;
-    }
+	const std::string& getName() const {
+		return m_name;
+	}
 
-    const std::string& getColor() const {
-        return m_color;
-    }
+	const std::string& getColor() const {
+		return m_color;
+	}
 };
 
 class Apple : public Fruit {
 // The previous constructor we used for Apple had a fixed name ("apple").
 // We need a new constructor for GrannySmith to use to set the name of the fruit
 protected:
-    Apple(std::string_view name, std::string_view color)
-        : Fruit { name, color } {}
+	Apple(std::string_view name, std::string_view color)
+		: Fruit { name, color } {}
 
 public:
-    Apple(std::string_view color="red")
-        : Fruit { "apple", color } {}
+	Apple(std::string_view color="red")
+		: Fruit { "apple", color } {}
 };
 
 class Banana : public Fruit {
 public:
-    Banana() : Fruit { "banana", "yellow" } {}
+	Banana() : Fruit { "banana", "yellow" } {}
 };
 
 class GrannySmith : public Apple {
 public:
-    GrannySmith() : Apple { "granny smith apple", "green" } {}
+	GrannySmith() : Apple { "granny smith apple", "green" } {}
 };
 
 int main() {

@@ -3,9 +3,9 @@
 #include <iostream>
 
 int main() {
-    char ch {};
-    while (std::cin >> ch)
-        std::cout << ch;
+	char ch {};
+	while (std::cin >> ch)
+		std::cout << ch;
 
-    return 0;
+	return 0;
 }

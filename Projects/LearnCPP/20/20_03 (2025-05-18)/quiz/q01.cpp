@@ -8,15 +8,15 @@ Hint: Remember that (x * y) = (y * x), so the product of all the numbers between
 #include <iostream>
 
 int factorial(int n) {
-    if (n <= 0)
-        return 1;
-    
-    return factorial(n - 1) * n;
+	if (n <= 0)
+		return 1;
+	
+	return factorial(n - 1) * n;
 }
 
 int main() {
-    for (int count { 0 }; count < 7; ++count)
-        std::cout << factorial(count) << '\n';
+	for (int count { 0 }; count < 7; ++count)
+		std::cout << factorial(count) << '\n';
 
-    return 0;
+	return 0;
 }

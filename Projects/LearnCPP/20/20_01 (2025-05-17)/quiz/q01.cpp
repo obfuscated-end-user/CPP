@@ -14,60 +14,60 @@ In this quiz, we’re going to write a version of our basic calculator using fun
 #include <iostream>
 
 int getInteger() {
-    std::cout << "Enter an integer: ";
-    int x;
-    std::cin >> x;
-    return x;
+	std::cout << "Enter an integer: ";
+	int x;
+	std::cin >> x;
+	return x;
 }
 
 char getOperation() {
-    char op {};
+	char op {};
 
-    do {
-        std::cout << "Enter an operation ('+', '-', '*', '/'): ";
-        std::cin >> op;
-    } while (op != '+' &&op != '-' &&op != '*' &&op != '/');
+	do {
+		std::cout << "Enter an operation ('+', '-', '*', '/'): ";
+		std::cin >> op;
+	} while (op != '+' &&op != '-' &&op != '*' &&op != '/');
 
-    return op;
+	return op;
 }
 
 int add(int x, int y) {
-    return x + y;
+	return x + y;
 }
 
 int subtract(int x, int y) {
-    return x - y;
+	return x - y;
 }
 
 int multiply(int x, int y) {
-    return x * y;
+	return x * y;
 }
 
 int divide(int x, int y) {
-    return x / y;
+	return x / y;
 }
 
 using ArithmeticFunction = std::function<int(int, int)>;
 
 ArithmeticFunction getArithmeticFunction(char op ) {
-    switch (op) {
-        case '+': return &add;
-        case '-': return &subtract;
-        case '*': return &multiply;
-        case '/': return &divide;
-    }
+	switch (op) {
+		case '+': return &add;
+		case '-': return &subtract;
+		case '*': return &multiply;
+		case '/': return &divide;
+	}
 
-    return nullptr;
+	return nullptr;
 }
 
 int main() {
-    int x { getInteger() };
-    char op { getOperation() };
-    int y { getInteger() };
+	int x { getInteger() };
+	char op { getOperation() };
+	int y { getInteger() };
 
-    ArithmeticFunction fcn { getArithmeticFunction(op) };
-    if (fcn)
-        std::cout << x << ' ' << op << ' ' << y << " = " << fcn(x, y) << '\n';
+	ArithmeticFunction fcn { getArithmeticFunction(op) };
+	if (fcn)
+		std::cout << x << ' ' << op << ' ' << y << " = " << fcn(x, y) << '\n';
 
-    return 0;
+	return 0;
 }

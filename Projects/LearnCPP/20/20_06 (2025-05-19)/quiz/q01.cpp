@@ -8,13 +8,13 @@ Given the following array
 ```
 std::array<Student, 8> arr{
   { { "Albert", 3 },
-    { "Ben", 5 },
-    { "Christine", 2 },
-    { "Dan", 8 }, // Dan has the most points (8).
-    { "Enchilada", 4 },
-    { "Francis", 1 },
-    { "Greg", 3 },
-    { "Hagrid", 5 } }
+	{ "Ben", 5 },
+	{ "Christine", 2 },
+	{ "Dan", 8 }, // Dan has the most points (8).
+	{ "Enchilada", 4 },
+	{ "Francis", 1 },
+	{ "Greg", 3 },
+	{ "Hagrid", 5 } }
 };
 ```
 
@@ -41,18 +41,18 @@ struct Student
 int main()
 {
   constexpr std::array<Student, 8> arr{
-    { { "Albert", 3 },
-      { "Ben", 5 },
-      { "Christine", 2 },
-      { "Dan", 8 },
-      { "Enchilada", 4 },
-      { "Francis", 1 },
-      { "Greg", 3 },
-      { "Hagrid", 5 } }
+	{ { "Albert", 3 },
+	  { "Ben", 5 },
+	  { "Christine", 2 },
+	  { "Dan", 8 },
+	  { "Enchilada", 4 },
+	  { "Francis", 1 },
+	  { "Greg", 3 },
+	  { "Hagrid", 5 } }
   };
 
   const auto best{
-    std::max_element(arr.begin(), arr.end(), / * lambda * /) // returns an iterator
+	std::max_element(arr.begin(), arr.end(), / * lambda * /) // returns an iterator
   };
 
   std::cout << best->name << " is the best student\n"; // must dereference iterator to get element
@@ -68,29 +68,29 @@ int main()
 #include <string_view>
 
 struct Student {
-    std::string_view name {};
-    int points {};
+	std::string_view name {};
+	int points {};
 };
 
 int main() {
-    constexpr std::array<Student, 8> arr {
-      { { "Albert", 3 },
-        { "Ben", 5 },
-        { "Christine", 2 },
-        { "Dan", 8 },
-        { "Enchilada", 4 },
-        { "Francis", 1 },
-        { "Greg", 3 },
-        { "Hagrid", 5 } }
-    };
+	constexpr std::array<Student, 8> arr {
+	  { { "Albert", 3 },
+		{ "Ben", 5 },
+		{ "Christine", 2 },
+		{ "Dan", 8 },
+		{ "Enchilada", 4 },
+		{ "Francis", 1 },
+		{ "Greg", 3 },
+		{ "Hagrid", 5 } }
+	};
 
-    const auto best {   // returns an iterator
-        std::max_element(arr.begin(), arr.end(), [](const auto& a, const auto& b) {
-            return a.points < b.points;
-        })
-    };
+	const auto best {	// returns an iterator
+		std::max_element(arr.begin(), arr.end(), [](const auto& a, const auto& b) {
+			return a.points < b.points;
+		})
+	};
 
-    std::cout << best->name << " is the best student\n";    // must dereference iterator to get element
+	std::cout << best->name << " is the best student\n";	// must dereference iterator to get element
 
-    return 0;
+	return 0;
 }

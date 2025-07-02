@@ -34,98 +34,98 @@ The results of this program should be randomized.
 
 class Creature {
 protected:
-    std::string m_name {};
-    char m_symbol {};
-    int m_health {};
-    int m_damage {};
-    int m_gold {};
+	std::string m_name {};
+	char m_symbol {};
+	int m_health {};
+	int m_damage {};
+	int m_gold {};
 
 public:
-    Creature(std::string_view name, char symbol, int health, int damage, int gold)
-        : m_name { name }
-        , m_symbol { symbol }
-        , m_health { health }
-        , m_damage { damage }
-        , m_gold { gold } {}
+	Creature(std::string_view name, char symbol, int health, int damage, int gold)
+		: m_name { name }
+		, m_symbol { symbol }
+		, m_health { health }
+		, m_damage { damage }
+		, m_gold { gold } {}
 
-    const std::string& getName() const {
-        return m_name;
-    }
+	const std::string& getName() const {
+		return m_name;
+	}
 
-    char getSymbol() const {
-        return m_symbol;
-    }
+	char getSymbol() const {
+		return m_symbol;
+	}
 
-    int getHealth() const {
-        return m_health;
-    }
+	int getHealth() const {
+		return m_health;
+	}
 
-    int getDamage() const {
-        return m_damage;
-    }
+	int getDamage() const {
+		return m_damage;
+	}
 
-    int getGold() const {
-        return m_gold;
-    }
+	int getGold() const {
+		return m_gold;
+	}
 
-    void reduceHealth(int health) {
-        m_health -= health;
-    }
+	void reduceHealth(int health) {
+		m_health -= health;
+	}
 
-    bool isDead() const {
-        return m_health <= 0;
-    }
+	bool isDead() const {
+		return m_health <= 0;
+	}
 
-    void addGold(int gold) {
-        m_gold += gold;
-    }
+	void addGold(int gold) {
+		m_gold += gold;
+	}
 };
 
 class Player : public Creature {
-    int m_level { 1 };
+	int m_level { 1 };
 
 public:
-    Player(std::string_view name) : Creature { name, '@', 10, 1, 0 } {}
+	Player(std::string_view name) : Creature { name, '@', 10, 1, 0 } {}
 
-    void levelUp() {
-        ++m_level;
-        ++m_damage;
-    }
+	void levelUp() {
+		++m_level;
+		++m_damage;
+	}
 
-    int getLevel() const {
-        return m_level;
-    }
+	int getLevel() const {
+		return m_level;
+	}
 
-    bool hasWon() const {
-        return m_level >= 20;
-    }
+	bool hasWon() const {
+		return m_level >= 20;
+	}
 };
 
 class Monster : public Creature {
 public:
-    enum Type {
-        dragon,
-        orc,
-        slime,
-        max_types
-    };
+	enum Type {
+		dragon,
+		orc,
+		slime,
+		max_types
+	};
 
 private:
-    inline static Creature monsterData[] {
-        Creature { "dragon", 'D', 20, 4, 100 },
-        Creature { "orc", 'o', 4, 2, 25 },
-        Creature { "slime", 's', 1, 1, 10 }
-    };
+	inline static Creature monsterData[] {
+		Creature { "dragon", 'D', 20, 4, 100 },
+		Creature { "orc", 'o', 4, 2, 25 },
+		Creature { "slime", 's', 1, 1, 10 }
+	};
 
-    static_assert(std::size(monsterData) == max_types);
+	static_assert(std::size(monsterData) == max_types);
 
 public:
-    Monster(Type type) : Creature { monsterData[type] } {}
+	Monster(Type type) : Creature { monsterData[type] } {}
 
-    static Monster getRandomMonster() {
-        int num { Random::get(0, max_types - 1) };
-        return Monster { static_cast<Type>(num) };
-    }
+	static Monster getRandomMonster() {
+		int num { Random::get(0, max_types - 1) };
+		return Monster { static_cast<Type>(num) };
+	}
 };
 
 int main() {

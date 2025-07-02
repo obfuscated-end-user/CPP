@@ -10,11 +10,11 @@ Update your code for the prior quiz solution so that the following program compi
 
 int main()
 {
-    std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
+	std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9 };
 
-    printArray(arr); // use function template to print array
+	printArray(arr); // use function template to print array
 
-    return 0;
+	return 0;
 }
 */
 
@@ -23,17 +23,17 @@ int main()
 
 template <typename T>
 void printArray(const std::vector<T>& arr) {
-    for (std::size_t index { 0 }; index < arr.size(); ++index)
-        std::cout << arr[index] << ' ';
+	for (std::size_t index { 0 }; index < arr.size(); ++index)
+		std::cout << arr[index] << ' ';
 
-    if (arr.size() > 0)
-        std::cout << '\n';
+	if (arr.size() > 0)
+		std::cout << '\n';
 }
 
 int main() {
-    std::vector arr { 4, 6, 7, 3, 8, 2, 1, 9 };
+	std::vector arr { 4, 6, 7, 3, 8, 2, 1, 9 };
 
-    printArray(arr);
+	printArray(arr);
 
-    return 0;
+	return 0;
 }

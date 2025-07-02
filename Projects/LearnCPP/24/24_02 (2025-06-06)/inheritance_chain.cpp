@@ -7,46 +7,46 @@
 class Person {
 public:
 // In this example, we're making our members public for simplicity
-    std::string m_name {};
-    int m_age {};
+	std::string m_name {};
+	int m_age {};
 
-    Person(std::string_view name="", int age=0)
-        : m_name { name }, m_age { age } {}
+	Person(std::string_view name="", int age=0)
+		: m_name { name }, m_age { age } {}
 
-    const std::string& getName() const {
-        return m_name;
-    }
+	const std::string& getName() const {
+		return m_name;
+	}
 
-    int getAge() const {
-        return m_age;
-    }
+	int getAge() const {
+		return m_age;
+	}
 };
 
 // Employee publicly inherits from Person
 class Employee : public Person {
 // In this example, we're making our members public for simplicity
 public:
-    double m_hourlySalary {};
-    long m_employeeID {};
+	double m_hourlySalary {};
+	long m_employeeID {};
 
-    Employee(double hourlySalary=0.0, int employeeID=0)
-        : m_hourlySalary { hourlySalary }, m_employeeID { employeeID } {}
+	Employee(double hourlySalary=0.0, int employeeID=0)
+		: m_hourlySalary { hourlySalary }, m_employeeID { employeeID } {}
 
-    void printNameAndSalary() const {
-        std::cout << m_name << ": " << m_hourlySalary << '\n';
-    }
+	void printNameAndSalary() const {
+		std::cout << m_name << ": " << m_hourlySalary << '\n';
+	}
 };
 
 class Supervisor : public Employee {
 public:
-    // This supervisor can oversee a max of 5 employees
-    long m_overseesIDs[5] {};
+	// This supervisor can oversee a max of 5 employees
+	long m_overseesIDs[5] {};
 };
 
 int main() {
-    Employee frank { 20.25, 12345 };
-    frank.m_name = "Frank"; // we can do this because m_name is public
-    frank.printNameAndSalary();
+	Employee frank { 20.25, 12345 };
+	frank.m_name = "Frank"; // we can do this because m_name is public
+	frank.printNameAndSalary();
 
-    return 0;
+	return 0;
 }

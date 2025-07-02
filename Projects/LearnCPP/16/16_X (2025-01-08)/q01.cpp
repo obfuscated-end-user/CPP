@@ -13,13 +13,13 @@ e) A std::vector with 12 int elements, initialized to the default values.
 #include <string_view>
 
 int main() {
-    using namespace std::literals::string_view_literals;    // for sv suffix
+	using namespace std::literals::string_view_literals;	// for sv suffix
 
-    std::vector evens { 2, 4, 6, 8, 10, 12};
-    const std::vector d { 1.2, 3.4, 5.6, 7.8 }; // reminder: std::vector can't be constexpr
-    const std::vector names { "Albert"sv, "Brad"sv, "Charles"sv, "Dave"sv };    // sv suffix needed for CTAD to infer std::string_view
-    std::vector v { 12 };
-    std::vector<int> v2 (12);
+	std::vector evens { 2, 4, 6, 8, 10, 12};
+	const std::vector d { 1.2, 3.4, 5.6, 7.8 }; // reminder: std::vector can't be constexpr
+	const std::vector names { "Albert"sv, "Brad"sv, "Charles"sv, "Dave"sv };	// sv suffix needed for CTAD to infer std::string_view
+	std::vector v { 12 };
+	std::vector<int> v2 (12);
 
-    return 0;
+	return 0;
 }

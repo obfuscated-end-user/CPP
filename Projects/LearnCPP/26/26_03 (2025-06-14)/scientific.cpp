@@ -4,16 +4,16 @@
 
 template <typename T>
 void print(const T& t) {
-    std::cout << t << '\n';
+	std::cout << t << '\n';
 }
 
 void print(double d) {
-    std::cout << std::scientific << d << '\n';
+	std::cout << std::scientific << d << '\n';
 }
 
 int main() {
-    print(5);
-    print(6.7);
+	print(5);
+	print(6.7);
 
-    return 0;
+	return 0;
 }

@@ -4,29 +4,29 @@
 
 class Base {
 public:
-    Base() {}
+	Base() {}
 
-    friend std::ostream& operator<<(std::ostream& out, const Base&) {
-        out << "In Base\n";
-        return out;
-    }
+	friend std::ostream& operator<<(std::ostream& out, const Base&) {
+		out << "In Base\n";
+		return out;
+	}
 };
 
 class Derived : public Base {
 public:
-    Derived() {}
+	Derived() {}
 
-    friend std::ostream& operator<<(std::ostream& out, const Derived& d) {
-        out << "In Derived\n";
-        // static_cast Derived to a Base object, so we call the right version of operator<<
-        out << static_cast<const Base&>(d);
-        return out;
-    }
+	friend std::ostream& operator<<(std::ostream& out, const Derived& d) {
+		out << "In Derived\n";
+		// static_cast Derived to a Base object, so we call the right version of operator<<
+		out << static_cast<const Base&>(d);
+		return out;
+	}
 };
 
 int main() {
-    Derived derived {};
-    std::cout << derived << '\n';
+	Derived derived {};
+	std::cout << derived << '\n';
 
-    return 0;
+	return 0;
 }

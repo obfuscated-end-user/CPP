@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/chapter-26-summary-and-quiz
 
 /*
-    Write a Pair class that allows you to specify separate types for each of the two values in the pair.
+	Write a Pair class that allows you to specify separate types for each of the two values in the pair.
 
 Note: We’re naming this class differently from the previous one because C++ does not currently allow you to “overload” classes that differ only in the number or type of template parameters.
 
@@ -35,36 +35,36 @@ Hint: To define a template using two different types, separate the two types by 
 template <typename T, typename S>
 class Pair {
 private:
-    T m_x {};
-    S m_y {};
+	T m_x {};
+	S m_y {};
 
 public:
-    Pair(const T& x, const S& y)
-        : m_x { x }, m_y { y } {}
+	Pair(const T& x, const S& y)
+		: m_x { x }, m_y { y } {}
 
-    T& first() {
-        return m_x;
-    }
+	T& first() {
+		return m_x;
+	}
 
-    S& second() {
-        return m_y;
-    }
+	S& second() {
+		return m_y;
+	}
 
-    const T& first() const {
-        return m_x;
-    }
+	const T& first() const {
+		return m_x;
+	}
 
-    const S& second() const {
-        return m_y;
-    }
+	const S& second() const {
+		return m_y;
+	}
 };
 
 int main() {
-    Pair<int, double> p1 { 5, 6.7 };
-    std::cout << "Pair: " << p1.first() << ' ' << p1.second() << '\n';
+	Pair<int, double> p1 { 5, 6.7 };
+	std::cout << "Pair: " << p1.first() << ' ' << p1.second() << '\n';
 
-    const Pair<double, int> p2 { 2.3, 4 };
-    std::cout << "Pair: " << p2.first() << ' ' << p2.second() << '\n';
+	const Pair<double, int> p2 { 2.3, 4 };
+	std::cout << "Pair: " << p2.first() << ' ' << p2.second() << '\n';
 
-    return 0;
+	return 0;
 }

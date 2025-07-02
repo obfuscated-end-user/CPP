@@ -3,13 +3,13 @@
 #include <iostream>
 
 int main() {
-    int value { 5 };
+	int value { 5 };
 
-    int* ptr { &value };
-    std::cout << *ptr << '\n';      // Dereference pointer to int to get int value
+	int* ptr { &value };
+	std::cout << *ptr << '\n';	  // Dereference pointer to int to get int value
 
-    int** ptrptr { &ptr };
-    std::cout << **ptrptr << '\n';  // deference to get pointer to int, dereference again to get int value
+	int** ptrptr { &ptr };
+	std::cout << **ptrptr << '\n';  // deference to get pointer to int, dereference again to get int value
 
-    return 0;
+	return 0;
 }

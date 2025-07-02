@@ -6,37 +6,37 @@
 
 class Animal {  // This Animal is an abstract base class
 protected:
-    std::string m_name {};
+	std::string m_name {};
 
 public:
-    Animal(std::string_view name) : m_name(name) {}
+	Animal(std::string_view name) : m_name(name) {}
 
-    const std::string& getName() const {
-        return m_name;
-    }
+	const std::string& getName() const {
+		return m_name;
+	}
 
-    virtual std::string_view speak() const = 0; // note that speak is a pure virtual function
+	virtual std::string_view speak() const = 0; // note that speak is a pure virtual function
 
-    virtual ~Animal() = default;
+	virtual ~Animal() = default;
 };
 
 std::string_view Animal::speak() const {
-    return "buzz";  // some default implementation
+	return "buzz";  // some default implementation
 }
 
 class Dragonfly : public Animal {
 public:
-    Dragonfly(std::string_view name) : Animal { name } {}
+	Dragonfly(std::string_view name) : Animal { name } {}
 
-    // this class is no longer abstract because we defined this function
-    std::string_view speak() const override {
-        return Animal::speak(); // use Animal's default implementation
-    }
+	// this class is no longer abstract because we defined this function
+	std::string_view speak() const override {
+		return Animal::speak(); // use Animal's default implementation
+	}
 };
 
 int main() {
-    Dragonfly dfly { "Sally" };
-    std::cout << dfly.getName() << " says " << dfly.speak() << '\n';
+	Dragonfly dfly { "Sally" };
+	std::cout << dfly.getName() << " says " << dfly.speak() << '\n';
 
-    return 0;
+	return 0;
 }

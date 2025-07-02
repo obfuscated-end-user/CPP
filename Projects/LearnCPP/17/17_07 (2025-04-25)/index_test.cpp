@@ -3,12 +3,12 @@
 #include <iostream>
 
 int main() {
-    const int arr[] { 9, 8, 7, 6, 5 };
-    int s { 2 };
-    std::cout << arr[s] << '\n';    // okay to use signed index
+	const int arr[] { 9, 8, 7, 6, 5 };
+	int s { 2 };
+	std::cout << arr[s] << '\n';	// okay to use signed index
 
-    unsigned int u { 2 };
-    std::cout << arr[u] << '\n';    // okay to use unsigned index
+	unsigned int u { 2 };
+	std::cout << arr[u] << '\n';	// okay to use unsigned index
 
-    return 0;
+	return 0;
 }

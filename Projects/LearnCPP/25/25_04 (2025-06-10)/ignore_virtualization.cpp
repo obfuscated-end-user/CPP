@@ -5,26 +5,26 @@
 
 class Base {
 public:
-    virtual ~Base() = default;
+	virtual ~Base() = default;
 
-    virtual std::string_view getName() const {
-        return "Base";
-    }
+	virtual std::string_view getName() const {
+		return "Base";
+	}
 };
 
 class Derived : public Base {
 public:
-    virtual std::string_view getName() const {
-        return "Derived";
-    }
+	virtual std::string_view getName() const {
+		return "Derived";
+	}
 };
 
 int main() {
-    Derived derived {};
-    const Base& base { derived };
+	Derived derived {};
+	const Base& base { derived };
 
-    // Calls Base::getName() insteadof the virtualized Derived::getName()
-    std::cout << base.Base::getName() << '\n';
+	// Calls Base::getName() insteadof the virtualized Derived::getName()
+	std::cout << base.Base::getName() << '\n';
 
-    return 0;
+	return 0;
 }

@@ -8,10 +8,10 @@ The following code should run:
 ```
 int main()
 {
-    MyString s { "Hello, world!" };
-    std::cout << s(7, 5) << '\n'; // start at index 7 and return 5 characters
+	MyString s { "Hello, world!" };
+	std::cout << s(7, 5) << '\n'; // start at index 7 and return 5 characters
 
-    return 0;
+	return 0;
 }
 ```
 
@@ -31,31 +31,31 @@ Hint: You can use std::string::substr to get a substring of a std::string.
 
 class MyString {
 private:
-    std::string m_string {};
+	std::string m_string {};
 
 public:
-    MyString(std::string_view string={}) : m_string { string } {}
+	MyString(std::string_view string={}) : m_string { string } {}
 
-    MyString operator()(int start, int length) {
-        assert(start >= 0);
-        assert(start + length <= static_cast<int>(m_string.length()) && "MyString::operator(int, int): Substring is out of range");
+	MyString operator()(int start, int length) {
+		assert(start >= 0);
+		assert(start + length <= static_cast<int>(m_string.length()) && "MyString::operator(int, int): Substring is out of range");
 
-        return MyString { m_string.substr(
-            static_cast<std::string::size_type>(start),
-            static_cast<std::string::size_type>(length)
-        ) };
-    }
+		return MyString { m_string.substr(
+			static_cast<std::string::size_type>(start),
+			static_cast<std::string::size_type>(length)
+		) };
+	}
 
-    friend std::ostream& operator<<(std::ostream& out, const MyString& s) {
-        out << s.m_string;
+	friend std::ostream& operator<<(std::ostream& out, const MyString& s) {
+		out << s.m_string;
 
-        return out;
-    }
+		return out;
+	}
 };
 
 int main() {
-    MyString s { "Hello, world!" };
-    std::cout << s(7, 5) << '\n';   // start at index 7 and return 5 characters
+	MyString s { "Hello, world!" };
+	std::cout << s(7, 5) << '\n';	// start at index 7 and return 5 characters
 
-    return 0;
+	return 0;
 }

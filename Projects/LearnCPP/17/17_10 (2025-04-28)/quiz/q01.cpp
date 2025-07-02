@@ -11,18 +11,18 @@ Write a function to print a C-style string character by character. Use a pointer
 // However, we can point str at something else. This doe snot change the value of the argument.
 
 void printCString(const char str[]) {
-    // While we haven't encountered a null terminator
-    while (*str != '\0') {
-        // print the current character
-        std::cout << *str;
-        // and use pointer arithmetic to move str to the next character
-        ++str;
-    }
+	// While we haven't encountered a null terminator
+	while (*str != '\0') {
+		// print the current character
+		std::cout << *str;
+		// and use pointer arithmetic to move str to the next character
+		++str;
+	}
 }
 
 int main() {
-    printCString("Hello world!");
-    std::cout << '\n';
+	printCString("Hello world!");
+	std::cout << '\n';
 
-    return 0;
+	return 0;
 }

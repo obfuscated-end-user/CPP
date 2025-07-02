@@ -4,22 +4,22 @@
 
 class Base {
 public:
-    Base() {}
+	Base() {}
 };
 
 class Derived: public Base {
 public:
-    Derived() {}
+	Derived() {}
 };
 
 int main() {
-    try {
-        throw Derived();
-    } catch (const Derived& derived) {
-        std::cerr << "caught Derived";
-    } catch (const Base& base) {
-        std::cerr << "caught Base";
-    }
+	try {
+		throw Derived();
+	} catch (const Derived& derived) {
+		std::cerr << "caught Derived";
+	} catch (const Base& base) {
+		std::cerr << "caught Base";
+	}
 
-    return 0;
+	return 0;
 }

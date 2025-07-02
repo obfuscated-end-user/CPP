@@ -10,7 +10,7 @@ Hint: You can’t initialize the vector using a std::initializer_list, since thi
 Hint: std::unique_ptr::get() returns a pointer to the managed element.
 */
 
-#include <algorithm>    // for std::max
+#include <algorithm>	// for std::max
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -30,58 +30,58 @@ public:
 
 class Shape {
 public:
-    virtual std::ostream& print(std::ostream& out) const = 0;
+	virtual std::ostream& print(std::ostream& out) const = 0;
 
-    friend std::ostream& operator<<(std::ostream& out, const Shape& p) {
-        return p.print(out);
-    }
+	friend std::ostream& operator<<(std::ostream& out, const Shape& p) {
+		return p.print(out);
+	}
 
-    virtual ~Shape() = default;
+	virtual ~Shape() = default;
 };
 
 class Triangle : public Shape {
 private:
-    Point m_p1;
-    Point m_p2;
-    Point m_p3;
+	Point m_p1;
+	Point m_p2;
+	Point m_p3;
 
 public:
-    Triangle(const Point& p1, const Point& p2, const Point& p3)
-        : m_p1 { p1 }, m_p2 { p2 }, m_p3 { p3 } {}
+	Triangle(const Point& p1, const Point& p2, const Point& p3)
+		: m_p1 { p1 }, m_p2 { p2 }, m_p3 { p3 } {}
 
-    std::ostream& print(std::ostream& out) const override {
-        return out << "Triangle(" << m_p1 << ", " << m_p2 << ", " << m_p3 << ')';
-    }
+	std::ostream& print(std::ostream& out) const override {
+		return out << "Triangle(" << m_p1 << ", " << m_p2 << ", " << m_p3 << ')';
+	}
 };
 
 class Circle : public Shape {
 private:
-    Point m_center;
-    int m_radius {};
+	Point m_center;
+	int m_radius {};
 
 public:
-    Circle(const Point& center, int radius)
-        : m_center { center }, m_radius { radius } {}
+	Circle(const Point& center, int radius)
+		: m_center { center }, m_radius { radius } {}
 
-    std::ostream& print(std::ostream& out) const override {
-        return out << "Circle(" << m_center << ", radius " << m_radius << ')';
-    }
+	std::ostream& print(std::ostream& out) const override {
+		return out << "Circle(" << m_center << ", radius " << m_radius << ')';
+	}
 
-    int getRadius() const {
-        return m_radius;
-    }
+	int getRadius() const {
+		return m_radius;
+	}
 };
 
 int getLargestRadius(const std::vector<std::unique_ptr<Shape>>& v) {
-    int largestRadius { 0 };
+	int largestRadius { 0 };
 
-    // Loop through all the shapes in the vector
-    for (const auto& element : v) {
-        if (auto *c { dynamic_cast<const Circle*>(element.get()) })
-            largestRadius = std::max(largestRadius, c->getRadius());
-    }
+	// Loop through all the shapes in the vector
+	for (const auto& element : v) {
+		if (auto *c { dynamic_cast<const Circle*>(element.get()) })
+			largestRadius = std::max(largestRadius, c->getRadius());
+	}
 
-    return largestRadius;
+	return largestRadius;
 }
 
 int main() {
@@ -92,9 +92,9 @@ int main() {
 	v.push_back(std::make_unique<Circle>(Point { 7, 8 }, 3));
 
 	for (const auto& element : v)
-        std::cout << *element << '\n';
+		std::cout << *element << '\n';
 
 	std::cout << "The largest radius is: " << getLargestRadius(v) << '\n';
 
-    return 0;
+	return 0;
 }

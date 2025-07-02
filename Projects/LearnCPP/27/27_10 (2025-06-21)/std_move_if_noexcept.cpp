@@ -1,88 +1,88 @@
 // https://www.learncpp.com/cpp-tutorial/stdmove_if_noexcept
 
 #include <iostream>
-#include <utility>      // For std::pair, std::make_pair, std::move, std::move_if_noexcept
-#include <stdexcept>    // std::runtime_error
+#include <utility>	  // For std::pair, std::make_pair, std::move, std::move_if_noexcept
+#include <stdexcept>	// std::runtime_error
 
 class MoveClass {
 private:
-    int* m_resource {};
+	int* m_resource {};
 
 public:
-    MoveClass() = default;
+	MoveClass() = default;
 
-    MoveClass(int resource) : m_resource { new int { resource } } {}
+	MoveClass(int resource) : m_resource { new int { resource } } {}
 
-    // Copy constructor
-    MoveClass(const MoveClass& that) {
-        // deep copy
-        if (that.m_resource != nullptr) {
-            m_resource = new int { *that.m_resource };
-        }
-    }
+	// Copy constructor
+	MoveClass(const MoveClass& that) {
+		// deep copy
+		if (that.m_resource != nullptr) {
+			m_resource = new int { *that.m_resource };
+		}
+	}
 
-    // Move constructor
-    MoveClass(MoveClass&& that) noexcept
-        : m_resource { that.m_resource } {
-        that.m_resource = nullptr;
-    }
+	// Move constructor
+	MoveClass(MoveClass&& that) noexcept
+		: m_resource { that.m_resource } {
+		that.m_resource = nullptr;
+	}
 
-    ~MoveClass() {
-        std::cout << "destroying " << *this << '\n';
+	~MoveClass() {
+		std::cout << "destroying " << *this << '\n';
 
-        delete m_resource;
-    }
+		delete m_resource;
+	}
 
-    friend std::ostream& operator<<(std::ostream& out, const MoveClass& moveClass) {
-        out << "MoveClass(";
+	friend std::ostream& operator<<(std::ostream& out, const MoveClass& moveClass) {
+		out << "MoveClass(";
 
-        if (moveClass.m_resource == nullptr) {
-            out << "empty";
-        } else {
-            out << *moveClass.m_resource;
-        }
+		if (moveClass.m_resource == nullptr) {
+			out << "empty";
+		} else {
+			out << *moveClass.m_resource;
+		}
 
-        out << ')';
+		out << ')';
 
-        return out;
-    }
+		return out;
+	}
 };
 
 
 class CopyClass {
 public:
-    bool m_throw {};
+	bool m_throw {};
 
-    CopyClass() = default;
+	CopyClass() = default;
 
-    // Copy constructor throws an exception when copying from
-    // a CopyClass object where its m_throw is 'true'
-    CopyClass(const CopyClass& that)
-        : m_throw { that.m_throw } {
-        if (m_throw) {
-            throw std::runtime_error { "abort!" };
-        }
-    }
+	// Copy constructor throws an exception when copying from
+	// a CopyClass object where its m_throw is 'true'
+	CopyClass(const CopyClass& that)
+		: m_throw { that.m_throw } {
+		if (m_throw) {
+			throw std::runtime_error { "abort!" };
+		}
+	}
 };
 
 int main() {
-    // We can make a std::pair without any problems:
-    std::pair my_pair { MoveClass { 13 }, CopyClass {} };
+	// We can make a std::pair without any problems:
+	std::pair my_pair { MoveClass { 13 }, CopyClass {} };
 
-    std::cout << "my_pair.first: " << my_pair.first << '\n';
+	std::cout << "my_pair.first: " << my_pair.first << '\n';
 
-    // But the problem arises when we try to move that pair into another pair.
-    try {
-        my_pair.second.m_throw = true;  // To trigger copy constructor exception
+	// But the problem arises when we try to move that pair into another pair.
+	try {
+		my_pair.second.m_throw = true;  // To trigger copy constructor exception
 
-        std::pair moved_pair { std::move_if_noexcept(my_pair) };
+		std::pair moved_pair { std::move_if_noexcept(my_pair) };
 
-        std::cout << "moved pair exists\n"; // Never prints
-    } catch (const std::exception& ex) {
-            std::cerr << "Error found: " << ex.what() << '\n';
-    }
+		std::cout << "moved pair exists\n"; // Never prints
+	} catch (const std::exception& ex) {
+			std::cerr << "Error found: " << ex.what() << '\n';
+	}
 
-    std::cout << "my_pair.first: " << my_pair.first << '\n';
+	std::cout << "my_pair.first: " << my_pair.first << '\n';
 
-    return 0;
+	return 0;
 }

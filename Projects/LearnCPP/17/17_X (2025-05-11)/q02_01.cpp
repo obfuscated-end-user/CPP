@@ -73,35 +73,35 @@ Hint: We show a method for iterating through an enumeration using a range-based 
 #include <string_view>
 
 namespace Potion {
-    enum Type {
-        healing,
-        mana,
-        speed,
-        invisibility,
-        max_potions
-    };
+	enum Type {
+		healing,
+		mana,
+		speed,
+		invisibility,
+		max_potions
+	};
 
-    constexpr std::array types { healing, mana, speed, invisibility };  // An array of our enumerators
+	constexpr std::array types { healing, mana, speed, invisibility };	// An array of our enumerators
 
-    // We could put these in a struct, but since we only have two attributes we'll keep them separate for now
-    // We will explicitly define the element type so we don't have to use the sv suffix
-    constexpr std::array<std::string_view, max_potions> name { "healing", "mana", "speed", "invisibility" };
-    constexpr std::array cost { 20, 30, 12, 50 };
+	// We could put these in a struct, but since we only have two attributes we'll keep them separate for now
+	// We will explicitly define the element type so we don't have to use the sv suffix
+	constexpr std::array<std::string_view, max_potions> name { "healing", "mana", "speed", "invisibility" };
+	constexpr std::array cost { 20, 30, 12, 50 };
 
-    static_assert(std::size(types) == max_potions); // ensure 'all' ccontains the correct number of enumerators
-    static_assert(std::size(cost) == max_potions);
-    static_assert(std::size(name) == max_potions);
+	static_assert(std::size(types) == max_potions);	// ensure 'all' ccontains the correct number of enumerators
+	static_assert(std::size(cost) == max_potions);
+	static_assert(std::size(name) == max_potions);
 };
 
 void shop() {
-    std::cout << "Here is our selection for today:\n";
+	std::cout << "Here is our selection for today:\n";
 
-    for (auto p: Potion::types)
-        std::cout << p << ") " << Potion::name[p] << " costs " << Potion::cost[p] << '\n';
+	for (auto p: Potion::types)
+		std::cout << p << ") " << Potion::name[p] << " costs " << Potion::cost[p] << '\n';
 }
 
 int main() {
-    shop();
+	shop();
 
-    return 0;
+	return 0;
 }

@@ -21,8 +21,8 @@ public:
 	virtual ~Base() = default;
 
 	virtual ClassID getClassID() const {
-        return ClassID::base;
-    }
+		return ClassID::base;
+	}
 };
 
 class Derived : public Base {
@@ -34,12 +34,12 @@ public:
 		: Base { value }, m_name { name } {}
 
 	const std::string& getName() const {
-        return m_name;
-    }
+		return m_name;
+	}
 
 	ClassID getClassID() const override {
-        return ClassID::derived;
-    }
+		return ClassID::derived;
+	}
 };
 
 Base* getObject(bool bReturnDerived) {

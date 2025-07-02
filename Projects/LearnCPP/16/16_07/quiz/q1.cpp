@@ -6,55 +6,55 @@
 
 class IntArray {
 private:
-    int m_length;
-    int* m_data;
+	int m_length;
+	int* m_data;
 
 public:
-    IntArray() = default;
-    IntArray(int length) : m_length { length }, m_data { new int[length] {} } {}
+	IntArray() = default;
+	IntArray(int length) : m_length { length }, m_data { new int[length] {} } {}
 
-    IntArray(std::initializer_list<int> list): IntArray(static_cast<int>(list.size())) {
-        int count = 0;
-        for (auto element : list) {
-            m_data[count] = element;
-            ++count;
-        }
-    }
+	IntArray(std::initializer_list<int> list): IntArray(static_cast<int>(list.size())) {
+		int count = 0;
+		for (auto element : list) {
+			m_data[count] = element;
+			++count;
+		}
+	}
 
-    ~IntArray() {
-        delete[] m_data;
-    }
+	~IntArray() {
+		delete[] m_data;
+	}
 
-    IntArray(const IntArray&) = delete;
-    IntArray& operator=(const IntArray& list) = delete;
+	IntArray(const IntArray&) = delete;
+	IntArray& operator=(const IntArray& list) = delete;
 
-    // implement an overloaded assignment operator that takes an initializer list
-    IntArray& operator=(std::initializer_list<int> list) {
-        // if list has different size, reallocate it
-        int length = static_cast<int>(list.size());
-        if (length != m_length) {
-            delete[] m_data;
-            m_length = length;
-            m_data = new int[length]{};
-        }
+	// implement an overloaded assignment operator that takes an initializer list
+	IntArray& operator=(std::initializer_list<int> list) {
+		// if list has different size, reallocate it
+		int length = static_cast<int>(list.size());
+		if (length != m_length) {
+			delete[] m_data;
+			m_length = length;
+			m_data = new int[length]{};
+		}
 
-        int count = 0;
-        for (auto element : list) {
-            m_data[count] = element;
-            ++count;
-        }
+		int count = 0;
+		for (auto element : list) {
+			m_data[count] = element;
+			++count;
+		}
 
-        return *this;
-    }
+		return *this;
+	}
 
-    int& operator[](int index) {
-        assert(index >= 0 && index < m_length);
-        return m_data[index];
-    }
+	int& operator[](int index) {
+		assert(index >= 0 && index < m_length);
+		return m_data[index];
+	}
 
-    int getLength() const {
-        return m_length;
-    }
+	int getLength() const {
+		return m_length;
+	}
 };
 
 int main() {

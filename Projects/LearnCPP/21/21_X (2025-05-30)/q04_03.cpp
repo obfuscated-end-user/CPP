@@ -3,8 +3,8 @@
 /*
 Now let’s handle the case where the fractional portion is out of bounds. We have two reasonable strategies here:
 
-    Clamp the fraction portion (if >99, set to 99).
-    Treat overflow as relevant (if >99, reduce by 100 and add 1 to base).
+	Clamp the fraction portion (if >99, set to 99).
+	Treat overflow as relevant (if >99, reduce by 100 and add 1 to base).
 
 In this exercise, we’ll treat decimal overflow as relevant, as this will be useful in the next step.
 
@@ -18,10 +18,10 @@ The following should run:
 // so the function can access the private members of FixedPoint2
 bool testDecimal(const FixedPoint2 &fp)
 {
-    if (fp.m_base >= 0)
-        return fp.m_decimal >= 0 && fp.m_decimal < 100;
-    else
-        return fp.m_decimal <= 0 && fp.m_decimal > -100;
+	if (fp.m_base >= 0)
+		return fp.m_decimal >= 0 && fp.m_decimal < 100;
+	else
+		return fp.m_decimal <= 0 && fp.m_decimal > -100;
 }
 
 int main()
@@ -65,18 +65,18 @@ Hint: To output your number, static_cast it to a double.
 
 class FixedPoint2 {
 private:
-    std::int16_t m_base {};
-    std::int8_t m_decimal {};
+	std::int16_t m_base {};
+	std::int8_t m_decimal {};
 
 public:
-    FixedPoint2(std::int16_t base=0, std::int8_t decimal=0)
-        : m_base { base }, m_decimal { decimal } {
-        if (m_base < 0 || m_decimal < 0) {
-            if (m_base > 0)
-                m_base = -m_base;
-            if (m_decimal > 0)
-                m_decimal = -m_decimal;
-        }
+	FixedPoint2(std::int16_t base=0, std::int8_t decimal=0)
+		: m_base { base }, m_decimal { decimal } {
+		if (m_base < 0 || m_decimal < 0) {
+			if (m_base > 0)
+				m_base = -m_base;
+			if (m_decimal > 0)
+				m_decimal = -m_decimal;
+		}
 
 		// If decimal is out of bounds (in either direction),
 		// adjust the decimal so it's in bounds
@@ -84,18 +84,18 @@ public:
 		// h/t to reader David Pinheiro for simplifying this
 		m_base += m_decimal / 100;		// integer division
 		m_decimal = m_decimal % 100;	// integer remainder
-    }
+	}
 
-    explicit operator double() const {
-        return m_base + (static_cast<double>(m_decimal) / 100);
-    }
+	explicit operator double() const {
+		return m_base + (static_cast<double>(m_decimal) / 100);
+	}
 
 	friend bool testDecimal(const FixedPoint2& fp);
 };
 
 std::ostream& operator<<(std::ostream& out, const FixedPoint2& fp) {
-    out << static_cast<double>(fp);
-    return out;
+	out << static_cast<double>(fp);
+	return out;
 }
 
 // You will need t make testDecimal a friend of FixedPoint2

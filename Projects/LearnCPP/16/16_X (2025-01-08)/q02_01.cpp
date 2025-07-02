@@ -14,27 +14,27 @@ You have 16 total items
 #include <vector>
 
 namespace Items {
-    enum Type {
-        health_potion,
-        torch,
-        arrow,
-        max_items
-    };
+	enum Type {
+		health_potion,
+		torch,
+		arrow,
+		max_items
+	};
 }
 
 // Inventory items should have integral quantities so we don't need a function template here
 int countTotalItems(const std::vector<int>& inventory) {
-    int sum { 0 };
-    for (auto e : inventory)
-        sum += e;
-    return sum;
+	int sum { 0 };
+	for (auto e : inventory)
+		sum += e;
+	return sum;
 }
 
 int main() {
-    std::vector inventory { 1, 5, 10 };
-    assert(std::size(inventory) == Items::max_items);   // make sure our inventory has the correct number of initializers
+	std::vector inventory { 1, 5, 10 };
+	assert(std::size(inventory) == Items::max_items);	// make sure our inventory has the correct number of initializers
 
-    std::cout << "You have " << countTotalItems(inventory) << " total items\n";
+	std::cout << "You have " << countTotalItems(inventory) << " total items\n";
 
-    return 0;
+	return 0;
 }

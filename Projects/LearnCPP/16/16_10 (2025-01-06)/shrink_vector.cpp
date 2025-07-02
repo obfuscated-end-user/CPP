@@ -8,10 +8,10 @@ void printCapLen(const std::vector<int>& v) {
 }
 
 int main() {
-	std::vector<int> v(1000);   // allocate room for 1000 elements
+	std::vector<int> v(1000);	// allocate room for 1000 elements
 	printCapLen(v);
 
-	v.resize(0);                // resize to 0 elements
+	v.resize(0);				// resize to 0 elements
 	printCapLen(v);
 
 	v.shrink_to_fit();

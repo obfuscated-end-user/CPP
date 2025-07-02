@@ -4,31 +4,31 @@
 
 class Base {
 protected:
-    int m_value {};
+	int m_value {};
 
 public:
-    Base(int value) : m_value { value } {}
+	Base(int value) : m_value { value } {}
 
-    void identify() const {
-        std::cout << "I am a base\n";
-    }
+	void identify() const {
+		std::cout << "I am a base\n";
+	}
 };
 
 class Derived : public Base {
 public:
-    Derived(int value) : Base { value } {}
+	Derived(int value) : Base { value } {}
 
-    int getValue() const {
-        return m_value;
-    }
+	int getValue() const {
+		return m_value;
+	}
 };
 
 int main() {
-    Derived derived { 5 };
-    std::cout << "derived has value " << derived.getValue() << '\n';
+	Derived derived { 5 };
+	std::cout << "derived has value " << derived.getValue() << '\n';
 
-    Base base { 5 };
-    // std::cout << "base has value " << base.getValue() << '\n';
+	Base base { 5 };
+	// std::cout << "base has value " << base.getValue() << '\n';
 
-    return 0;
+	return 0;
 }

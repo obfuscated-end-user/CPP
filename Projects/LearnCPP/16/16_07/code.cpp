@@ -34,8 +34,8 @@ public:
 	}
 
 	int getLength() const {
-        return m_length;
-    }
+		return m_length;
+	}
 };
 
 int main() {
@@ -43,7 +43,7 @@ int main() {
 	array = { 1, 3, 5, 7, 9, 11 }; // Here's our list assignment statement
 
 	for (int count = 0; count < array.getLength(); ++count)
-		std::cout << array[count] << ' ';   // garbage
+		std::cout << array[count] << ' ';	// garbage
 
 	return 0;
 }

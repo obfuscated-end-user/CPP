@@ -7,14 +7,14 @@ Write a recursive function that takes an integer as input and returns the sum of
 #include <iostream>
 
 int sumDigits(int x) {
-    if (x < 10)
-        return x;
+	if (x < 10)
+		return x;
 
-    return sumDigits(x / 10) + x % 10;
+	return sumDigits(x / 10) + x % 10;
 }
 
 int main() {
-    std::cout << sumDigits(93427);
+	std::cout << sumDigits(93427);
 
-    return 0;
+	return 0;
 }

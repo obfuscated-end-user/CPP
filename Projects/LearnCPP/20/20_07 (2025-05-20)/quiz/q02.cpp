@@ -8,17 +8,17 @@ What does the following code print? Don’t run the code, work it out in your he
 #include <string>
 
 int main() {
-    std::string favoriteFruit { "grapes" };
+	std::string favoriteFruit { "grapes" };
 
-    auto printFavoriteFruit {
-        [=]() {
-            std::cout << "I like " << favoriteFruit << '\n';
-        }
-    };
+	auto printFavoriteFruit {
+		[=]() {
+			std::cout << "I like " << favoriteFruit << '\n';
+		}
+	};
 
-    favoriteFruit = "bananas with chocolate";
+	favoriteFruit = "bananas with chocolate";
 
-    printFavoriteFruit();
+	printFavoriteFruit();
 
-    return 0;
+	return 0;
 }

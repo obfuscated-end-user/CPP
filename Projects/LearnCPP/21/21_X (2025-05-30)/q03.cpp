@@ -52,65 +52,65 @@ This program should print:
 
 class IntArray {
 private:
-    int m_length { 0 };
-    int* m_array { nullptr };
+	int m_length { 0 };
+	int* m_array { nullptr };
 
 public:
-    explicit IntArray(int length) : m_length { length } {
-        assert(length > 0 && "IntArray length should be a positive integer");
+	explicit IntArray(int length) : m_length { length } {
+		assert(length > 0 && "IntArray length should be a positive integer");
 
-        m_array = new int[static_cast<std::size_t>(m_length)] {};
-    }
+		m_array = new int[static_cast<std::size_t>(m_length)] {};
+	}
 
-    // Copy constructor that does a deep copy
-    IntArray(const IntArray& array) : m_length { array.m_length } {
-        // Allocate a new array
-        m_array = new int[static_cast<std::size_t>(m_length)] {};
+	// Copy constructor that does a deep copy
+	IntArray(const IntArray& array) : m_length { array.m_length } {
+		// Allocate a new array
+		m_array = new int[static_cast<std::size_t>(m_length)] {};
 
-        // Copy elements from original array to new array
-        for (int count { 0 }; count < array.m_length; ++count)
-            m_array[count] = array.m_array[count];
-    }
+		// Copy elements from original array to new array
+		for (int count { 0 }; count < array.m_length; ++count)
+			m_array[count] = array.m_array[count];
+	}
 
-    ~IntArray() {
-        delete[] m_array;
-    }
+	~IntArray() {
+		delete[] m_array;
+	}
 
-    // If you're getting crazy values here you probably forgot to do a deep copy in your copy constructor
-    friend std::ostream& operator<<(std::ostream& out, const IntArray& array) {
-        for (int count { 0 }; count < array.m_length; ++count) {
-            out << array.m_array[count] << ' ';
-        }
+	// If you're getting crazy values here you probably forgot to do a deep copy in your copy constructor
+	friend std::ostream& operator<<(std::ostream& out, const IntArray& array) {
+		for (int count { 0 }; count < array.m_length; ++count) {
+			out << array.m_array[count] << ' ';
+		}
 
-        return out;
-    }
+		return out;
+	}
 
-    int& operator[](const int index) {
-        assert(index >= 0);
-        assert(index < m_length);
-        return m_array[index];
-    }
+	int& operator[](const int index) {
+		assert(index >= 0);
+		assert(index < m_length);
+		return m_array[index];
+	}
 
-    // Assignment operator that does a deep copy
-    IntArray& operator=(const IntArray& array) {
-        // self-assignment guard
-        if (this == &array)
-            return *this;
-        
-        // If this array already exists, delete it so we don't leak memory
-        delete[] m_array;
+	// Assignment operator that does a deep copy
+	IntArray& operator=(const IntArray& array) {
+		// self-assignment guard
+		if (this == &array)
+			return *this;
+		
+		// If this array already exists, delete it so we don't leak memory
+		delete[] m_array;
 
-        m_length = array.m_length;
+		m_length = array.m_length;
 
-        // Allocate a new array
-        m_array = new int[static_cast<std::size_t>(m_length)] {};
+		// Allocate a new array
+		m_array = new int[static_cast<std::size_t>(m_length)] {};
 
-        // Copy elements from original array to new array
-        for (int count { 0 }; count < array.m_length; ++count) 
-            m_array[count] = array.m_array[count];
+		// Copy elements from original array to new array
+		for (int count { 0 }; count < array.m_length; ++count) 
+			m_array[count] = array.m_array[count];
 
-        return *this;
-    }
+		return *this;
+	}
 };
 
 IntArray fillArray() {
@@ -130,7 +130,7 @@ int main() {
 
 	std::cout << a << '\n';
 
-	auto& ref { a };    // we're using this reference to avoid compiler self-assignment errors
+	auto& ref { a };	// we're using this reference to avoid compiler self-assignment errors
 	a = ref;
 
 	IntArray b(1);

@@ -4,37 +4,37 @@
 
 class Base {
 public:
-    Base() {}
+	Base() {}
 
-    virtual void print() {
-        std::cout << "Base";
-    }
+	virtual void print() {
+		std::cout << "Base";
+	}
 };
 
 class Derived : public Base {
 public:
-    Derived() {}
+	Derived() {}
 
-    void print() override {
-        std::cout << "Derived";
-    }
+	void print() override {
+		std::cout << "Derived";
+	}
 };
 
 int main() {
-    try {
-        try {
-            throw Derived {};
-        } catch (Base& b) {
-            std::cout << "Caught Base b, which is actually a ";
-            b.print();
-            std::cout << '\n';
-            throw b;    // the Derived object gets sliced here
-        }
-    } catch (Base& b) {
-        std::cout << "Caught Base b, which is actually a ";
-        b.print();
-        std::cout << '\n';
-    }
+	try {
+		try {
+			throw Derived {};
+		} catch (Base& b) {
+			std::cout << "Caught Base b, which is actually a ";
+			b.print();
+			std::cout << '\n';
+			throw b;	// the Derived object gets sliced here
+		}
+	} catch (Base& b) {
+		std::cout << "Caught Base b, which is actually a ";
+		b.print();
+		std::cout << '\n';
+	}
 
-    return 0;
+	return 0;
 }

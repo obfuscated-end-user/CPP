@@ -3,11 +3,11 @@
 #include <iostream>
 
 try {
-    openFile(filename);
-    writeFile(filename, data);
+	openFile(filename);
+	writeFile(filename, data);
 }
 catch (const FileException& exception) {
-    std::cerr << "Failed to write to file: " << exception.what() << '\n';
+	std::cerr << "Failed to write to file: " << exception.what() << '\n';
 }
 
 // Make sure file is closed

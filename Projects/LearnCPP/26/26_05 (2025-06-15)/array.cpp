@@ -5,27 +5,27 @@
 template <typename T, int size> // size is the expression parameter
 class StaticArray {
 private:
-    // The expression parameter controls the size of the array
-    T m_array[size] {};
+	// The expression parameter controls the size of the array
+	T m_array[size] {};
 
 public:
-    T* getArray() {
-        return m_array;
-    }
+	T* getArray() {
+		return m_array;
+	}
 
-    const T& operator[](int index) const {
-        return m_array[index];
-    }
+	const T& operator[](int index) const {
+		return m_array[index];
+	}
 
-    T& operator[](int index) {
-        return m_array[index];
-    }
+	T& operator[](int index) {
+		return m_array[index];
+	}
 };
 
 template <typename T, int size>
 void print(const StaticArray<T, size>& array) {
-    for (int count { 0 }; count < size; ++count)
-        std::cout << array[count] << ' ';
+	for (int count { 0 }; count < size; ++count)
+		std::cout << array[count] << ' ';
 }
 
 int main() {

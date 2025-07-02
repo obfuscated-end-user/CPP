@@ -47,7 +47,7 @@ int main()
 */
 
 #include <iostream>
-#include <memory>   // for std::unique_ptr
+#include <memory>	// for std::unique_ptr
 
 class Fraction {
 private:

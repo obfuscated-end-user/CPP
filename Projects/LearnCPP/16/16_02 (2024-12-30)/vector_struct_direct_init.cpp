@@ -3,10 +3,10 @@
 #include <vector>
 
 struct Foo {
-    // std::vector<int> v1(8); // compile error: direct initialization not allowed for member default
-    std::vector<int> v { std::vector<int>(8) }; // ok
+	// std::vector<int> v1(8); // compile error: direct initialization not allowed for member default
+	std::vector<int> v { std::vector<int>(8) }; // ok
 };
 
 int main() {
-    return 0;
+	return 0;
 }

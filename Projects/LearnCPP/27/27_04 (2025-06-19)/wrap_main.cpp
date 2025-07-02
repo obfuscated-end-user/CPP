@@ -3,27 +3,27 @@
 #include <iostream>
 
 struct GameSession {
-    // Game session data here
+	// Game session data here
 };
 
 void runGame(GameSession&) {
-    throw 1;
+	throw 1;
 }
 
 void saveGame(GameSession&) {
-    // Save user's game here
+	// Save user's game here
 }
 
 int main() {
-    GameSession session {};
+	GameSession session {};
 
-    try {
-        runGame(session);
-    } catch(...) {
-        std::cerr << "Abnormal termination\n";
-    }
+	try {
+		runGame(session);
+	} catch(...) {
+		std::cerr << "Abnormal termination\n";
+	}
 
-    saveGame(session);  // save the user's game (even if catch-all handler was hit)
+	saveGame(session);  // save the user's game (even if catch-all handler was hit)
 
-    return 0;
+	return 0;
 }

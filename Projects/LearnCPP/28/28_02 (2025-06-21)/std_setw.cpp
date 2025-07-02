@@ -4,10 +4,10 @@
 #include <iostream>
 
 int main() {
-    char buf[10] {};
-    std::cin >> std::setw(10) >> buf;
+	char buf[10] {};
+	std::cin >> std::setw(10) >> buf;
 
-    std::cout << buf << '\n';
+	std::cout << buf << '\n';
 
-    return 0;
+	return 0;
 }

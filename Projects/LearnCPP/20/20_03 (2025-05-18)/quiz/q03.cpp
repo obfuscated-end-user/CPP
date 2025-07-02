@@ -25,19 +25,19 @@ Hint: A signed value can be positive or negative, but an unsigned value is alway
 #include <iostream>
 
 void printBinary(unsigned int n) {
-    if (n > 1)  // we only recurse if n > 1, so this is our termination case for n == 0
-        printBinary(n / 2);
+	if (n > 1)  // we only recurse if n > 1, so this is our termination case for n == 0
+		printBinary(n / 2);
 
-    std::cout << n % 2;
+	std::cout << n % 2;
 }
 
 int main() {
-    int x {};
-    std::cout << "Enter an integer: ";
-    std::cin >> x;
-    printBinary(static_cast<unsigned int>(x));
+	int x {};
+	std::cout << "Enter an integer: ";
+	std::cin >> x;
+	printBinary(static_cast<unsigned int>(x));
 
-    return 0;
+	return 0;
 }
 
 // As the hints note, converting between signed and unsigned does not change the binary representation, just the way the value is interpreted. Therefore, if we capture the user’s input in a signed int, and then convert that to an unsigned int, we will get a value that is always positive but has the same binary representation as the signed value the user entered. That way, our function only has to handle positive numbers.

@@ -3,24 +3,24 @@
 #include <iostream>
 
 int main() {
-    int ammo { 10 };
+	int ammo { 10 };
 
-    // Define a lambda and store it in a variable called "shoot".
-    auto shoot {
-        [ammo]() mutable {  // now mutable
-            // We're allowed to modify ammo now
-            --ammo;
+	// Define a lambda and store it in a variable called "shoot".
+	auto shoot {
+		[ammo]() mutable {  // now mutable
+			// We're allowed to modify ammo now
+			--ammo;
 
-            std::cout << "Pew! " << ammo << " shot(s) left.\n";
-        }
-    };
+			std::cout << "Pew! " << ammo << " shot(s) left.\n";
+		}
+	};
 
-    // Call the lambda
-    shoot();
-    shoot();
+	// Call the lambda
+	shoot();
+	shoot();
 
-    // 10 shots left
-    std::cout << ammo << " shot(s) left.\n";
+	// 10 shots left
+	std::cout << ammo << " shot(s) left.\n";
 
-    return 0;
+	return 0;
 }
