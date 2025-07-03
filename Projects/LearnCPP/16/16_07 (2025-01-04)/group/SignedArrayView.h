@@ -3,7 +3,7 @@
 #ifndef SIGNED_ARRAY_VIEW_H
 #define SIGNED_ARRAY_VIEW_H
 
-#include <cstddef>  // for std::size_t and std::ptrdiff_t
+#include <cstddef>	// for std::size_t and std::ptrdiff_t
 
 // SignedArrayView provides a view into a container that supports indexing
 // allowing us to work with these types using signed indices

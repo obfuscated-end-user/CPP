@@ -1,11 +1,11 @@
 // https://www.learncpp.com/cpp-tutorial/array-indexing-and-length-using-enumerators
 
 #include <iostream>
-#include <type_traits>  // for std::underlying_type_t
+#include <type_traits>	// for std::underlying_type_t
 #include <vector>
 
 enum class StudentNames {
-	kenny,		  // 0
+	kenny,			// 0
 	kyle,			// 1
 	stan,			// 2
 	butters,		// 3

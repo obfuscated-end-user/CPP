@@ -4,7 +4,7 @@
 #include <vector>
 
 void printStack(const std::vector<int>& stack) {
-	if (stack.empty())  // if stack.size == 0
+	if (stack.empty())	// if stack.size == 0
 		std::cout << "Empty";
 	
 	for (auto element : stack)
@@ -15,8 +15,8 @@ void printStack(const std::vector<int>& stack) {
 }
 
 int main() {
-	std::vector<int> stack {};  // empty stack
-	// std::vector<int> stack(3);  // parenthesis init to set vector's capacity to 3
+	std::vector<int> stack {};	// empty stack
+	// std::vector<int> stack(3);	// parenthesis init to set vector's capacity to 3
 
 	printStack(stack);
 

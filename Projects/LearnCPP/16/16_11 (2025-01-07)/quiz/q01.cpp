@@ -22,7 +22,7 @@ void printStackValues(const std::vector<int>& v) {
 	for (auto e : v)
 		std::cout << ' ' << e;
 
-	if (v.empty())  // if v.size == 0
+	if (v.empty())	// if v.size == 0
 		std::cout << " empty";
 	
 	std::cout << ")\n";

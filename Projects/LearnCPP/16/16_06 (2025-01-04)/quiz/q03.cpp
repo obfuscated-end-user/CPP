@@ -42,7 +42,7 @@ int findIndex(const std::vector<T>& arr, T val) {
 			return static_cast<int>(index);
 	}
 
-	return -1;  // -1 is not a valid index, so we can use it as an error return value
+	return -1;	// -1 is not a valid index, so we can use it as an error return value
 }
 
 int getValidNumber() {

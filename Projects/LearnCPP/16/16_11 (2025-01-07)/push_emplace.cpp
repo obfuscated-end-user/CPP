@@ -32,7 +32,7 @@ int main() {
 
 	// push_back won't use explicit constructors, emplace_back will
 	// stack.push_back({ 2 }); // compile error: Foo(int) is explicit
-	stack.emplace_back(2);  // ok
+	stack.emplace_back(2);	// ok
 
 	return 0;
 }

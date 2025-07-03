@@ -24,7 +24,7 @@ int findIndex(const std::vector<T>& arr, T val) {
 			return static_cast<int>(index);
 	}
 
-	return -1;  // -1 is not a valid index, so we can use it as an error return value
+	return -1;	// -1 is not a valid index, so we can use it as an error return value
 }
 
 // Passing in low and high allows the compiler to infer the type of the input we want

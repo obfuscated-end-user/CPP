@@ -5,7 +5,7 @@
 
 std::vector<int> doSomething(std::vector<int> v2) {
 	std::vector v3 { v2[0] + v2[0] };	// 3 -- construct value to be returned to caller
-	return v3;  // 4 -- actually retun value
+	return v3;	// 4 -- actually retun value
 }
 
 int main() {

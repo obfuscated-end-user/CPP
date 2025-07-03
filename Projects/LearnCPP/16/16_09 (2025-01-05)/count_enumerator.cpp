@@ -5,12 +5,12 @@
 
 namespace Students {
 	enum Names {
-		kenny,		  // 0
+		kenny,			// 0
 		kyle,			// 1
 		stan,			// 2
 		butters,		// 3
 		cartman,		// 4
-		wendy,		  // 5
+		wendy,			// 5
 		// add future enumerators here
 		max_students	// 6
 	};

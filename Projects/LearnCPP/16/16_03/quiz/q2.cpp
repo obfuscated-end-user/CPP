@@ -32,7 +32,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const Department department) {
 		out << "Department: ";
 		for (const auto& teacher : department.m_teachers)
-			out << teacher.get().getName() << ' ';  // the get is the method in std::reference_wrapper
+			out << teacher.get().getName() << ' ';	// the get is the method in std::reference_wrapper
 		out << '\n';
 		return out;
 	}

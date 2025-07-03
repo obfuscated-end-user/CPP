@@ -13,7 +13,7 @@ Use a loop to print out the number of items and the item names for each inventor
 #include <cassert>
 #include <iostream>
 #include <string_view>
-#include <type_traits>  // for std::is_integral and std::is_enum
+#include <type_traits>	// for std::is_integral and std::is_enum
 #include <vector>
 
 namespace Items {
@@ -27,9 +27,9 @@ namespace Items {
 
 std::string_view getItemNamePlural(Items::Type type) {
 	switch (type) {
-		case Items::health_potion:  return "health potions";
-		case Items::torch:		  return "torches";
-		case Items::arrow:		  return "arrows";
+		case Items::health_potion:	return "health potions";
+		case Items::torch:			return "torches";
+		case Items::arrow:			return "arrows";
 
 		default:					return "???";
 	}
@@ -37,9 +37,9 @@ std::string_view getItemNamePlural(Items::Type type) {
 
 std::string_view getItemNameSingular(Items::Type type) {
 	switch (type) {
-		case Items::health_potion:  return "health potion";
-		case Items::torch:		  return "torch";
-		case Items::arrow:		  return "arrow";
+		case Items::health_potion:	return "health potion";
+		case Items::torch:			return "torch";
+		case Items::arrow:			return "arrow";
 
 		default:					return "???";
 	}

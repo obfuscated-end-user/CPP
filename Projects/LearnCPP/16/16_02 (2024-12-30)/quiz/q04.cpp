@@ -17,7 +17,7 @@ The product is: 60
 int main() {
 	std::vector<int> arr(3);
 
-	std::cout << "Enter 3 integers: ";  // create a vector of length 3
+	std::cout << "Enter 3 integers: ";	// create a vector of length 3
 	std::cin >> arr[0] >> arr[1] >> arr[2];
 	
 	std::cout << "The sum is: " << arr[0] + arr[1] + arr[2] << '\n';

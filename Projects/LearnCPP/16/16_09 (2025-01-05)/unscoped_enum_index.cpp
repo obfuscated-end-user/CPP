@@ -4,7 +4,7 @@
 
 namespace Students {
 	enum Names {
-		kenny,		  // 0
+		kenny,			// 0
 		kyle,			// 1
 		stan,			// 2
 		butters,		// 3
@@ -19,7 +19,7 @@ int main() {
 	testScores[Students::stan] = 76;	// we are now updating the test score belonging to stan
 
 	Students::Names name { Students::stan };	// non-constexpr
-	testScores[name] = 76;  // may trigger a sign conversion warning if Student::Names defaults to a signed underlying type
+	testScores[name] = 76;	// may trigger a sign conversion warning if Student::Names defaults to a signed underlying type
 
 	return 0;
 }

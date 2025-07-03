@@ -8,7 +8,7 @@ void printCapLen(const std::vector<int>& v) {
 }
 
 int main() {
-	std::vector v { 0, 1, 2 };  // length is initially 3
+	std::vector v { 0, 1, 2 };	// length is initially 3
 
 	printCapLen(v);
 

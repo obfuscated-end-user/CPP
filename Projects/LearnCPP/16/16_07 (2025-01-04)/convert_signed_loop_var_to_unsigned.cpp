@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/arrays-loops-and-sign-challenge-solutions
 
 #include <iostream>
-#include <type_traits>  // for std::is_integral and std::is_enum
+#include <type_traits>	// for std::is_integral and std::is_enum
 #include <vector>
 
 using Index = std::ptrdiff_t;

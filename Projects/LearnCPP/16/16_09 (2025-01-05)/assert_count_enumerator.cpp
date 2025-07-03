@@ -6,7 +6,7 @@
 
 namespace Students {
 	enum Names {
-		kenny,		  // 0
+		kenny,			// 0
 		kyle,			// 1
 		stan,			// 2
 		butters,		// 3

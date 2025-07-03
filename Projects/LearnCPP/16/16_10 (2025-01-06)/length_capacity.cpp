@@ -10,7 +10,7 @@ void printCapLen(const std::vector<int>& v) {
 int main() {
 	// Create a vector with length 5
 	std::vector v { 0, 1, 2, 3, 4 };
-	v = { 0, 1, 2, 3, 4 };  // okay, array length = 5
+	v = { 0, 1, 2, 3, 4 };	// okay, array length = 5
 	printCapLen(v);
 
 	for (auto i : v)

@@ -17,7 +17,7 @@ int main() {
 	std::vector<int> v5({ 10 });	// { 10 } interpreted as initializer list, matches list constructor
 
 	// Default init
-	std::vector<int> v6 {};	 // {} is empty initializer list, matches default constructor
+	std::vector<int> v6 {};		// {} is empty initializer list, matches default constructor
 	std::vector<int> v7 = {};	// {} is empty initializer list, matches default constructor
 
 	return 0;
