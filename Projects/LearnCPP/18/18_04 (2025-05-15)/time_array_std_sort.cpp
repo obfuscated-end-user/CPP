@@ -3,9 +3,9 @@
 #include <algorithm>	// for std::sort
 #include <array>
 #include <chrono>		// for std::chrono functions
-#include <cstddef>	  // for std::size_t
+#include <cstddef>		// for std::size_t
 #include <iostream>
-#include <numeric>	  // for std::iota
+#include <numeric>		// for std::iota
 
 const int g_arrayElements { 10000 };
 
@@ -29,13 +29,13 @@ public:
 
 int main() {
 	std::array<int, g_arrayElements> array;
-	std::iota(array.rbegin(), array.rend(), 1); // fill the array with values 10000 to 1
+	std::iota(array.rbegin(), array.rend(), 1);	// fill the array with values 10000 to 1
 
 	Timer t;
 
 	std::ranges::sort(array);	// Since C++20
 	// If your compiler isn't C++20-capable
-	// std::sort(array.begin(), array.end());  // this is somehow faster on my machine
+	// std::sort(array.begin(), array.end());	// this is somehow faster on my machine
 
 	std::cout << "Time taken: " << t.elapsed() << " seconds\n";
 	

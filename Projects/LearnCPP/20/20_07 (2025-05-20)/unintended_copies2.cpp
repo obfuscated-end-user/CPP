@@ -16,7 +16,7 @@ int main() {
 	} };
 
 	// Increments and prints its local copy of @i.
-	std::function count2 { [i]() mutable {  // lambda object stored in a std::function
+	std::function count2 { [i]() mutable {	// lambda object stored in a std::function
 		std::cout << ++i << '\n';
 	} };
 

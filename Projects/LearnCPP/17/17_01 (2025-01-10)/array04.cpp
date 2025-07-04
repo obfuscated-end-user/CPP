@@ -12,7 +12,7 @@ int main() {
 	std::vector<int> v(5);		// Members value intialized (int elements are zero initialized) (for comparison)
 
 	// std::array<int, 4> c { 1, 2, 3, 4, 5 }; // compile error: too many initializers
-	std::array<int, 4> d { 1, 2 };		  // b[2] and b[3] are value initialized
+	std::array<int, 4> d { 1, 2 };			// b[2] and b[3] are value initialized
 
 	return 0;
 }

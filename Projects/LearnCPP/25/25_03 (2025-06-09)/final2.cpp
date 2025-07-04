@@ -9,7 +9,7 @@ public:
 	}
 };
 
-class B final : public A {  // note use of final specifier here
+class B final : public A {	// note use of final specifier here
 public:
 	std::string_view getName() const override {
 		return "B";

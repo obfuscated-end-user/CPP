@@ -8,28 +8,28 @@ Here is some sample output:
 The dealer is showing: 2
 You have score: 14
 (h) to hit, or (s) to stand: h
-You were dealt KH.  You now have: 24
+You were dealt KH.	You now have: 24
 You went bust!
 You lose!
 
 The dealer is showing: 10
 You have score: 9
 (h) to hit, or (s) to stand: h
-You were dealt TH.  You now have: 19
+You were dealt TH.	You now have: 19
 (h) to hit, or (s) to stand: s
-The dealer flips a 3D.  They now have: 13
-The dealer flips a 7H.  They now have: 20
+The dealer flips a 3D.	They now have: 13
+The dealer flips a 7H.	They now have: 20
 You lose!
 
 The dealer is showing: 7
 You have score: 12
 (h) to hit, or (s) to stand: h
-You were dealt 7S.  You now have: 19
+You were dealt 7S.	You now have: 19
 (h) to hit, or (s) to stand: h
-You were dealt 2D.  You now have: 21
+You were dealt 2D.	You now have: 21
 (h) to hit, or (s) to stand: s
-The dealer flips a 6H.  They now have: 13
-The dealer flips a QC.  They now have: 23
+The dealer flips a 6H.	They now have: 13
+The dealer flips a QC.	They now have: 23
 The dealer went bust!
 You win!
 ```

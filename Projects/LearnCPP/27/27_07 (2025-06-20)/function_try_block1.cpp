@@ -22,7 +22,7 @@ public:
 
 		std::cerr << "Exception caught\n";
 
-		throw;  // rethrow the existing exception
+		throw;	// rethrow the existing exception
 	}
 };
 

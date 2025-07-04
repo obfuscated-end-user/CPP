@@ -21,7 +21,7 @@ public:
 
 // Now define our specialized class template
 template <> // the following is a template class with no templated parameters
-class Storage8<bool> {  // we're specializing Storage8 for bool
+class Storage8<bool> {	// we're specializing Storage8 for bool
 	// What follows is just standard class implementation details
 private:
 	std::uint8_t m_data {};
@@ -33,9 +33,9 @@ public:
 		// This will put a 1 in the bit we're interested in turning on/off
 		auto mask { 1 << index };
 
-		if (value)  // If we're setting a bit
-			m_data |= mask; // use bitwise-or to turn that bit on
-		else	// if we're turning a bit off
+		if (value)	// If we're setting a bit
+			m_data |= mask; 	// use bitwise-or to turn that bit on
+		else		// if we're turning a bit off
 			m_data &= ~mask;	// bitwise-and the inverse mask to turn that bit off
 	}
 

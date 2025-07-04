@@ -6,7 +6,7 @@ void fun(const int& lref) { // l-value arguments will select this function
 	std::cout << "l-value reference to const: " << lref << '\n';
 }
 
-void fun(int&& rref) {  // r-value arguments will select this function
+void fun(int&& rref) {	// r-value arguments will select this function
 	std::cout << "r-value reference: " << rref << '\n';
 }
 

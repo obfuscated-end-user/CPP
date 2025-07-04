@@ -28,6 +28,6 @@ int main() {
 	Derived derived { 7 };
 
 	// printValue is public in Derived, so this is okay
-	derived.printValue();   // prints 7
+	derived.printValue();	// prints 7
 	return 0;
 }

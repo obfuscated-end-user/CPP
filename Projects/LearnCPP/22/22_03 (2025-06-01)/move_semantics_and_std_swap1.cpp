@@ -6,7 +6,7 @@
 
 class Name {
 private:
-	std::string m_name {};  // std::string is move capable
+	std::string m_name {};	// std::string is move capable
 
 public:
 	Name(std::string_view name) : m_name { name } {}

@@ -27,7 +27,7 @@ smallestIndex should probably be renamed largestIndex as well.
 int main() {
 	int array[] { 30, 50, 20, 10, 40 };
 	constexpr int length { static_cast<int>(std::size(array)) };	// C++17
-//  constexpr int length { sizeof(array) / sizeof(array[0]) };  // use instead if not C++17 capable
+//	constexpr int length { sizeof(array) / sizeof(array[0]) };		// use instead if not C++17 capable
 
 	// Step through each element of the array the last
 	for (int startIndex { 0 }; startIndex < length - 1; ++startIndex) {

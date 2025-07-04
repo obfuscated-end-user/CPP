@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/partial-template-specialization-for-pointers
 
 #include <iostream>
-#include <type_traits>  // for std::is_pointer_v and std::is_null_pointer_v
+#include <type_traits>	// for std::is_pointer_v and std::is_null_pointer_v
 #include <memory>
 
 template <typename T>
@@ -23,11 +23,11 @@ public:
 template <typename T>
 class Storage<T*> {
 private:
-	std::unique_ptr<T> m_value {};  // use std::unique_ptr to automatically deallocate when Storage is destroyed
+	std::unique_ptr<T> m_value {};	// use std::unique_ptr to automatically deallocate when Storage is destroyed
 
 public:
 	Storage(T* value)
-	  : m_value { std::make_unique<T>(value ? *value : 0) } {	// or throw exception when !value
+		: m_value { std::make_unique<T>(value ? *value : 0) } {	// or throw exception when !value
 	}
 
 	void print() {
@@ -42,7 +42,7 @@ int main() {
 	Storage s1 { d };	// ok
 	s1.print();
 
-	Storage s2 { &d };  // ok, copies d on heap
+	Storage s2 { &d };	// ok, copies d on heap
 	s2.print();
 
 	return 0;

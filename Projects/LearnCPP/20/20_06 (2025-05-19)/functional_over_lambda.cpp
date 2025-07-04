@@ -23,7 +23,7 @@ int main() {
 	std::cout << '\n';
 
 	// Pass std::greater to std::sort
-	std::sort(arr.begin(), arr.end(), std::greater{});  // note: need curly braces to instantiate object
+	std::sort(arr.begin(), arr.end(), std::greater{});	// note: need curly braces to instantiate object
 
 	for (int i : arr) {
 		std::cout << i << ' ';

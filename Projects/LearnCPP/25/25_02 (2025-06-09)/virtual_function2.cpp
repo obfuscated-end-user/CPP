@@ -38,7 +38,7 @@ int main() {
 
 	std::cout << c.getName() << '\n';	// will always call C::getName
 
-	A a { c };  // copies the A portion of c into a (don't do this)
+	A a { c };	// copies the A portion of c into a (don't do this)
 	std::cout << a.getName() << '\n';	// will always call A::getName
 
 	return 0;

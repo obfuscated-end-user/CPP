@@ -13,7 +13,7 @@ Third, write a shuffle() member function that shuffles the deck. To make this ea
 
 ```
 #include <algorithm> // for std::shuffle
-#include "Random.h"  // for Random::mt
+#include "Random.h"	// for Random::mt
 
 	// Put this line in your shuffle function to shuffle m_cards using the Random::mt Mersenne Twister
 	// This will rearrange all the Cards in the deck randomly

@@ -23,7 +23,7 @@ private:
 	Point2D m_bottomRight {};
 };
 
-class Label {   // mixin Label class
+class Label {	// mixin Label class
 public:
 	void setText(const std::string_view str) {
 		m_text = str;

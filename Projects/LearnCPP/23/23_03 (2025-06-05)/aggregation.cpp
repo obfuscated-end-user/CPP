@@ -26,7 +26,7 @@ public:
 
 int main() {
 	// Create a teacher outside the scope of the Department
-	Teacher bob { "Bob" };  // create a teacher
+	Teacher bob { "Bob" };	// create a teacher
 	
 	{
 		// Create a department and use the constructor parameter to pass

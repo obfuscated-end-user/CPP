@@ -8,7 +8,7 @@ First, write an empty Monster class inheriting from Creature, and then add an en
 
 #include <iostream>
 #include <string>
-#include <string_view>  // Requires C++17
+#include <string_view>	// Requires C++17
 
 class Creature {
 protected:

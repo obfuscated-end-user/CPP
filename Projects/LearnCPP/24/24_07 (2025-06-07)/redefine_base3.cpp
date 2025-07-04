@@ -17,7 +17,7 @@ public:
 
 	void identify() const {
 		std::cout << "Derived::identify()\n";
-		Base::identify();   // note call to Base::identify() here
+		Base::identify();	// note call to Base::identify() here
 	}
 };
 

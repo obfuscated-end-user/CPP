@@ -175,7 +175,7 @@ void attackMonster(Player& player, Monster& monster) {
 		std::cout << "You killed the " << monster.getName() << ".\n";
 		player.levelUp();
 		std::cout << "You are now level " << player.getLevel() << ".\n";
-		std::cout << "You found  " << monster.getGold() << " gold.\n";
+		std::cout << "You found " << monster.getGold() << " gold.\n";
 		player.addGold(monster.getGold());
 	}
 }
@@ -198,7 +198,7 @@ void fightMonster(Player& player) {
 	std::cout << "You have encountered a " << monster.getName() << " (" << monster.getSymbol() << ").\n";
 
 	// While the monster isn't dead and the player isn't dead, the fight continues
-	while (!monster.isDead() &&  !player.isDead()) {
+	while (!monster.isDead() && !player.isDead()) {
 		std::cout << "(R)un or (F)ight: ";
 		char input {};
 		std::cin >> input;

@@ -9,7 +9,7 @@ public:
 	}
 };
 
-class Scanner : virtual public PoweredDevice {  // note: PoweredDevice is now a virtual base class
+class Scanner : virtual public PoweredDevice {	// note: PoweredDevice is now a virtual base class
 public:
 	Scanner(int scanner, int power)
 		: PoweredDevice { power } { // this line is required to create Scanner objects, but ignored in this case
@@ -17,7 +17,7 @@ public:
 	}
 };
 
-class Printer : virtual public PoweredDevice {  // note: PoweredDevice is now a virtual base class
+class Printer : virtual public PoweredDevice {	// note: PoweredDevice is now a virtual base class
 public:
 	Printer(int printer, int power)
 		: PoweredDevice { power } { // this line is required to create Printer objects, but ignored in this case

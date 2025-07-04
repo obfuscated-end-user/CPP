@@ -1,6 +1,6 @@
 // https://www.learncpp.com/cpp-tutorial/function-pointers
 
-#include <utility>  // for std::swap
+#include <utility>	// for std::swap
 #include <iostream>
 
 // Here is a comparison function that sorts in ascending order
@@ -27,7 +27,7 @@ bool evensFirst(int x, int y) {
 }
 
 // Note our user-defined comparison is the third parameter
-void selectionSort(int* array, int size, bool (*comparisonFcn)(int, int) =  ascending) {
+void selectionSort(int* array, int size, bool (*comparisonFcn)(int, int) = ascending) {
 	if (!array || !comparisonFcn)
 		return;
 	

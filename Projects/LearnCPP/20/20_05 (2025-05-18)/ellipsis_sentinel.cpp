@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/ellipsis-and-why-to-avoid-them
 
 #include <iostream>
-#include <cstdarg>  // needed to use ellipsis
+#include <cstdarg>	// needed to use ellipsis
 
 // The ellipsis must be the last parameter
 double findAverage(int first, ...) {

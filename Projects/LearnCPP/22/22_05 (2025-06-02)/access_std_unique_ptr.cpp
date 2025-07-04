@@ -23,7 +23,7 @@ int main() {
 	std::unique_ptr<Resource> res { new Resource() };
 
 	if (res)	// use implicit cast to bool to ensure res contains a Resource
-		std::cout << *res << '\n';  // print the Resource that res is owning
+		std::cout << *res << '\n';	// print the Resource that res is owning
 
 	return 0;
 }

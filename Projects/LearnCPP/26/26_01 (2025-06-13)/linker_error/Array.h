@@ -15,7 +15,7 @@ public:
 
 	Array(int length) {
 		assert(length > 0);
-		m_data = new T[length] {};  // allocated an array of objects of type T
+		m_data = new T[length] {};	// allocated an array of objects of type T
 		m_length = length;
 	}
 

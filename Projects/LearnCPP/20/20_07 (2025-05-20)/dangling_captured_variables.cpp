@@ -7,7 +7,7 @@
 auto makeWalrus(const std::string& name) {
 	// Capture name by reference and return the lambda.
 	return [&]() {
-		std::cout << "I am a walrus, my name is " << name << '\n';  // undefined behavior
+		std::cout << "I am a walrus, my name is " << name << '\n';	// undefined behavior
 	};
 }
 

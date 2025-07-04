@@ -29,14 +29,14 @@ std::istream& operator>>(std::istream& in, Point& point) {
 	double y {};
 	double z {};
 
-	/* if (in >> x >> y >> z)		  // if all extractions succeed
-		point = Point { x, y, z };  // overwrite our existing point */
+	/* if (in >> x >> y >> z)			// if all extractions succeed
+		point = Point { x, y, z };	// overwrite our existing point */
 
 	/* in >> x >> y >> z;
 	point = in ? Point { x, y, z } : Point {}; */
 
 	in >> x >> y >> z;
-	if (x < 0.0 || y < 0.0 || z < 0.0)		  // if any extractable input is negative
+	if (x < 0.0 || y < 0.0 || z < 0.0)			// if any extractable input is negative
 		in.setstate(std::ios_base::failbit);	// set failure mode manually
 	point = in ? Point { x, y, z } : Point {};
 

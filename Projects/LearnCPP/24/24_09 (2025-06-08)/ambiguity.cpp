@@ -34,7 +34,7 @@ public:
 
 int main() {
 	WirelessAdapter c54G { 5442, 181742 };
-	// std::cout << c54G.getID();  // Which getID() do we call?
+	// std::cout << c54G.getID();	// Which getID() do we call?
 
 	std::cout << c54G.USBDevice::getID();
 

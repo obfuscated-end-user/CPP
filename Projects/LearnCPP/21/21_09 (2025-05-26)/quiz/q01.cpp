@@ -52,8 +52,8 @@ public:
 
 char& GradeMap::operator[](std::string_view name) {
 	auto found { std::find_if(m_map.begin(), m_map.end(),
-		[name](const auto& student) {	// this is a lambda that captures name from the surrounding scope
-			return (student.name == name);  // so we can use name here
+		[name](const auto& student) {		// this is a lambda that captures name from the surrounding scope
+			return (student.name == name);	// so we can use name here
 		})
 	};
 

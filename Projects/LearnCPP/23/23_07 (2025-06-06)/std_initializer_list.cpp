@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/stdinitializer_list
 
 #include <algorithm>		// for std::copy
-#include <cassert>		  // for assert()
+#include <cassert>			// for assert()
 #include <initializer_list> // for std::initializer_list
 #include <iostream>
 

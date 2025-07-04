@@ -41,7 +41,7 @@ int main() {
 	IntArray array;
 
 	try {
-		int value{ array[5] };  // out of range subscript
+		int value{ array[5] };	// out of range subscript
 	} catch (const ArrayException& exception) {
 		std::cerr << "An array exception occurred (" << exception.getError() << ")\n";
 	}

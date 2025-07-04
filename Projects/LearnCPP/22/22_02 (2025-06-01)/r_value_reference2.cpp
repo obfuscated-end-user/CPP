@@ -18,7 +18,7 @@ public:
 };
 
 int main() {
-	auto&& rref { Fraction { 3, 5 } };  // r-value reference to temporary Fraction
+	auto&& rref { Fraction { 3, 5 } };	// r-value reference to temporary Fraction
 
 	// f1 of operator<< binds to the temporary, no copies are created.
 	std::cout << rref << '\n';

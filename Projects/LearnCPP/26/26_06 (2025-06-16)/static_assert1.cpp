@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/partial-template-specialization-for-pointers
 
 #include <iostream>
-#include <type_traits>  // for std::is_pointer_v and std::is_null_pointer_v
+#include <type_traits>	// for std::is_pointer_v and std::is_null_pointer_v
 
 template <typename T>
 class Storage {
@@ -25,7 +25,7 @@ int main() {
 	Storage s1 { d };	// ok
 	s1.print();
 
-	Storage s2 { &d };  // static_assert because T is a pointer
+	Storage s2 { &d };	// static_assert because T is a pointer
 	s2.print();
 
 	Storage s3 { nullptr }; // static_assert because T is a nullptr

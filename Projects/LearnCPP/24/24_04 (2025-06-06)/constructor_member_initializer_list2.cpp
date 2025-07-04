@@ -29,7 +29,7 @@ public:
 
 	BaseballPlayer(std::string_view name="", int age=0,
 		double battingAverage=0.0, int homeRuns=0)
-		: Person { name, age }  // call Person(std::string_view, int) to initialize these fields
+		: Person { name, age }	// call Person(std::string_view, int) to initialize these fields
 		, m_battingAverage { battingAverage }
 		, m_homeRuns { homeRuns } {}
 

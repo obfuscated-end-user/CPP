@@ -40,7 +40,7 @@ int main() {
 	Base* ptr { &derived };
 	std::cout << "ptr is a " << ptr->getName() << " and has value " << ptr->getValue() << '\n';
 
-	Base base { derived };  // what happens here?
+	Base base { derived };	// what happens here?
 	std::cout << "base is a " << base.getName() << " and has value " << base.getValue() << '\n';
 
 	return 0;

@@ -23,7 +23,7 @@ int main() {
 		std::cerr << "Abnormal termination\n";
 	}
 
-	saveGame(session);  // save the user's game (even if catch-all handler was hit)
+	saveGame(session);	// save the user's game (even if catch-all handler was hit)
 
 	return 0;
 }

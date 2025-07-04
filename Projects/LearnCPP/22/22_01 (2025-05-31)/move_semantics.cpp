@@ -17,7 +17,7 @@ public:
 	Auto_ptr2(Auto_ptr2& a) {	// note: not const
 		// We don't need to delete m_ptr here. This constructor is only called when we're creating a new object, and m_ptr can't be set prior to this.
 		m_ptr = a.m_ptr;	// transfer our dumb pointer from the source to our local object
-		a.m_ptr = nullptr;  // make sur the source no longer owns the pointer
+		a.m_ptr = nullptr;	// make sur the source no longer owns the pointer
 	}
 
 	// An assignment operator that implements move semantics
@@ -27,7 +27,7 @@ public:
 
 		delete m_ptr;		// make sure we decallocate any pointer the destination is already holding first
 		m_ptr = a.m_ptr;	// then transfer our dumb pointer from the source to the local object
-		a.m_ptr = nullptr;  // make sure the source no longer owns the pointer
+		a.m_ptr = nullptr;	// make sure the source no longer owns the pointer
 		return *this;
 	}
 

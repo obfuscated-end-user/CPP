@@ -8,7 +8,7 @@ int main() {
 	std::size_t length {};
 	std::cin >> length;
 
-	int* array { new int[length] {} };  // use array new. Note that length does not need to be constant!
+	int* array { new int[length] {} };	// use array new. Note that length does not need to be constant!
 
 	std::cout << "I just allocated an array of integers of length " << length << '\n';
 

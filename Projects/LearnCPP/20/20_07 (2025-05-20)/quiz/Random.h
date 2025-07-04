@@ -28,7 +28,7 @@ namespace Random {
 
 	// Here's our global std::mt19937 object.
 	// The inline keyword means we only have one global instance for our whole program.
-	inline std::mt19937 mt { generate() };  // generates a seeded std::mt19937 and copies it into our global object
+	inline std::mt19937 mt { generate() };	// generates a seeded std::mt19937 and copies it into our global object
 
 	// Generate a random int between [min, max] (inclusive)
 	inline int get(int min, int max) {
@@ -55,9 +55,9 @@ namespace Random {
 	// * min and max can have different types
 	// * Must explicitly specify return type as template type argument
 	// * min and max will be converted to the return type
-	// Sample call: Random::get<std::size_t>(0, 6);	 //returns std::size_t
-	// Sample call: Random::get<std::size_t>(0, 6u);	//returns std::size_t
-	// Sample call: Random::get<std::int>(0, 6u);		//returns std::int
+	// Sample call: Random::get<std::size_t>(0, 6);	 	// returns std::size_t
+	// Sample call: Random::get<std::size_t>(0, 6u);	// returns std::size_t
+	// Sample call: Random::get<std::int>(0, 6u);		// returns std::int
 	template <typename R, typename S, typename T>
 	R get(S min, T max) {
 		return get<R>(static_cast<R>(min), static_cast<R>(max));

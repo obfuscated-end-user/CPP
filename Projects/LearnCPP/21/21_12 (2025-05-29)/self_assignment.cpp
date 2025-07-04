@@ -13,7 +13,7 @@ public:
 		: m_length { std::max(length, 0) } {
 		if (length) {
 			m_data = new char[static_cast<std::size_t>(length)];
-			std::copy_n(data, length, m_data);  // copy length elements of data into m_data
+			std::copy_n(data, length, m_data);	// copy length elements of data into m_data
 		}
 	}
 
@@ -50,17 +50,17 @@ MyString& MyString::operator=(const MyString& str) {
 	if (m_length)
 		m_data = new char[static_cast<std::size_t>(str.m_length)];
 
-	std::copy_n(str.m_data, m_length, m_data);  // copies m_length elements of str.m_data into m_data
+	std::copy_n(str.m_data, m_length, m_data);	// copies m_length elements of str.m_data into m_data
 
 	// return the existing object so we can chain this operator
 	return *this;
 }
 
 int main() {
-	MyString bob("Bob", 5); // Meet Bob
+	MyString bob("Bob", 5);	// Meet Bob
 	MyString employee;
-	employee = bob;		 // Bob is our newest employee
-	std::cout << employee;  // say your name, employee
+	employee = bob;		 	// Bob is our newest employee
+	std::cout << employee;	// say your name, employee
 
 	bob = bob;
 	std::cout << employee;

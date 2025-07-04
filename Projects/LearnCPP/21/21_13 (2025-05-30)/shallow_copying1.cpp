@@ -3,7 +3,7 @@
 #include <cassert>
 #include <iostream>
 
-class Fraction  {
+class Fraction {
 private:
 	int m_numerator { 0 };
 	int m_denominator { 1 };
@@ -40,6 +40,5 @@ public:
 };
 
 int main() {
-
 	return 0;
 }

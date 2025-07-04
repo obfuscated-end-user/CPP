@@ -68,7 +68,7 @@ int gcd(int a, int b) {
 */
 
 #include <iostream>
-#include <numeric>  // for std::gcd
+#include <numeric>	// for std::gcd
 
 class Fraction {
 private:

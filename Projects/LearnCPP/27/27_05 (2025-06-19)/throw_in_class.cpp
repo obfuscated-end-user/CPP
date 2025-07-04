@@ -25,7 +25,7 @@ public:
 	}
 
 	~A() {
-		std::cerr << "~A\n";  // should not be called
+		std::cerr << "~A\n";	// should not be called
 	}
 };
 

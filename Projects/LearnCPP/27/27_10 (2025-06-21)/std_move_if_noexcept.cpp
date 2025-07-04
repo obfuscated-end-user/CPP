@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/stdmove_if_noexcept
 
 #include <iostream>
-#include <utility>	  // For std::pair, std::make_pair, std::move, std::move_if_noexcept
+#include <utility>		// For std::pair, std::make_pair, std::move, std::move_if_noexcept
 #include <stdexcept>	// std::runtime_error
 
 class MoveClass {
@@ -73,7 +73,7 @@ int main() {
 
 	// But the problem arises when we try to move that pair into another pair.
 	try {
-		my_pair.second.m_throw = true;  // To trigger copy constructor exception
+		my_pair.second.m_throw = true;	// To trigger copy constructor exception
 
 		std::pair moved_pair { std::move_if_noexcept(my_pair) };
 

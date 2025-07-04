@@ -44,7 +44,7 @@ Fraction& Fraction::operator=(const Fraction& fraction) {
 }
 
 int main() {
-	Fraction fiveThirds { 5, 3  };
+	Fraction fiveThirds { 5, 3 };
 	Fraction f;
 	f = fiveThirds; // calls overloaded assignment
 	std::cout << f;

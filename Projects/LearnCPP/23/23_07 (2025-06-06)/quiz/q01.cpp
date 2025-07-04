@@ -34,7 +34,7 @@ This should print:
 */
 
 #include <algorithm>		// for std::copy
-#include <cassert>		  // for assert()
+#include <cassert>			// for assert()
 #include <initializer_list> // for std::initializer_list
 #include <iostream>
 

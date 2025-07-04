@@ -6,7 +6,7 @@
 class Base {
 public:
 	virtual std::string_view getName() const {
-		return "Base";  // note addition of virtual keyword
+		return "Base";	// note addition of virtual keyword
 	}
 
 	// Some modern compilers may give an error about having virtual functions and an accessible non-virtual destructor.

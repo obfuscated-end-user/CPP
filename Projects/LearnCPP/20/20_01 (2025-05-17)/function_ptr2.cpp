@@ -12,7 +12,7 @@ int goo() {
 
 int main() {
 	int (*fcnPtr)() { &foo };	// fcnPtr points to function foo
-	fcnPtr = &goo;			  // fcnPtr now points to function goo
+	fcnPtr = &goo;				// fcnPtr now points to function goo
 
 	return 0;
 }

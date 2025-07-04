@@ -2,7 +2,7 @@
 
 #include <algorithm>	// for std::copy_n
 #include <chrono>		// for std::chrono functions
-#include <cstddef>	  // for std::size_t
+#include <cstddef>		// for std::size_t
 #include <iostream>
 
 template <typename T>

@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 
-class Animal {  // This Animal is an abstract base class
+class Animal {	// This Animal is an abstract base class
 protected:
 	std::string m_name {};
 
@@ -21,7 +21,7 @@ public:
 };
 
 std::string_view Animal::speak() const {
-	return "buzz";  // some default implementation
+	return "buzz";	// some default implementation
 }
 
 class Dragonfly : public Animal {

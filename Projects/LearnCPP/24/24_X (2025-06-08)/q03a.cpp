@@ -33,7 +33,7 @@ The orc has 3 health and is carrying 15 gold.
 
 #include <iostream>
 #include <string>
-#include <string_view>  // Requires C++17
+#include <string_view>	// Requires C++17
 
 class Creature {
 protected:

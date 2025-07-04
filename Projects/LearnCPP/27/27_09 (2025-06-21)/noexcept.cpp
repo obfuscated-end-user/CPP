@@ -41,7 +41,7 @@ void tester(int c) noexcept {
 }
 
 int main() {
-	std::cout << std::unitbuf;	  // flush buffer after each insertion
+	std::cout << std::unitbuf;		// flush buffer after each insertion
 	std::cout << std::boolalpha;	// print boolean as true/false
 	tester(1);
 	std::cout << "Test successful\n\n";

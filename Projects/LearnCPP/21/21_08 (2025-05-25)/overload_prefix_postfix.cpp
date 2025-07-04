@@ -12,8 +12,8 @@ public:
 	Digit& operator++();	// prefix has no parameter
 	Digit& operator--();	// prefix has no parameter
 
-	Digit operator++(int);  // postfix has an int parameter
-	Digit operator--(int);  // postfix has an int parameter
+	Digit operator++(int);	// postfix has an int parameter
+	Digit operator--(int);	// postfix has an int parameter
 
 	friend std::ostream& operator<<(std::ostream& out, const Digit& d);
 };
@@ -48,7 +48,7 @@ Digit Digit::operator++(int) {
 	Digit temp { *this };
 
 	// Use prefix operator to increment this digit
-	++(*this);  // apply operator
+	++(*this);	// apply operator
 
 	// return temporary result
 	return temp;	// return saved state
@@ -60,7 +60,7 @@ Digit Digit::operator--(int) {
 	Digit temp { *this };
 
 	// Use prefix operator to increment this digit
-	--(*this);  // apply operator
+	--(*this);	// apply operator
 
 	// return temporary result
 	return temp;	// return saved state
@@ -75,11 +75,11 @@ int main() {
 	Digit digit { 5 };
 	
 	std::cout << digit;
-	std::cout << ++digit; // calls Digit::operator++();
-	std::cout << digit++; // calls Digit::operator++(int);
+	std::cout << ++digit;	// calls Digit::operator++();
+	std::cout << digit++;	// calls Digit::operator++(int);
 	std::cout << digit;
-	std::cout << --digit; // calls Digit::operator--();
-	std::cout << digit--; // calls Digit::operator--(int);
+	std::cout << --digit;	// calls Digit::operator--();
+	std::cout << digit--;	// calls Digit::operator--(int);
 	std::cout << digit;
 
 	return 0;

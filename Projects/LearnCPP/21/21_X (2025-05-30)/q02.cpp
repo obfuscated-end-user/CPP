@@ -47,11 +47,11 @@ and produce the result:
 */
 
 #include <iostream>
-#include <cstdint>  // for fixed width integers
+#include <cstdint>	// for fixed width integers
 
 class Average {
 private:
-	std::int32_t m_total { 0 }; // the sum of all numbers we've seen so far
+	std::int32_t m_total { 0 };	// the sum of all numbers we've seen so far
 	int m_numbers { 0 };		// the count of numbers we've seen so far
 
 public:

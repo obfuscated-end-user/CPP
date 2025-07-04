@@ -4,7 +4,7 @@
 g) Extra credit:
 Reader Tom didn’t sharpen his sword enough to defeat the mighty dragon. Help him by implementing the following potions in different sizes:
 
-Type		Effect(Small)   Effect (Medium) Effect (Large)
+Type		Effect(Small)	Effect (Medium) Effect (Large)
 Health		+2 Health		+2 Health		+5 Health
 Strength	+1 Damage		+1 Damage		+1 Damage
 Poison		-1 Health		-1 Health		-1 Health
@@ -242,7 +242,7 @@ void onMonsterKilled(Player& player, const Monster& monster) {
 	std::cout << "You killed the " << monster.getName() << ".\n";
 	player.levelUp();
 	std::cout << "You are now level " << player.getLevel() << ".\n";
-	std::cout << "You found  " << player.getGold() << " gold.\n";
+	std::cout << "You found " << player.getGold() << " gold.\n";
 	player.addGold(monster.getGold());
 
 	// 30% chance of finding a potion
@@ -300,7 +300,7 @@ void fightMonster(Player& player) {
 	std::cout << "You have encountered a " << monster.getName() << " (" << monster.getSymbol() << ").\n";
 
 	// While the monster isn't dead and the player isn't dead, the fight continues
-	while (!monster.isDead() &&  !player.isDead()) {
+	while (!monster.isDead() && !player.isDead()) {
 		std::cout << "(R)un or (F)ight: ";
 		char input {};
 		std::cin >> input;

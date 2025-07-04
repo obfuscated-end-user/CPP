@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string_view>
-#include <cstdarg>  // needed to use ellipsis
+#include <cstdarg>	// needed to use ellipsis
 
 // The ellipsis must be the last parameter
 double findAverage(std::string_view decoder, ...) {

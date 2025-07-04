@@ -29,9 +29,9 @@ public:
 	Direction operator-() const {
 		switch (m_type) {
 			case up:	return Direction { down };
-			case down:  return Direction { up };
-			case left:  return Direction { right };
-			case right: return Direction { left };
+			case down:	return Direction { up };
+			case left:	return Direction { right };
+			case right:	return Direction { left };
 			default:	break;
 		}
 
@@ -53,7 +53,7 @@ std::ostream& operator<<(std::ostream& stream, Direction dir) {
 		case Direction::up:	 	return (stream << "up");
 		case Direction::down:	return (stream << "down");
 		case Direction::left:	return (stream << "left");
-		case Direction::right:  return (stream << "right");
+		case Direction::right:	return (stream << "right");
 		default:				break;
 	}
 
@@ -78,7 +78,7 @@ struct Point {
 			case Direction::up:	 	return Point { x, y - 1 };
 			case Direction::down:	return Point { x, y + 1 };
 			case Direction::left:	return Point { x - 1, y };
-			case Direction::right:  return Point { x + 1, y };
+			case Direction::right:	return Point { x + 1, y };
 			default:				break;
 		}
 
@@ -147,9 +147,9 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& stream, Tile tile) {
-	if (tile.getNum() > 9)		  // if two digit number
+	if (tile.getNum() > 9)			// if two digit number
 		stream << " " << tile.getNum() << " ";
-	else if (tile.getNum() > 0)	 // if one digit number
+	else if (tile.getNum() > 0)	 	// if one digit number
 		stream << "  " << tile.getNum() << " ";
 	else if (tile.getNum() == 0)	// if empty spot
 		stream << "	";

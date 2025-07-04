@@ -9,7 +9,7 @@ int main() {
 
 	if (fcnPtr) {		// make sure fcnPtr isn't a null pointer
 		(*fcnPtr)(5);	// call function foo(5) through fcnPtr.
-		fcnPtr(5);	  // otherwise this will lead to undefined behavior
+		fcnPtr(5);		// otherwise this will lead to undefined behavior
 	}
 	
 

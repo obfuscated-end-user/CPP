@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/stdinitializer_list
 
 #include <algorithm>		// for std::copy()
-#include <cassert>		  // for assert()
+#include <cassert>			// for assert()
 #include <initializer_list> // for std::initializer_list
 #include <iostream>
 
@@ -28,8 +28,8 @@ public:
 		// we don't need to set m_data to null or m_length to 0 here, since the object will be destroyed immediately after this function anyway
 	}
 
-//  IntArray(const IntArray&) = delete; // to avoid shallow copies
-//  IntArray& operator=(const IntArray& list) = delete; // to avoid shallow copies
+//	IntArray(const IntArray&) = delete; // to avoid shallow copies
+//	IntArray& operator=(const IntArray& list) = delete; // to avoid shallow copies
 
 	int& operator[](int index) {
 		assert(index >= 0 && index < m_length);
@@ -43,7 +43,7 @@ public:
 
 int main() {
 	IntArray array {};
-	array = { 1, 3, 5, 7, 9, 11 };  // Here's our list assignment statement
+	array = { 1, 3, 5, 7, 9, 11 };	// Here's our list assignment statement
 
 	for (int count { 0 }; count < array.getLength(); ++count)
 		std::cout << array[count] << ' ';	// undefined behavior

@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <memory>	// for std::unique_ptr
-#include <utility>  // for std::move
+#include <utility>	// for std::move
 
 class Resource {
 public:
@@ -16,8 +16,8 @@ public:
 };
 
 int main() {
-	std::unique_ptr<Resource> res1 { new Resource() };  // Resource created here
-	std::unique_ptr<Resource> res2 {};  // Start as nullptr
+	std::unique_ptr<Resource> res1 { new Resource() };	// Resource created here
+	std::unique_ptr<Resource> res2 {};	// Start as nullptr
 
 	std::cout << "res1 is " << (res1 ? "not null\n" : "null\n");
 	std::cout << "res2 is " << (res2 ? "not null\n" : "null\n");

@@ -31,7 +31,7 @@ public:
 class Patient {
 private:
 	std::string m_name {};
-	std::vector<std::reference_wrapper<const Doctor>> m_doctor {};  // so that we can use it here
+	std::vector<std::reference_wrapper<const Doctor>> m_doctor {};	// so that we can use it here
 
 	// We're going to make addDoctor private because we don't want the public to use it.
 	// They should use Doctor::addPatient() instead, which is publicly exposed

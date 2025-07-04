@@ -7,7 +7,7 @@ int main() {
 	try {
 		// Statements that may throw exceptions you want to handle go here
 		throw -1;
-	} catch (double) {  // no variable name since we don't use the exception itself in the catch block below
+	} catch (double) {	// no variable name since we don't use the exception itself in the catch block below
 		// Any exceptions of type double thrown within the above try block get sent here
 		std::cerr << "We caught an exception of type double\n";
 	} catch (int x) {

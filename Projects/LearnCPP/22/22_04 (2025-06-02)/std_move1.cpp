@@ -2,13 +2,13 @@
 
 #include <iostream>
 #include <string>
-#include <utility>  // for std::move
+#include <utility>	// for std::move
 
 template <typename T>
 void mySwapMove(T& a, T& b) {
-	T tmp { std::move(a) }; // invokes move constructor
+	T tmp { std::move(a) };	// invokes move constructor
 	a = std::move(b);		// invokes move assignment
-	b = std::move(tmp);	 // invokes move assignment
+	b = std::move(tmp);		// invokes move assignment
 }
 
 int main() {

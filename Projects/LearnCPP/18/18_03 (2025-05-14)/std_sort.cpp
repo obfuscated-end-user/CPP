@@ -15,7 +15,7 @@ int main() {
 	
 	// Pass greater to std::sort
 	std::sort(arr.begin(), arr.end(), greater);
-	// std::sort(arr.begin(), arr.end(), std::greater{});  // use the standard library greater comparison
+	// std::sort(arr.begin(), arr.end(), std::greater{});	// use the standard library greater comparison
 	// Before C++17, we had to specify the element type when we create std::greater
 	// std::sort(arr.begin(), arr.end(), std::greater<int>{});
 

@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/shallow-vs-deep-copying
 
-#include <cstring>  // for strlen()
-#include <cassert>  // for assert()
+#include <cstring>	// for strlen()
+#include <cassert>	// for assert()
 #include <iostream>
 
 class MyString {
@@ -45,7 +45,7 @@ int main() {
 		MyString copy { hello };	// use default copy constructor
 	}	// copy is a local variable, so it gets destroyed here. The destructor deletes copy's string, which leaves hello with a dangling pointer
 
-	std::cout << hello.getString() << '\n'; // this will have undefined behavior
+	std::cout << hello.getString() << '\n';	// this will have undefined behavior
 
 	return 0;
 }

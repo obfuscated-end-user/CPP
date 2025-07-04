@@ -1,6 +1,6 @@
 // https://www.learncpp.com/cpp-tutorial/exceptions-classes-and-inheritance
 
-#include <cstddef>	  // for std::size_t
+#include <cstddef>		// for std::size_t
 #include <exception>	// for std::exception
 #include <iostream>
 #include <limits>

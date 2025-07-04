@@ -33,7 +33,7 @@ int main() {
 	Derived d {};
 	Base* b { &d };
 	d.getThis()->printType();	// calls Derived::getThis(), returns a Derived*, calls Derived::printType
-	b->getThis()->printType();  // calls Derived::getThis(), returns a Base*, calls Base::printType
+	b->getThis()->printType();	// calls Derived::getThis(), returns a Base*, calls Base::printType
 
 	return 0;
 }

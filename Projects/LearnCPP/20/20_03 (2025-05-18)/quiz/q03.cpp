@@ -25,7 +25,7 @@ Hint: A signed value can be positive or negative, but an unsigned value is alway
 #include <iostream>
 
 void printBinary(unsigned int n) {
-	if (n > 1)  // we only recurse if n > 1, so this is our termination case for n == 0
+	if (n > 1)	// we only recurse if n > 1, so this is our termination case for n == 0
 		printBinary(n / 2);
 
 	std::cout << n % 2;

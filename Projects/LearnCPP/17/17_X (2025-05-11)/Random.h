@@ -28,7 +28,7 @@ namespace Random {
 
 	// Here's our global std::mt19937 object.
 	// The inline keyword means we only have one global instance for our whole program.
-	inline std::mt19937 mt { generate() };  // generates a seeded std::mt19937 and copies it into our global object
+	inline std::mt19937 mt { generate() };	// generates a seeded std::mt19937 and copies it into our global object
 
 	// Generate a random int between [min, max] (inclusive)
 	inline int get(int min, int max) {

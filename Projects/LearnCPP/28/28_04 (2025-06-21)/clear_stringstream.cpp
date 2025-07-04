@@ -15,8 +15,8 @@ int main() {
 
 	os << "Hello ";
 
-	os.str(std::string{});  // erase the buffer
-	os.clear();			 // reset error flags
+	os.str(std::string{});	// erase the buffer
+	os.clear();			 	// reset error flags
 
 	os << "World!";
 	std::cout << os.str();

@@ -19,7 +19,7 @@ public:
 	Fraction(const Fraction &copy) = delete;
 
 	// Overloaded assignment
-	Fraction& operator=(const Fraction& fration) = delete;  // no copies through assignment!
+	Fraction& operator=(const Fraction& fration) = delete;	// no copies through assignment!
 	
 	friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
 };
@@ -32,7 +32,7 @@ std::ostream& operator<<(std::ostream& out, const Fraction& f1) {
 int main() {
 	Fraction fiveThirds { 5, 3 };
 	Fraction f;
-	f = fiveThirds; // compile error, operator= has been deleted
+	f = fiveThirds;	// compile error, operator= has been deleted
 	std::cout << f;
 
 	return 0;

@@ -17,7 +17,7 @@ public:
 
 class Derived : public Base {
 private:
-	using Base::getValue;   // make ALL getValue functions private
+	using Base::getValue;	// make ALL getValue functions private
 
 public:
 	Derived(int value) : Base { value } {}
@@ -26,7 +26,7 @@ public:
 int main() {
 	Derived derived { 7 };
 	std::cout << derived.getValue();	// error: getValue() is private in Derived
-	std::cout << derived.getValue(5);   // error: getValue() is private in Derived
+	std::cout << derived.getValue(5);	// error: getValue() is private in Derived
 
 	return 0;
 }

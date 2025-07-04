@@ -7,7 +7,7 @@ int main() {
 
 	auto shoot {
 		// We don't need mutable anymore
-		[&ammo]() mutable {  // &ammo means ammo is captured by reference
+		[&ammo]() mutable {	// &ammo means ammo is captured by reference
 			// Changes to ammo will affect main's ammo
 			--ammo;
 

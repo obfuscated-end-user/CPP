@@ -16,7 +16,7 @@ int main() {
 
 	foo(7);
 
-	std::array<int, 0> arr {};  // creates a zero-length std::array
+	std::array<int, 0> arr {};	// creates a zero-length std::array
 	std::cout << arr.empty();	// true if arr is zero-length
 
 	return 0;

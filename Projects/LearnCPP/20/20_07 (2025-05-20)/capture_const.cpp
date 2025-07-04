@@ -7,7 +7,7 @@ int main() {
 
 	// Define a lambda and store it in a variable called "shoot".
 	auto shoot {
-		[ammo]() mutable {  // now mutable
+		[ammo]() mutable {	// now mutable
 			// We're allowed to modify ammo now
 			--ammo;
 

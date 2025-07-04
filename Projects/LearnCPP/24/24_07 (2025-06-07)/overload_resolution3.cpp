@@ -15,7 +15,7 @@ public:
 
 class Derived : public Base {
 public:
-	using Base::print;  // make all Base::print() functions eligible for overload resolution
+	using Base::print;	// make all Base::print() functions eligible for overload resolution
 	void print(double) {
 		std::cout << "Derived::print(double)\n";
 	}

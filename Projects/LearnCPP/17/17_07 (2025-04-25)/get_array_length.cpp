@@ -1,6 +1,6 @@
 // https://www.learncpp.com/cpp-tutorial/introduction-to-c-style-arrays
 
-#include <cstddef>  // for std::size_t
+#include <cstddef>	// for std::size_t
 #include <iostream>
 
 template <typename T, std::size_t N>

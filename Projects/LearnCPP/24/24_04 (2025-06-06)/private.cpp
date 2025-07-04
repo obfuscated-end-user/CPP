@@ -21,7 +21,7 @@ private:	// our member is now private
 public:
 
 	Derived(double cost=0.0, int id=0) 
-		: Base { id }   // Call Base(int) constructor with value id!
+		: Base { id }	// Call Base(int) constructor with value id!
 		, m_cost { cost } {}
 
 	double getCost() const {

@@ -10,7 +10,7 @@ int main() {
 
 	// Define the function right where we use it.
 	auto found { std::find_if(arr.begin(), arr.end(),
-								[](std::string_view str) {  // here's our lambda, no capture clause
+								[](std::string_view str) {	// here's our lambda, no capture clause
 									return str.find("nut") != std::string_view::npos;
 								}) };
 

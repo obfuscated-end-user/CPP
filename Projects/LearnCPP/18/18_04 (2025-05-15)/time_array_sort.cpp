@@ -2,9 +2,9 @@
 
 #include <array>
 #include <chrono>	// for std::chrono functions
-#include <cstddef>  // for std::size_t
+#include <cstddef>	// for std::size_t
 #include <iostream>
-#include <numeric>  // for std::iota
+#include <numeric>	// for std::iota
 
 const int g_arrayElements { 10000 };
 

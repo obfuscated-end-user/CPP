@@ -10,7 +10,7 @@ using ArrayFlat2d = std::array<T, Row * Col>;
 
 // A modifiable view that allows us to work with an ArrayFlat2d using two dimensions
 // This is a view, so the ArrayFlat2d being viewed must stay in scope
-template <typename T, std::size_t  Row, std::size_t Col>
+template <typename T, std::size_t	Row, std::size_t Col>
 class ArrayView2d {
 private:
 	// You might be tempted to make m_arr a reference to an ArrayFlat2d,

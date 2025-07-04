@@ -12,7 +12,7 @@ int main() {
 
 	count();	// invoke count
 
-	auto otherCount { count };  // create a copy of count
+	auto otherCount { count };	// create a copy of count
 
 	// invoke both count and the copy
 	count();

@@ -16,7 +16,7 @@ void printValue(int value) {
 }
 
 int main() {
-	printValue(5);	  // direct function call to printValue(int)
+	printValue(5);		// direct function call to printValue(int)
 	printValue<>(5);	// direct function call to printValue<int>(int)
 
 	return 0;

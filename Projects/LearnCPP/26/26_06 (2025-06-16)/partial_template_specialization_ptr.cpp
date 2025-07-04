@@ -34,8 +34,8 @@ int main() {
 	double d { 1.2 };
 	double *ptr { &d };
 
-	Storage s { ptr };  // instantiates Storage<double*> from partially specialized class
-	s.print();		  // calls Storage<double*>::print()
+	Storage s { ptr };	// instantiates Storage<double*> from partially specialized class
+	s.print();			// calls Storage<double*>::print()
 
 	return 0;
 }

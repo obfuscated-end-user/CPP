@@ -45,7 +45,7 @@ Hint: To output your number, static_cast it to a double.
 
 
 #include <cassert>
-#include <cstdint>  // for fixed width integers
+#include <cstdint>	// for fixed width integers
 #include <iostream>
 
 class FixedPoint2 {

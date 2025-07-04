@@ -9,7 +9,7 @@ private:
 	int m_private {};
 };
 
-class D2 : private Base {   // note: private inheritance
+class D2 : private Base {	// note: private inheritance
 	// Private inheritance means:
 	// Public inherited members become private
 	// Protected inherited members become private

@@ -38,6 +38,6 @@ int main() {
 	Storage d { 6.7 }; // uses explicit specialization Storage<double>
 
 	// Print out some values
-	i.print();  // calls Storage<int>::print (instantiated from Storage<T>)
-	d.print();  // calls Storage<double>::print (called from explicit specialization of Storage<double>)
+	i.print();	// calls Storage<int>::print (instantiated from Storage<T>)
+	d.print();	// calls Storage<double>::print (called from explicit specialization of Storage<double>)
 }

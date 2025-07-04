@@ -18,7 +18,7 @@ class Derived : public Base {
 public:
 	Derived(int value) : Base { value } {}
 
-	int getValue() const = delete;  // mark this function as inaccessible
+	int getValue() const = delete;	// mark this function as inaccessible
 };
 
 int main() {

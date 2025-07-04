@@ -14,7 +14,7 @@ void saveGame(GameSession&) {
 	// Save user's game here
 }
 
-class DummyException {  // a dummy class that can't be instantiated
+class DummyException {	// a dummy class that can't be instantiated
 	DummyException() = delete;
 };
 
@@ -25,7 +25,7 @@ int main() {
 		runGame(session);
 	}
 // #define NDEBUG 1
-#ifndef NDEBUG  // if we're in release node
+#ifndef NDEBUG	// if we're in release node
 	catch(...) {	// compile in the catch-all handler
 		std::cerr << "Abnormal termination\n";
 	}

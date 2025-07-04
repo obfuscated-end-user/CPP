@@ -3,8 +3,8 @@
 #ifndef INTARRAY_H
 #define INTARRAY_H
 
-#include <cassert>	  // for assert()
-#include <cstddef>	  // for std::size_t
+#include <cassert>		// for assert()
+#include <cstddef>		// for std::size_t
 #include <algorithm>	// for std::copy_n
 
 class IntArray {
@@ -98,7 +98,7 @@ public:
 		// in the smaller of the two arrays.
 		if (m_length > 0) {
 			int elementsToCopy { (newLength > m_length) ? m_length : newLength };
-			std::copy_n(m_data, elementsToCopy, data);  // copy the elements
+			std::copy_n(m_data, elementsToCopy, data);	// copy the elements
 		}
 
 		// Now we can delete the old array because we don't need it any more

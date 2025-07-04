@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 
-class Animal {  // This Animal is an abstract base class
+class Animal {	// This Animal is an abstract base class
 protected:
 	std::string m_name {};
 

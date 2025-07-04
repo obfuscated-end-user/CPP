@@ -10,7 +10,7 @@ int main() {
 		std::cout << "Enter your age: ";
 		std::cin >> age;
 
-		if (std::cin.fail()) {  // no extraction took place
+		if (std::cin.fail()) {	// no extraction took place
 			std::cin.clear();	// reset the state bits back to goodbit so we can use ignore()
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear out the bad input from the stream
 			continue;	// try again

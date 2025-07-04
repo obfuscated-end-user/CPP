@@ -12,7 +12,7 @@ public:
 	}
 
 	void reset() {
-		m_counter = 0;  // optional
+		m_counter = 0;	// optional
 	}
 };
 

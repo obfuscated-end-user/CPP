@@ -10,7 +10,7 @@ private:
 	int m_length {};
 
 public:
-	IntArray(int length) {  // constructor
+	IntArray(int length) {	// constructor
 		assert(length > 0);
 
 		m_array = new int[static_cast<std::size_t>(length)] {};

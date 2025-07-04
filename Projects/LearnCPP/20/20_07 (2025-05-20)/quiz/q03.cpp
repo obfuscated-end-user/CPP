@@ -79,7 +79,7 @@ int distance{ std::abs(3 - 5) }; // 2
 
 #include <algorithm>	// std::find, std::min_element
 #include <cmath>		// std::abs
-#include <cstddef>	  // std::size_t
+#include <cstddef>		// std::size_t
 #include <iostream>
 #include <vector>
 #include "Random.h"
@@ -189,7 +189,6 @@ int main() {
 		if (numbers.size() == 0)
 			break;
 	}
-
 
 	return 0;
 }

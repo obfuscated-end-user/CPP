@@ -63,7 +63,7 @@ And produce the result:
 */
 
 #include <iostream>
-#include <numeric>  // for std::gcd
+#include <numeric>	// for std::gcd
 
 class Fraction {
 private:
@@ -80,7 +80,7 @@ public:
 
 	void reduce() {
 		int gcd { std::gcd(m_numerator, m_denominator) };
-		if (gcd) {  // Make sure we don't try to divide by 0
+		if (gcd) {	// Make sure we don't try to divide by 0
 			m_numerator /= gcd;
 			m_denominator /= gcd;
 		}

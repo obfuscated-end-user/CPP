@@ -48,7 +48,7 @@ This program should print:
 */
 
 #include <iostream>
-#include <cassert>  // for assert
+#include <cassert>	// for assert
 
 class IntArray {
 private:

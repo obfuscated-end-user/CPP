@@ -15,11 +15,11 @@ std::optional<int> extractAge(std::string_view age) {
 	// Try to parse an int from age
 	// If we got an error of some kind...
 	if (std::from_chars(age.data(), end, result).ec != std::errc {}) {
-		return {};  // return nothing
+		return {};	// return nothing
 	}
 
-	if (result <= 0) {  // make sure age is positive
-		return {};	  // return nothing
+	if (result <= 0) {	// make sure age is positive
+		return {};		// return nothing
 	}
 
 	return result; // return an int value

@@ -36,7 +36,7 @@ public:
 };
 
 void printCents(Cents cents) {
-//  std::cout << cents; // no longer  works because cents won't implicit convert to an int
+//	std::cout << cents; // no longer works because cents won't implicit convert to an int
 	std::cout << static_cast<int>(cents);	// we can use an explicit cast instead
 }
 

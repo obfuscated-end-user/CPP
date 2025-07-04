@@ -59,7 +59,7 @@ public:
 int main() {
 	Driver d { "Franz", 17 };	// Franz is driving the car with ID 17
 
-	Car* car { CarLot::getCar(d.getCarId()) };  // Get that car from the car lot
+	Car* car { CarLot::getCar(d.getCarId()) };	// Get that car from the car lot
 
 	if (car)
 		std::cout << d.getName() << " is driving a " << car->getName() << '\n';

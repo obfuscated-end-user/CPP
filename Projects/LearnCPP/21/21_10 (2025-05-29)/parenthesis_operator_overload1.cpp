@@ -1,6 +1,6 @@
 // https://www.learncpp.com/cpp-tutorial/overloading-the-parenthesis-operator
 
-#include <cassert>  // for assert()
+#include <cassert>	// for assert()
 #include <iostream>
 
 class Matrix {
@@ -8,7 +8,7 @@ private:
 	double m_data[4][4] {};
 public:
 	double& operator()(int row, int col);
-	double operator()(int row, int col) const;  // for const objects
+	double operator()(int row, int col) const;	// for const objects
 };
 
 double& Matrix::operator()(int row, int col) {

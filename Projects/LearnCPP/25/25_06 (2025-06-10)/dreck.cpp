@@ -5,7 +5,7 @@
 
 class Base {
 public:
-	std::string_view getName() const {  // not virtual
+	std::string_view getName() const {	// not virtual
 		return "Base";
 	}
 

@@ -25,7 +25,7 @@ Hint: When comparing pairs of elements, be careful of your array’s range.
 int main() {
 	int array[] { 6, 3, 2, 9, 7, 1, 5, 4, 8 };
 	constexpr int length { static_cast<int>(std::size(array)) };	// C++17
-//  constexpr int length { sizeof(array) / sizeof(array[0]) };  // use instead if not C++17 capable
+//	constexpr int length { sizeof(array) / sizeof(array[0]) };		// use instead if not C++17 capable
 
 	// Step through each element of the array (except the last, which will already be storted by the time we get to it)
 	for (int iteration { 0 }; iteration < length - 1; ++iteration) {

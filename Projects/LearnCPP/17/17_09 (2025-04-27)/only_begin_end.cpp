@@ -14,7 +14,7 @@ int main() {
 	constexpr int arr[] { 9, 7, 5, 3, 1 };
 	
 	const int* begin { arr };
-	const int* end  { arr + std::size(arr) };
+	const int* end	{ arr + std::size(arr) };
 
 	printArray(begin, end);
 

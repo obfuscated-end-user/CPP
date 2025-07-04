@@ -1,7 +1,7 @@
 // https://www.learncpp.com/cpp-tutorial/command-line-arguments
 
 #include <iostream>
-#include <sstream>  // for std::stringstream
+#include <sstream>	// for std::stringstream
 #include <string>
 
 int main(int argc, char* argv[]) {
@@ -16,11 +16,11 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	std::stringstream convert { argv[1] };  // set up a stringstream variable named convert, initialized with the input from argv[1]
+	std::stringstream convert { argv[1] };	// set up a stringstream variable named convert, initialized with the input from argv[1]
 
 	int myInt {};
 	if (!(convert >> myInt))	// do the conversion
-		myInt = 0;  // if conversion fails, set myInt to a default value
+		myInt = 0;	// if conversion fails, set myInt to a default value
 
 	std::cout << "Got integer: " << myInt << '\n';
 

@@ -7,7 +7,7 @@
 
 class ArrayException : public std::exception {
 private:
-	std::string m_error{};  // handle our own string
+	std::string m_error{};	// handle our own string
 
 public:
 	ArrayException(std::string_view error)

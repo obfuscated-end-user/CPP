@@ -27,8 +27,8 @@ int main() {
 	
 	for (const auto& house : houses) {
 		std::cout << "House number " << house.number
-				  << " has " << (house.stories * house.roomsPerStory)
-				  << " rooms.\n";
+					<< " has " << (house.stories * house.roomsPerStory)
+					<< " rooms.\n";
 	}
 
 	return 0;

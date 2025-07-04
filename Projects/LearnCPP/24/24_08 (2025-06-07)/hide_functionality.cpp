@@ -17,10 +17,10 @@ public:
 
 int main() {
 	Derived derived { 7 };
-	std::cout << derived.m_value;   // error: m_value is private in Derived
+	std::cout << derived.m_value;	// error: m_value is private in Derived
 
 	Base& base { derived };
-	std::cout << base.m_value;  // okay: m_value is public in Base
+	std::cout << base.m_value;		// okay: m_value is public in Base
 
 	return 0;
 }
