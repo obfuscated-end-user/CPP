@@ -31,7 +31,7 @@ int main() {
 
 	inf.seekg(-14, std::ios::end);	// move 14 bytes before end of file
 	// Get rest of the line and print it
-	std::getline(inf, strData);	 // undefined behavior
+	std::getline(inf, strData);		// undefined behavior
 	std::cout << strData << '\n';
 	std::cout << inf.tellg() << '\n';
 
