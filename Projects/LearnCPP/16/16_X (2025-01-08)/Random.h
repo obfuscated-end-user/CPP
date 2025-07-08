@@ -57,9 +57,9 @@ namespace Random {
 	// * min and max can have different types
 	// * Must explicitly specify return type as template type argument
 	// * min and max will be converted to the return type
-	// Sample call: Random::get<std::size_t>(0, 6);	// returns std::size_t
-	// Sample call: Random::get<std::size_t>(0, 6u); // returns std::size_t
-	// Sample call: Random::get<std::int>(0, 6u);	// returns int
+	// Sample call: Random::get<std::size_t>(0, 6);		// returns std::size_t
+	// Sample call: Random::get<std::size_t>(0, 6u);	// returns std::size_t
+	// Sample call: Random::get<std::int>(0, 6u);		// returns int
 	template <typename R, typename S, typename T>
 	R get(S min, T max) {
 		return get<R>(static_cast<R>(min), static_cast<R>(max));
