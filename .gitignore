@@ -36,8 +36,10 @@
 **/tempCodeRunnerFile.cpp
 
 Projects/LearnCPP/track.txt
+Projects/Misc/c++ test.h
 Projects/Misc/clit_fuck.cpp
 Projects/Misc/cypher.cpp
+Projects/Misc/main (2).cpp
 Projects/Misc/motherfucker.cpp
 Projects/Misc/nes_emu.cpp
 Projects/Misc/notepad_clone.cpp
@@ -48,5 +50,6 @@ Projects/Misc/squirt.cpp
 Projects/Misc/stolen1.cpp
 Projects/Misc/todo.txt
 commands.txt
+build/
 
 *.class
